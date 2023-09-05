@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Teko:wght@300;400;500;600;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	transition: all .3s ease-in-out;
+}
+html{
+	font-size: 62.5%;
+	/*font-family: 'Teko', sans-serif;*/
+	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
+	scroll-behavior: smooth;
+	transition: all .3s ease-in-out;
+}
+/*////////////start off point////////*/
+/*//////////////////////////////////*/
+.header{
+	width: 100%;
+	padding: 30px 0;
+	background-color:#69b280;
+	text-align: center;
+}
+.header h1{
+	font-size: 65px;
+	letter-spacing: 10px;
+	color: white;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 0px 0.5px 8px rgb(1, 66, 1);
+}
+.header button{
+	width: 15rem;
+	padding: 5px 20px;
+	outline: none;
+	background-color: transparent;
+	border:1px solid white;
+	cursor: pointer;
+	margin-top: 1.7rem;
+	border-radius: 5px;
+}
+.header button a{
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	color: white;
+	text-decoration: none;
+}
+.header button:hover{
+	background-color: seagreen;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+}
+.header button:active{
+	transition: .3s ease-in;
+	cursor: pointer;
+	transform: translateY(1.2rem);
+}
+main{
+	width: 100%;
+	padding: 20px 0;
+}
+main p{
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: black;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	margin:0 auto;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	line-height: 22px;
+	margin-bottom: 6rem;
+}
+.sidebar{
+	width: 12%;
+	height: 100%;
+	top: 0;
+	position: fixed;
+	padding-top: 20rem;
+	text-align: center;
+	background-color: #69b280;
+	border-right:2px solid white;
+}
+.sidebar a{
+	display: block;
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	color: white;
+	padding-bottom: 35px;
+	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
+}
+.sidebar a:hover{
+	color: yellow;
+	cursor: pointer;
+}
+.content{
+	width: 90%;
+	padding: 20px 0;
+	background-color: white;
+}
+.rows{
+	display: grid;
+	grid-template-columns: 40% 40% 1fr 1fr;
+	grid-gap:5rem ;
+	padding-left: 40rem;
+	margin-bottom: 8rem;
+}
+.card{
+	width: 88%;
+	height: 100%;
+	box-shadow: 0 0 3rem 0 rgba(210,210,200,0.820);
+	text-align: center;
+	border-radius: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.card img{
+	padding-top: 12px;
+	margin-bottom: 1.5rem;
+	width: 65%;
+	height: 200px;
+	backface-visibility: hidden;
+	border-radius: 10px;
+}
+.text{
+	width: 100%;
+	padding: 5px 0;
+	text-align: center;
+	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
+}
+.card .text-hi{
+	font-size: 18px;
+	letter-spacing: 0px;
+	font-weight: 200;
+}
+.text h1{
+	font-size: 18px;
+	color: black;
+	font-weight: 300;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin-bottom: 1rem;
+	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
+}
+.text ul li{
+	font-size: 15px;
+	color: black;
+	list-style: none;
+	letter-spacing: 2px;
+	font-weight: 450;
+	padding-top: 10px;
+	margin-bottom: 1rem;
+}
+.text .buttons{
+	display: flex;
+	text-align: center;
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+	justify-content: center;
+}
+.text .buttons a{
+	width: 12rem;
+	padding: 3px 20px;
+	font-size: 13px;
+	font-weight: 400;
+	text-decoration: none;
+	background-color: transparent;
+	outline: none;
+	border-radius: 10px;
+	border: 1px solid black;
+	cursor: pointer;
+	color: black;
+}
+.text .buttons .btn-1{
+	margin-right: 1.5rem;
+}
+.buttons a:hover{
+	background-color:rgb(57 119 57);
+	cursor: pointer;
+	color: white;
+	transition: .3s ease-in-out;
+}
+.top-btn{
+	margin-bottom: 6rem;
+}
+.top-btn ion-icon{
+	width: 50px;
+	height: 50px;
+	font-size: 50px;
+	color: black;
+	float: right;
+	margin-right: 5rem;
+}
+.top-btn ion-icon:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+	color: green;
+}*/
+/*/////////////////////////////*/
+/*////Complete off Section////*/
+@media(max-width:1060px){
+	.text .buttons a{
+		width: 10rem;
+		font-size: 11px;
+		font-weight: 350;
+		padding: 3px 8px;
+	}
+	.rows{
+		margin-bottom: 8rem;
+	}
+}
+@media(max-width:1024px){
+	.text h1{
+		font-size: 20px;
+	}
+	.text .size{
+		font-size: 16px;
+	}
+	.text ul li{
+		font-size: 14px;
+	}
+	.text .buttons a{
+		width: 10rem;
+		padding: 3px 10px;
+		font-size: 12px;
+		font-weight: 400;
+		background-color: transparent;
+		border-radius: 10px;
+		border: 1px solid white;
+		cursor: pointer;
+		color: white;
+	}
+	.text .buttons .btn-1{
+		margin-right: 1.5rem;
+	}
+	.top-btn ion-icon{
+		padding-right: 3rem;
+	}
+}
+@media(max-width:952px){
+	main p{
+		font-size: 13px;
+	}
+	.content{
+		width: 100%;
+		display: block;
+		margin: 0 20%;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+	}
+	.card{
+		width: 50%;
+		height: 50%;
+		margin-bottom: 7rem
+	}
+	.text h1{
+		font-size: 30px;
+		letter-spacing: 2px;
+	}
+	.text .size{
+		font-size: 17px;
+	}
+	.text ul li{
+		font-size: 15px;
+	}
+	.text .buttons a{
+		width: 12rem;
+		padding: 3px 12px;
+		font-size: 12px;
+		font-weight: 400;
+		background-color: transparent;
+		color: white;
+	}
+	.top-btn ion-icon{
+		padding-right: 2rem;
+	}
+}
+@media(max-width:768px){
+	.card img{
+		padding-top: 10px;
+		margin-bottom: 2rem;
+		width: 80%;
+		height: 250px;
+		backface-visibility: hidden;
+		border-radius: 10px;
+	}
+}
+@media(max-width:700px){
+	.text h1{
+		font-size: 25px;
+		letter-spacing: 0px;
+	}
+	.text .size{
+		font-size: 15px;
+	}
+	.text ul li{
+		font-size: 14px;
+	}
+	.text .buttons a{
+		width: 11rem;
+		padding: 3px 10px;
+		font-size: 11px;
+		font-weight: 400;
+		background-color: transparent;
+		color: white;
+	}
+	.top-btn ion-icon{
+		float: right;
+		padding-right: 3rem;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+}
+
+@media(max-width:660px){
+	.card{
+		margin-bottom: 6rem
+	}
+	.text .buttons a{
+		width: 10rem;
+		padding: 3px 10px;
+		font-size: 11px;
+		font-weight: 400;
+	}
+	.text .buttons .btn-1{
+		margin-right: 1.2rem;
+	}
+	.top-btn ion-icon{
+		float: right;
+		margin-right: 1rem;
+		width: 35px;
+		height: 35px;
+		font-size: 40px;
+	}
+}
+@media(max-width:626px){
+	.card{
+		width: 60%;
+		height: 50%;
+		margin-bottom: 6rem
+	}
+	.text .buttons a{
+		width: 10rem;
+		padding: 3px 10px;
+		font-size: 11px;
+		font-weight: 400;
+	}
+	.text .buttons .btn-1{
+		margin-right: 1.2rem;
+	}
+	.top-btn ion-icon{
+		float: right;
+		margin-right: 1rem;
+		width: 35px;
+		height: 35px;
+		font-size: 40px;
+	}
+}
+
+@media(max-width:544px){
+	main p{
+		font-size: 12px;
+		line-height: 25px;
+	}
+	.content{
+		margin: 0 15%;
+	}
+	.card{
+		width: 65%;
+		height: 50%;
+		margin-bottom: 6rem
+	}
+	.text .buttons a{
+		width: 9rem;
+		padding: 3px 10px;
+		font-size: 11px;
+		font-weight: 400;
+	}
+	.text .buttons .btn-1{
+		margin-right: 1.2rem;
+	}
+	.top-btn ion-icon{
+		float: right;
+		padding-right: 3rem;
+		width: 35px;
+		height: 35px;
+		font-size: 40px;
+	}
+}
+
+@media(max-width:482px){
+	main p{
+		font-size: 12px;
+		line-height: 25px;
+	}
+	.content{
+		margin: 0 15%;
+	}
+	.card{
+		width: 70%;
+		height: 55%;
+		margin-bottom: 6rem
+	}
+	.text .buttons a{
+		width: 9rem;
+		padding: 3px 9px;
+		font-size: 10px;
+		font-weight: 400;
+	}
+	.text .buttons .btn-1{
+		margin-right: 1.1rem;
+	}
+	.top-btn ion-icon{
+		float: right;
+		padding-right: 3rem;
+		width: 35px;
+		height: 35px;
+		font-size: 40px;
+	}
+}
+
+@media(max-width:448px){
+	main p{
+		font-size: 11px;
+		line-height: 25px;
+		font-weight: 400;
+	}
+	.content{
+		margin: 0 13%;
+	}
+	.card{
+		width: 75%;
+		height: 65%;
+		margin-bottom: 6rem
+	}
+	.card img{
+		width: 100%;
+		height: 80%;
+	}
+	.text .size{
+		font-size: 14px;
+	}
+	.text ul li{
+		font-size: 13px;
+	}
+	.text .buttons a{
+		width: 9rem;
+		padding: 3px 8px;
+		font-size: 10px;
+		font-weight: 350;
+	}
+}
+
+@media(max-width:426px){
+	main p{
+		font-size: 10px;
+		letter-spacing: 0;
+		width: 75%;
+		line-height: 23px;
+		font-weight: 400;
+	}
+	.content{
+		margin: 0 9%;
+	}
+	.card{
+		width: 90%;
+		height: 70%;
+		margin-bottom: 6rem
+	}
+	.card img{
+		width: 100%;
+		height: 80%;
+	}
+	.text .size{
+		font-size: 14px;
+	}
+	.text ul li{
+		font-size: 13px;
+	}
+	.text .buttons a{
+		width: 9rem;
+		padding: 3px 8px;
+		font-size: 10px;
+		font-weight: 350;
+	}
+}
+
+@media(max-width:414px){
+	.content{
+		margin: 0 5%;
+	}
+}
+
+@media(max-width:382px){
+	.text h1{
+		font-size: 20px;
+		letter-spacing: 0px;
+	}
+	.text .size{
+		font-size: 12px;
+	}
+	.text ul li{
+		font-size: 11px;
+	}
+	.text .buttons a{
+		width: 8rem;
+		padding: 3px 7px;
+		font-size: 9px;
+		font-weight: 350;
+	}
+}
+
+@media(max-width:360px){
+	.content{
+		margin: 0 5%;
+	}
+	.card{
+		width: 100%;
+		height: 60%;
+		margin-bottom: 5rem
+	}
+	.text h1{
+		font-size: 20px;
+		letter-spacing: 0px;
+	}
+	.text .size{
+		font-size: 12px;
+	}
+	.text ul li{
+		font-size: 11px;
+	}
+	.text .buttons a{
+		width: 8rem;
+		padding: 3px 7px;
+		font-size: 9px;
+		font-weight: 350;
+	}
+}
+
+@media(max-width:330px){
+	.content{
+		margin: 0 6%;
+	}
+	.card{
+		width: 110%;
+		height: 60%;
+		margin-bottom: 5rem
+	}
+	.text h1{
+		font-size: 19px;
+		letter-spacing: 0px;
+	}
+	.text .size{
+		font-size: 11px;
+	}
+	.text ul li{
+		font-size: 10px;
+	}
+	.text .buttons a{
+		width: 7rem;
+		padding: 3px 6px;
+		font-size: 9px;
+		font-weight: 300;
+	}
+	.text .buttons .btn-1{
+		margin-right: 12px;
+	}
+}
+
+@media(max-width:320px){
+	.header{
+		padding: 20px 0;
+	}
+	.header h1{
+		font-size: 50px;
+		font-weight: 400;
+		letter-spacing: 3px;
+	}
+	.header button{
+		width: 12rem;
+		padding: 5px 10px;
+		margin-top: 1.3rem;
+	}
+	.header button a{
+		font-size: 12px;
+		letter-spacing: 1px;
+		font-weight: 300;
+	}
+	.content{
+		margin: 0 2%;
+	}
+	main h2{
+		font-size: 25px;
+	}
+}
+
+@media(max-width:302px){
+	.text .buttons a{
+		width: 6rem;
+		padding: 3px 5px;
+		font-size: 7px;
+		font-weight: 250;
+	}
+	.text .buttons .btn-1{
+		margin-right: 15px;
+	}
+	.content{
+		margin: 0 6%;
+	}
+	.card{
+		width: 105%;
+		height: 60%;
+		margin-bottom: 5rem
+	}
+}
+
+@media(max-width:293px){
+	.content{
+		margin: 0 4%;
+	}
+}
+
+@media(max-width:280px){
+	.text h1{
+		font-size: 18px;
+		letter-spacing: 0px;
+	}
+	.text .size{
+		font-size: 10px;
+	}
+	.text ul li{
+		font-size: 9px;
+	}
+	.text .buttons a{
+		width: 6rem;
+		padding: 3px 5px;
+		font-size: 7px;
+		font-weight: 300;
+	}
+	.text .buttons .btn-1{
+		margin-right: 8px;
+	}
+	content{
+		margin: 0 6%;
+	}
+	.card{
+		width: 112%;
+		height: 60%;
+		margin-bottom: 5rem
+	}
+}
+/*///////End of Section///////////*/
+/*///////////////////////////////*/
