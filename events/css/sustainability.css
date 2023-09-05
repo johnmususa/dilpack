@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Teko:wght@300;400;500;600;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 62.5%;
+	font-family: 'Teko', sans-serif;
+	scroll-behavior: smooth;
+	transition: all .3s ease-in-out;
+}
+/*////////////start off point////////*/
+/*//////////////////////////////////*/
+.header{
+	width: 100%;
+	padding: 25px 0;
+	text-align: center;
+	box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+	background-color:rgb(0, 68, 0);
+}
+.header h1{
+	font-size: 75px;
+	font-weight: 600;
+	line-height: 1.2;
+	margin-top: 1rem;
+	color: #fff;
+	letter-spacing: 8px;
+	padding-bottom: 2rem;
+}
+.hero-btn{
+	width: 15rem;
+	padding: 7px 25px;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	font-weight: 350;
+	color: white;
+	background-color: green;
+	text-decoration: none;
+	border-radius: 10px;
+	letter-spacing: 1px;
+}
+.hero-btn:hover{
+	background-color:darkgreen;
+	transition: .3s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+/*//////Start of responsive view/////*/
+/*//////////////////////////////////*/
+@media(max-width:952){
+	.header{
+		width: 100%;
+		padding: 20px 0;
+	}
+	.header h1{
+		font-size: 70px;
+		font-weight: 600;
+		line-height: 1.2;
+		margin-top: 1rem;
+		letter-spacing: 10px;
+	}
+	.header p{
+		letter-spacing: 3px;
+		font-weight: 400;
+		margin-bottom: 1.5rem;
+		font-size: 25px;
+	}
+/*//////End off Section////////////*/
+/*////////////////////////////////*/
