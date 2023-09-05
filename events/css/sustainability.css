@@ -7,7 +7,7 @@
 }
 html{
 	font-size: 62.5%;
-	font-family: 'Teko', sans-serif;
+	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
 	scroll-behavior: smooth;
 	transition: all .3s ease-in-out;
 }
@@ -18,32 +18,32 @@ html{
 	padding: 25px 0;
 	text-align: center;
 	box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-	background-color:rgb(0, 68, 0);
+	background-color:#69b280;
 }
 .header h1{
 	font-size: 75px;
 	font-weight: 600;
 	line-height: 1.2;
 	margin-top: 1rem;
+	margin-bottom: 2rem;
 	color: #fff;
 	letter-spacing: 8px;
-	padding-bottom: 2rem;
 }
 .hero-btn{
 	width: 15rem;
-	padding: 7px 25px;
+	padding: 8px 23px;
 	outline: none;
-	border: none;
-	font-size: 18px;
+	border: 1px solid white;
+	font-size: 15px;
 	font-weight: 350;
 	color: white;
-	background-color: green;
+	background-color: #69b280;
 	text-decoration: none;
 	border-radius: 10px;
 	letter-spacing: 1px;
 }
 .hero-btn:hover{
-	background-color:darkgreen;
+	background-color:seagreen;
 	transition: .3s ease-in;
 }
 

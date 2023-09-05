@@ -251,7 +251,7 @@ h4 strong{
 	border: none;
 	cursor: pointer;
 	box-shadow: 4px 6px 8px 0 rgba(0,0,0,0.4);	
-	background-color: #69b280;
+	background-color:seagreen; 
 }
 .banner-button a{
 	text-decoration: none;	
@@ -261,7 +261,7 @@ h4 strong{
 	letter-spacing: 1px;
 }
 .banner-button:hover{
-	background-color: seagreen;
+	background-color:#69b280;
 	transition: .3s ease-out;
 }
 .banner-button a:active{
@@ -464,6 +464,7 @@ h4 strong{
 	color: white;
 	transition: .3s ease-in-out;
 	cursor: pointer;
+	border: .1px solid white;
 }
 .btn-1 a:hover,.btn-2 a:hover{
 	color: white;
