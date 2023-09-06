@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Teko:wght@300;400;500;600;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	transition: all .3s ease-in-out;
+}
+html{
+	font-size: 62.5%;
+	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
+	scroll-behavior: smooth;
+	transition: all .3s ease-in-out;
+}
+/*////////////start off point////////*/
+/*//////////////////////////////////*/
+.header{
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+	background-color: #69b280;
+	scroll-behavior: smooth;
+	border-bottom: 3px solid white;
+}
+.header h1{
+	font-size: 60px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+	color: white;
+	margin-bottom: 2rem;
+	text-shadow: 0px 0.5px 8px rgb(1, 66, 1);
+	font-weight: 500;
+}
+.header-btn{
+	width: 10rem;
+	margin-bottom: 2rem;
+	padding: 8px 23px;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: transparent;
+}
+.header-btn a{
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: white;
+	font-weight: 500;
+	text-decoration: none;
+	cursor: pointer;
+}
+.header-btn:hover{
+	background-color: seagreen;
+	transition: .3s ease-in-out;
+	cursor: pointer;
+}
+.sidebar{
+	width: 43%;
+	padding: 10px 0;
+	background-color: #69b280;
+	display: block;
+	align-items: center;
+	justify-content: space-evenly;
+	position: absolute;
+	text-align: center;
+	z-index: 10;
+	border-right: 1px solid white;
+}
+.item-names{
+	text-align: center;
+	padding-top: 10px;
+	margin-bottom: 1rem;
+}
+.item-names h4{
+	font-size: 30px;
+	letter-spacing: 2px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: 550;
+	padding-bottom: 1rem;
+}
+.item-names a{
+	display: block;
+	font-size: 17px;
+	color: black;
+	padding-bottom: 1rem;
+	letter-spacing: 1px;
+	font-weight: 520;
+	list-style: none;
+}
+.item-names a:hover{
+	color: green;
+	cursor: pointer;
+}
+.solid-1{
+	width: 70%;
+	margin: 0 auto;
+}
+.gallery-list{
+	margin-top: 1rem;
+}
+.gallery-list h2{
+	font-size: 30px;
+	letter-spacing: 2px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: 550;
+	padding-bottom: 3rem;
+}
+.gallery-box{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	margin-bottom: 3rem;
+}
+.gallery-box .card img{
+	width: 65px;
+	/*border: 2px solid green;*/
+	height: 60px;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: #69b280;
+}
+.gallery-box .card{
+	width: 65px;
+	cursor: pointer;
+	height: 60px;
+	background-color: #69b280;
+}
+.gallery-box .text h1{
+	font-size: 14px;
+	font-weight: 500;
+	color: black;
+	border-bottom: 1px solid #333;
+	margin-bottom: 10px;
+}
+.gallery-box ul li{
+	list-style: none;
+	font-size: 13px;
+	color: black;
+	font-weight: 500;
+	padding-top: 2px;
+	padding-bottom: 4px;
+}
+.main{
+	width: 80%;
+	margin: 0 auto;
+}
+.content{
+	padding: 30px 0;
+	margin-left: 50%;
+	margin-right: auto;
+}
+.content h2{
+	text-align: center;
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	color: red;
+	margin-bottom: 1.5rem;
+}
+.form-2	h3{
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	color: black;
+	margin-bottom: 2.5rem;
+}
+form{
+	padding: 20px 0;
+	background-color: #000;
+	margin-left: 30px;
+	margin-bottom: 4rem;
+}
+form input{
+	display: block;
+	width: 28rem;
+	padding: 9px 25px;
+	outline: none;
+	font-size: 16px;
+	font-weight: 400;
+	color: black;
+	margin:0 auto;
+	margin-bottom: 2.5rem;
+}
+.item-select{
+	color: white;
+	font-size: 12px;
+	font-weight: 400;
+}
+span input, .item-select p{
+	display: inline-block;
+}
+.submit{
+	background-color: #69b280;
+	color: white;
+	font-weight: 400;
+	letter-spacing: 1px;
+	outline: none;
+	border: none;
+	border-radius: 12px;
+	padding: 10px 25px;
+	cursor: pointer;
+}
+.submit:active{
+	transform: translateY(1.1rem);
+	cursor: pointer;
+}
+.item-tag p{
+	text-align: center;
+	color: white;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+.form-1{
+	margin-left: 5rem;
+}
+.form-1 h3{
+	text-align: center;
+	font-size: 26px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	color: black;
+	margin-bottom: 1rem;
+}
+.form-1 p{
+	font-size: 12px;
+	font-weight: 420;
+	letter-spacing: 1px;
+	margin-left: 10px;
+	color: black;
+	margin-bottom: 5px;
+}
+.call-info{
+	margin-left: 6rem;
+}
+.form-1 ol li{
+	font-size: 15px;
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+	list-style: none;
+	color: black;
+	margin-left: 3rem;
+	font-weight: 500;
+}
+.call-info span{
+	font-weight: bold;
+}
+.form-1 h4{
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-weight: 550;
+	color: black;
+	margin-bottom: 7px;
+}
+.form-1 .call-info-2 li{
+	font-size: 15px;
+	display: block;
+	align-items: center;
+	text-align: center;
+	list-style: none;
+	color: black;
+	letter-spacing: 1px;
+	margin-left: 1rem;
+	font-weight: 450;
+}
+
