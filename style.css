@@ -211,10 +211,10 @@ header .logo{
 /*//////////////////////////////*/
 #section-1{
 	width: 100%;
-	height: 86vh;
+	height: 100vh;
 	height: -webkit-fill-avaliable;
 	background-color: #333;
-	background-image: url(../images/dilpack-banner.png);
+	background-image: url(../images/banner-new-last.png);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
