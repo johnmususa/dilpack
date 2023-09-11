@@ -9,7 +9,7 @@
 }
 html{
 	font-size: 62.5%;
-	font-family: 'Teko', sans-serif;
+	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
 	scroll-behavior: smooth;
 	transition: all .3s ease-in-out;
 }
@@ -27,6 +27,7 @@ html{
 	color: white;
 	text-transform: uppercase;
 	font-weight: 500;
+	padding-left: 10rem;
 	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
 	text-decoration: none;
 	text-shadow: 0px 0.5px 8px rgb(1, 66, 1);
@@ -38,7 +39,8 @@ html{
 	background-color: transparent;
 	border:1px solid white;
 	cursor: pointer;
-	margin-top: 1.8rem;
+	margin-top: 2rem;
+	margin-left: 8rem;
 	border-radius: 5px;
 }
 .header button a{
@@ -199,11 +201,77 @@ main p{
 }
 /*/////////////////////////////*/
 /*////Complete off Section////*/
+@media(max-width:1085px){
+	.sidebar{
+		width: 15%;
+		padding-top: 15rem;	
+	}
+	.header h1{
+		font-size: 65px;
+		letter-spacing: 10px;
+		font-weight: 500;
+		padding-left: 17rem;
+	}
+	.header button{
+		width: 15rem;
+		padding: 5px 20px;
+		margin-top: 2rem;
+		margin-left: 10rem;
+	}
+	main p{
+		font-size: 15px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		width: 70%;
+		padding-left: 16rem;
+		line-height: 18px;
+		margin-bottom: 6rem;
+	}
+	.content{
+		width: 90%;
+		padding: 20px 0;
+	}
+	.rows{
+		display: grid;
+		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 23rem;
+		margin-bottom: 6rem;
+	}
+	.card{
+		width: 90%;
+		height: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.card img{
+		padding-top: 13px;
+		margin-bottom: 2rem;
+		width: 85%;
+		height: 200px;
+	}
+	.text h1{
+		font-size: 23px;
+		padding-bottom: 3px;
+		padding-top: 10px;
+		font-weight: 300;
+		margin-bottom: 1rem;
+	}
+	.text ul{
+		padding-top: 10px;
+	}
+	.text ul li{
+		font-size: 15px;
+		letter-spacing: 2px;
+		font-weight: 400;
+		margin-bottom: 1rem;
+	}
+}
 @media(max-width:1060px){
 	.text .buttons a{
 		width: 10rem;
-		font-size: 11px;
-		font-weight: 350;
+		font-size: 13px;
+		font-weight: 400;
 		padding: 3px 8px;
 	}
 	.rows{
@@ -211,6 +279,47 @@ main p{
 	}
 }
 @media(max-width:1024px){
+	.header h1{
+		font-size: 60px;
+		letter-spacing: 12px;
+		font-weight: 500;
+		padding-left: 15rem;
+	}
+	.header button{
+		width: 15rem;
+		padding: 5px 20px;
+		margin-top: 2rem;
+		margin-left: 7rem;
+	}
+	main p{
+		font-size: 15px;
+		font-weight: 400;
+		width: 70%;
+		padding-left: 13rem;
+		line-height: 19px;
+		margin-bottom: 6rem;
+	}
+	.rows{
+		display: grid;
+		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 22rem;
+		margin-bottom: 6rem;
+	}
+	.card{
+		width: 95%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 2rem;
+		width: 80%;
+		height: 180px;
+		backface-visibility: hidden;
+		border-radius: 10px;
+	}
 	.text h1{
 		font-size: 20px;
 	}
@@ -227,435 +336,1498 @@ main p{
 		font-weight: 400;
 		background-color: transparent;
 		border-radius: 10px;
-		border: 1px solid white;
+		border: 1px solid black;
 		cursor: pointer;
-		color: white;
-	}
-	.text .buttons .btn-1{
-		margin-right: 1.5rem;
+		color: black;
 	}
 	.top-btn ion-icon{
 		float: right;
-		margin-right: 1rem;
+		padding-right: 2rem;
 	}
 }
-@media(max-width:952px){
+@media(max-width:950px){
 	main p{
 		font-size: 13px;
+		font-weight: 400;
+		color: black;
+		width: 70%;
+		padding-left: 13rem;
+		margin:0 auto;
+		line-height: 20px;
+		margin-bottom: 5rem;
+	}
+	.sidebar{
+		width: 15%;
+		padding-top: 15rem;	
 	}
 	.content{
-		width: 100%;
+		width: 90%;
+		padding: 20px 0;
+		background-color: white;
+	}
+	.rows{
+		display: grid;
+		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 20rem;
+		margin-bottom: 5rem;
+	}
+	.card{
+		width: 95%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1.5rem;
+		width: 80%;
+		height: 180px;
+	}
+	.text h1{
+		font-size: 20px;
+	}
+	.text .size{
+		font-size: 16px;
+	}
+	.text ul{
+		padding-top: 10px;
+	}
+	.text ul li{
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	.top-btn ion-icon{
+		width: 50px;
+		height: 50px;
+		font-size: 50px;
+		color: black;
+		float: right;
+		padding-right: 3rem;
+	}
+}
+@media(max-width:866px){
+	.header h1{
+		font-size: 60px;
+		letter-spacing: 12px;
+		font-weight: 500;
+		padding-left: 15rem;
+	}
+	.content{
+		width: 90%;
+		padding: 20px 0;
+		background-color: white;
+	}
+	.rows{
+		display: grid;
+		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 18rem;
+		margin-bottom: 5rem;
+	}
+	.card{
+		width: 94%;
+		height: 100%;
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1.3rem;
+		width: 84%;
+		height: 200px;
+	}
+	.text h1{
+		font-size: 20px;
+		letter-spacing: none;
+	}
+}
+@media(max-width:862px){
+	.header h1{
+		font-size: 55px;
+		letter-spacing: 10px;
+		font-weight: 500;
+		padding-left: 15rem;
+	}
+	.header button{
+		width: 14rem;
+		padding: 5px 15px;
+		border:1px solid white;
+		cursor: pointer;
+		margin-top: 2rem;
+	}
+	main p{
+		font-size: 13px;
+		font-weight: 400;
+		width: 70%;
+		padding-left: 13rem;
+		margin:0 auto;
+		line-height: 19px;
+		margin-bottom: 3rem;
+	}
+	.content{
+		width: 90%;
+		padding: 20px 0;
+		background-color: white;
+	}
+	.rows{
+		display: grid;
+		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 18rem;
+		margin-bottom: 6rem;
+	}
+	.card{
+		width: 94%;
+		height: 100%;
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+	.card img{
+		padding-top: 14px;
+		margin-bottom: 1.3rem;
+		width: 83%;
+		height: 170px;
+	}
+	.text h1{
+		font-size: 18px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 15px;
+	}
+	.text ul{
+		padding-top: 10px;
+	}
+	.text ul li{
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width:834px){
+	.header h1{
+		font-size: 55px;
+		letter-spacing: 10px;
+		font-weight: 500;
+		padding-left: 13rem;
+	}
+	.sidebar{
+		width: 16%;
+		padding-top: 15rem;	
+	}
+}
+@media(max-width:790px){
+	.header h1{
+		font-size: 50px;
+		letter-spacing: 9px;
+		font-weight: 500;
+		padding-left: 13rem;
+	}
+	.header button{
+		width: 14rem;
+		padding: 5px 15px;
+		border:1px solid white;
+		cursor: pointer;
+		margin-top: 2rem;
+		margin-left: 8rem;
+	}
+	.sidebar{
+		width: 16%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
 		display: block;
-		margin: 0 20%;
+		font-size: 15px;
+		font-weight: 400;
+		color: white;
+		padding-bottom: 34px;
+	}
+	main p{
+		font-size: 13px;
+		font-weight: 400;
+		color: black;
+		width: 74%;
+		padding-left: 13rem;
+		margin:0 auto;
+		line-height: 19px;
+		margin-bottom: 3rem;
+	}
+	.content{
+		width: 90%;
+		padding: 20px 0;
+		background-color: white;
+	}
+	.rows{
+		display: grid;
+		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
+		grid-gap:2rem ;
+		padding-left: 16rem;
+		margin-bottom: 5rem;
+	}
+	.text .size, .text ul li{
+		font-size: 13px;
+		letter-spacing: none;
+	}
+	.text .buttons a{
+		width: 10rem;
+		padding: 3px 10px;
+		font-size: 12px;
+		font-weight: 400;
+	}	
+	.top-btn ion-icon{
+		width: 40px;
+		height: 40px;
+		font-size: 45px;
+		color: black;
+		float: right;
+		padding-right: 3rem;
+	}
+}
+@media(max-width:742px){
+	.rows{
+		display: grid;
+		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 15rem;
+		margin-bottom: 5rem;
+	}
+	.card{
+		width: 98%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1.3rem;
+		width: 83%;
+		height: 160px;
+	}
+}
+@media(max-width:732px){
+	.header h1{
+		font-size: 55px;
+		letter-spacing: 9px;
+		font-weight: 500;
+		padding-left: 13rem;
+	}
+	.rows{
+		display: grid;
+		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 14rem;
+		margin-bottom: 5rem;
+	}
+	.card{
+		width: 100%;
+		height: 100%;
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1.3rem;
+		width: 83%;
+		height: 160px;
+	}
+}
+@media(max-width:712px){
+	.header h1{
+		font-size: 50px;
+		letter-spacing: 9px;
+		font-weight: 500;
+		padding-left: 15rem;
+	}
+	main p{
+		font-size: 12px;
+		font-weight: 400;
+		color: black;
+		width: 80%;
+		padding-left: 15rem;
+		text-align: left;
+		margin:0 auto;
+		line-height: 19px;
+		margin-bottom: 5rem;
+	}
+	.sidebar{
+		width: 20%;
+		padding-top: 15rem;	
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 28rem;
+		margin-bottom: 5rem;
+	}
+	.card{
+		width: 75%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 5rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1.3rem;
+		width: 75%;
+		height: 180px;
+	}
+	.text h1{
+		font-size: 24px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 16px;
+	}
+	.text ul{
+		padding-top: 10px;
+	}
+	.text ul li{
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width:704px){
+	.header h1{
+		font-size: 50px;
+		letter-spacing: 10px;
+		font-weight: 500;
+		padding-left: 15rem;
+	}
+	.header button{
+		width: 13rem;
+		padding: 5px 12px;
+		margin-top: 2.2rem;
+		margin-left: 10rem;
+	}
+	.sidebar{
+		width: 19%;
+		padding-top: 15rem;	
+	}
+	main p{
+		font-size: 12px;
+		font-weight: 400;
+		color: black;
+		width: 83%;
+		padding-left: 15rem;
+		text-align: left;
+		margin:0 auto;
+		line-height: 19px;
+		margin-bottom: 4rem;
+	}
+	.content{
+		width: 85%;
+		padding: 20px 0;
+		background-color: white;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 30rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 85%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 6rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1.5rem;
+		width: 77%;
+		height: 190px;
+	}
+	.text h1{
+		font-size: 25px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 17px;
+	}
+	.text ul{
+		padding-top: 10px;
+	}
+	.text ul li{
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width:656px){
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 26rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 85%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 6rem;
+	}
+	.card img{
+		padding-top: 17px;
+		margin-bottom: 1.5rem;
+		width: 80%;
+		height: 190px;
+	}
+	.text h1{
+		font-size: 23px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 16px;
+	}
+	.text ul{
+		padding-top: 10px;
+	}
+	.text ul li{
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width:628px){
+	.header h1{
+		font-size: 40px;
+		letter-spacing: 8px;
+		font-weight: 500;
+		padding-left: 13rem;
+	}
+	.header button a{
+		font-size: 12px;
+		font-weight: 400;
+		color: white;
+	}
+	.sidebar{
+		width: 20%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 14px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	main p{
+		font-size: 12px;
+		font-weight: 400;
+		width: 80%;
+		padding-left: 12rem;
+		line-height: 18px;
+		margin-bottom: 4rem;
+	}
+	.content{
+		width: 90%;
+		padding: 20px 0;
+		background-color: white;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 25rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 81%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 6rem;
+	}
+	.card img{
+		padding-top: 10px;
+		margin-bottom: 1.5rem;
+		width: 73%;
+		height: 180px;
+	}
+	.text h1{
+		font-size: 23px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 16px;
+	}
+	.text ul{
+		padding-top: 10px;
+	}
+	.text ul li{
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width:576px){
+	main p{
+		font-size: 12px;
+		font-weight: 400;
+		width: 85%;
+		padding-left: 13rem;
+		line-height: 17px;
+		margin-bottom: 4rem;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 23rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 87%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 5rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1.5rem;
+		width: 77%;
+		height: 180px;
+	}
+}
+@media(max-width:548px){
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 23rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 87%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 5rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1.5rem;
+		width: 77%;
+		height: 180px;
+	}
+}
+@media(max-width:528px){
+	.header h1{
+		font-size: 40px;
+		letter-spacing: 7px;
+		font-weight: 500;
+		padding-left: 13rem;
+	}
+	.header button{
+		width: 12rem;
+		padding: 5px 12px;
+		margin-top: 2rem;
+		margin-left: 10rem;
+	}
+	.sidebar{
+		width: 21%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 13px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	main p{
+		font-size: 11px;
+		font-weight: 400;
+		width: 85%;
+		padding-left: 12rem;
+		line-height: 17px;
+		margin-bottom: 3rem;
 	}
 	.rows{
 		display: block;
 		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
 		grid-gap:3rem ;
+		padding-left: 21rem;
+		margin-bottom: 4rem;
 	}
 	.card{
-		width: 50%;
-		height: 50%;
-		margin-bottom: 8rem
+		width: 87%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 4rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 75%;
+		height: 170px;
 	}
 	.text h1{
-		font-size: 30px;
-		letter-spacing: 2px;
+		font-size: 22px;
+		letter-spacing: none;
 	}
 	.text .size{
-		font-size: 17px;
+		font-size: 16px;
 	}
-	.text ul li{
-		font-size: 15px;
-	}
-	.text .buttons a{
-		width: 12rem;
-		padding: 3px 12px;
-		font-size: 12px;
-		font-weight: 400;
-		background-color: transparent;
-		color: white;
-	}
-	.top-btn ion-icon{
-		float: right;
-		margin-right: 1rem;
-	}
-}
-@media(max-width:768px){
-	.card img{
+	.text ul{
 		padding-top: 10px;
-		margin-bottom: 2rem;
-		width: 80%;
-		height: 250px;
-		backface-visibility: hidden;
-		border-radius: 10px;
 	}
-}
-@media(max-width:700px){
-	.text h1{
-		font-size: 25px;
-		letter-spacing: 0px;
-	}
-	.text .size{
+	.text ul li{
 		font-size: 15px;
-	}
-	.text ul li{
-		font-size: 14px;
-	}
-	.text .buttons a{
-		width: 11rem;
-		padding: 3px 10px;
-		font-size: 11px;
-		font-weight: 400;
-		background-color: transparent;
-		color: white;
-	}
-	.top-btn ion-icon{
-		float: right;
-		margin-right: 1rem;
-		width: 40px;
-		height: 40px;
-		font-size: 40px;
+		margin-bottom: 10px;
 	}
 }
-
-@media(max-width:660px){
-	.card{
-		margin-bottom: 6rem
-	}
-	.text .buttons a{
-		width: 10rem;
-		padding: 3px 10px;
-		font-size: 11px;
-		font-weight: 400;
-	}
-	.text .buttons .btn-1{
-		margin-right: 1.2rem;
-	}
-	.top-btn ion-icon{
-		float: right;
-		margin-right: 1rem;
-		width: 35px;
-		height: 35px;
-		font-size: 40px;
-	}
-}
-
-@media(max-width:626px){
-	.card{
-		width: 60%;
-		height: 50%;
-		margin-bottom: 6rem
-	}
-	.text .buttons a{
-		width: 10rem;
-		padding: 3px 10px;
-		font-size: 11px;
-		font-weight: 400;
-	}
-	.text .buttons .btn-1{
-		margin-right: 1.2rem;
-	}
-	.top-btn ion-icon{
-		float: right;
-		margin-right: 1rem;
-		width: 35px;
-		height: 35px;
-		font-size: 40px;
-	}
-}
-
-@media(max-width:544px){
-	main p{
-		font-size: 12px;
-		line-height: 25px;
-	}
-	.content{
-		margin: 0 15%;
-	}
-	.card{
-		width: 65%;
-		height: 50%;
-		margin-bottom: 6rem
-	}
-	.text .buttons a{
-		width: 9rem;
-		padding: 3px 10px;
-		font-size: 11px;
-		font-weight: 400;
-	}
-	.text .buttons .btn-1{
-		margin-right: 1.2rem;
-	}
-	.top-btn ion-icon{
-		float: right;
-		padding-right: 3rem;
-		width: 35px;
-		height: 35px;
-		font-size: 40px;
-	}
-}
-
-@media(max-width:482px){
-	main p{
-		font-size: 12px;
-		line-height: 25px;
-	}
-	.content{
-		margin: 0 15%;
-	}
-	.card{
-		width: 70%;
-		height: 55%;
-		margin-bottom: 6rem
-	}
-	.text .buttons a{
-		width: 9rem;
-		padding: 3px 9px;
-		font-size: 10px;
-		font-weight: 400;
-	}
-	.text .buttons .btn-1{
-		margin-right: 1.1rem;
-	}
-	.top-btn ion-icon{
-		float: right;
-		padding-right: 3rem;
-		width: 35px;
-		height: 35px;
-		font-size: 40px;
-	}
-}
-
-@media(max-width:448px){
-	main p{
-		font-size: 11px;
-		line-height: 25px;
-		font-weight: 400;
-	}
-	.content{
-		margin: 0 13%;
-	}
-	.card{
-		width: 75%;
-		height: 65%;
-		margin-bottom: 6rem
-	}
-	.card img{
-		width: 100%;
-		height: 80%;
-	}
-	.text .size{
-		font-size: 14px;
-	}
-	.text ul li{
-		font-size: 13px;
-	}
-	.text .buttons a{
-		width: 9rem;
-		padding: 3px 8px;
-		font-size: 10px;
-		font-weight: 350;
-	}
-}
-
-@media(max-width:426px){
-	main p{
-		font-size: 10px;
-		letter-spacing: 0;
-		width: 75%;
-		line-height: 23px;
-		font-weight: 400;
-	}
-	.content{
-		margin: 0 9%;
-	}
-	.card{
-		width: 90%;
-		height: 70%;
-		margin-bottom: 6rem
-	}
-	.card img{
-		width: 100%;
-		height: 80%;
-	}
-	.text .size{
-		font-size: 14px;
-	}
-	.text ul li{
-		font-size: 13px;
-	}
-	.text .buttons a{
-		width: 9rem;
-		padding: 3px 8px;
-		font-size: 10px;
-		font-weight: 350;
-	}
-}
-
-@media(max-width:414px){
-	.content{
-		margin: 0 5%;
-	}
-}
-
-@media(max-width:382px){
-	.text h1{
-		font-size: 20px;
-		letter-spacing: 0px;
-	}
-	.text .size{
-		font-size: 12px;
-	}
-	.text ul li{
-		font-size: 11px;
-	}
-	.text .buttons a{
-		width: 8rem;
-		padding: 3px 7px;
-		font-size: 9px;
-		font-weight: 350;
-	}
-}
-
-@media(max-width:360px){
-	.content{
-		margin: 0 5%;
-	}
-	.card{
-		width: 100%;
-		height: 60%;
-		margin-bottom: 5rem
-	}
-	.text h1{
-		font-size: 20px;
-		letter-spacing: 0px;
-	}
-	.text .size{
-		font-size: 12px;
-	}
-	.text ul li{
-		font-size: 11px;
-	}
-	.text .buttons a{
-		width: 8rem;
-		padding: 3px 7px;
-		font-size: 9px;
-		font-weight: 350;
-	}
-}
-
-@media(max-width:330px){
-	.content{
-		margin: 0 6%;
-	}
-	.card{
-		width: 110%;
-		height: 60%;
-		margin-bottom: 5rem
-	}
-	.text h1{
-		font-size: 19px;
-		letter-spacing: 0px;
-	}
-	.text .size{
-		font-size: 11px;
-	}
-	.text ul li{
-		font-size: 10px;
-	}
-	.text .buttons a{
-		width: 7rem;
-		padding: 3px 6px;
-		font-size: 9px;
-		font-weight: 300;
-	}
-	.text .buttons .btn-1{
-		margin-right: 12px;
-	}
-}
-
-@media(max-width:320px){
-	.header{
-		padding: 20px 0;
-	}
+@media(max-width:486px){
 	.header h1{
-		font-size: 50px;
-		font-weight: 400;
-		letter-spacing: 3px;
+		font-size: 30px;
+		letter-spacing: 7px;
+		font-weight: 500;
+		padding-left: 12rem;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 19rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 88%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 5rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1.2rem;
+		width: 77%;
+		height: 160px;
+	}
+	.text h1{
+		font-size: 20px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 14px;
+	}
+	.text ul{
+		padding-top: 10px;
+	}
+	.text ul li{
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width:472px){
+	.header h1{
+		font-size: 30px;
+		letter-spacing: 7px;
+		font-weight: 500;
+		padding-left: 12rem;
 	}
 	.header button{
-		width: 12rem;
+		width: 11rem;
 		padding: 5px 10px;
-		margin-top: 1.3rem;
+		margin-top: 2.5rem;
+		margin-left: 10rem;
 	}
 	.header button a{
 		font-size: 12px;
-		letter-spacing: 1px;
-		font-weight: 300;
+		font-weight: 400;
 	}
-	.content{
-		margin: 0 2%;
+	.sidebar{
+		width: 22%;
+		padding-top: 15rem;	
 	}
-	main h2{
-		font-size: 25px;
+	.sidebar a{
+		font-size: 12px;
+		font-weight: 400;;
+		padding-bottom: 34px;
 	}
-}
-
-@media(max-width:302px){
-	.text .buttons a{
-		width: 6rem;
-		padding: 3px 5px;
-		font-size: 7px;
-		font-weight: 250;
-	}
-	.text .buttons .btn-1{
-		margin-right: 15px;
-	}
-	.content{
-		margin: 0 6%;
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 18rem;
+		margin-bottom: 4rem;
 	}
 	.card{
-		width: 105%;
-		height: 60%;
-		margin-bottom: 5rem
+		width: 90%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 4rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 77%;
+		height: 170px;
+	}
+	.text h1{
+		font-size: 23px;
+		letter-spacing: none;
 	}
 }
-
-@media(max-width:293px){
-	.content{
-		margin: 0 4%;
+@media(max-width:442px){
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 17rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 95%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 4rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 77%;
+		height: 165px;
+	}
+	.text h1{
+		font-size: 20px;
+		letter-spacing: none;
 	}
 }
-
-@media(max-width:280px){
+@media(max-width:433px){
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 15rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 93%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 4rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 75%;
+		height: 160px;
+	}
+}
+@media(max-width:425px){
+	.sidebar{
+		width: 23%;
+		padding-top: 15rem;	
+	}
+	main p{
+		font-size: 11px;
+		font-weight: 400;
+		width: 84%;
+		padding-left: 11rem;
+		line-height: 17px;
+		margin-bottom: 3rem;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 16rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 94%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 4rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 75%;
+		height: 155px;
+	}
+	.text h1{
+		font-size: 20px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 15px;
+	}
+	.text ul{
+		padding-top: 10px;
+	}
+	.text ul li{
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width:414px){
+	.header h1{
+		font-size: 27px;
+		letter-spacing: 6px;
+		font-weight: 500;
+		padding-left: 10rem;
+	}
+}
+@media(max-width:412px){
+	.header h1{
+		font-size: 26px;
+		letter-spacing: 6px;
+		font-weight: 500;
+		padding-left: 10rem;
+	}
+	.sidebar{
+		width: 26%;
+		padding-top: 15rem;	
+	}
+}
+@media(max-width:399px){
+	.header h1{
+		font-size: 25px;
+		letter-spacing: 5px;
+		font-weight: 500;
+		padding-left: 10rem;
+	}
+	main p{
+		font-size: 10px;
+		font-weight: 400;
+		width: 86%;
+		padding-left: 10rem;
+		line-height: 15px;
+		margin-bottom: 3rem;
+	}
+	.sidebar{
+		width: 26%;
+		padding-top: 15rem;	
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 16rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 94%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 6rem;
+	}
+	.card img{
+		padding-top: 10px;
+		margin-bottom: 1.2rem;
+		width: 74%;
+		height: 170px;
+	}
 	.text h1{
 		font-size: 18px;
-		letter-spacing: 0px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 12px;
+	}
+	.text ul li{
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width:377px){
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 15rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 95%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 6rem;
+	}
+	.card img{
+		padding-top: 10px;
+		margin-bottom: 1.2rem;
+		width: 74%;
+		height: 170px;
+	}
+}
+@media(max-width:375px){
+	.header h1{
+		font-size: 30px;
+		letter-spacing: 6px;
+		font-weight: 500;
+		padding-left: 10rem;
+	}
+	.header button{
+		width: 10rem;
+		padding: 4px 8px;
+		margin-top: 2rem;
+		margin-left: 10rem;
+	}
+	.header button a{
+		font-size: 12px;
+		font-weight: 400;
+	}
+	.sidebar{
+		width: 24%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 11px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	main p{
+		font-size: 10px;
+		font-weight: 400;
+		width: 85%;
+		padding-left: 10rem;
+		line-height: 16px;
+		margin-bottom: 3rem;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:4rem ;
+		padding-left: 14rem;
+		margin-bottom: 4rem;
+	}
+	.card{
+		width: 95%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 4rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 78%;
+		height: 160px;
+	}
+	.text h1{
+		font-size: 20px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 13px;
+	}
+	.text ul li{
+		font-size: 13px;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width:360px){
+	.header h1{
+		font-size: 26px;
+		letter-spacing: 5px;
+		font-weight: 500;
+		padding-left: 10rem;
+	}
+	.header button{
+		width: 10rem;
+		padding: 4px 8px;
+		margin-top: 2.3rem;
+		margin-left: 8rem;
+	}
+	.header button a{
+		font-size: 11px;
+		font-weight: 400;
+	}
+	.sidebar{
+		width: 25%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 10px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 14rem;
+		margin-bottom: 3rem;
+	}
+	.card{
+		width: 97%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 4rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 75%;
+		height: 130px;
+	}
+}
+@media(max-width:349px){
+	.header h1{
+		font-size: 25px;
+		letter-spacing: 4px;
+		font-weight: 500;
+		padding-left: 9rem;
+	}
+	.header button{
+		width: 10rem;
+		padding: 4px 8px;
+		margin-top: 1.5rem;
+		margin-left: 8rem;
+	}
+	.header button a{
+		font-size: 11px;
+		font-weight: 400;
+	}
+	main p{
+		font-size: 9px;
+		font-weight: 400;
+		width: 85%;
+		padding-left: 9rem;
+		line-height: 15px;
+		margin-bottom: 2rem;
+	}
+	.sidebar{
+		width: 25%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 10px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 12rem;
+		margin-bottom: 3rem;
+	}
+	.card{
+		width: 97%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 4rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 75%;
+		height: 140px;
+	}
+	.text h1{
+		font-size: 18px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 12px;
+	}
+	.text ul li{
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	.text .buttons a{
+		width: 9rem;
+		padding: 3px 5px;
+		font-size: 10px;
+		font-weight: 400;
+	}
+}
+@media(max-width:333px){
+	.header h1{
+		font-size: 23px;
+		letter-spacing: 4px;
+		font-weight: 500;
+		padding-left: 9rem;
+	}
+	.header button{
+		width: 10rem;
+		padding: 4px 8px;
+		margin-top: 2.3rem;
+		margin-left: 8rem;
+	}
+	.header button a{
+		font-size: 11px;
+		font-weight: 400;
+	}
+	main p{
+		font-size: 9px;
+		font-weight: 400;
+		width: 85%;
+		padding-left: 9rem;
+		line-height: 15px;
+		margin-bottom: 3rem;
+	}
+	.sidebar{
+		width: 25%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 10px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 12rem;
+		margin-bottom: 3rem;
+	}
+	.card{
+		width: 97%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 5rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 75%;
+		height: 140px;
+	}
+	.text h1{
+		font-size: 17px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 11px;
+	}
+	.text ul li{
+		font-size: 11px;
+		margin-bottom: 10px;
+	}
+	.text .buttons a{
+		width: 9rem;
+		padding: 3px 5px;
+		font-size: 10px;
+		font-weight: 400;
+	}
+}
+@media(max-width:320px){
+	.header h1{
+		font-size: 23px;
+		letter-spacing: 4px;
+		font-weight: 500;
+		padding-left: 9rem;
+	}
+	.header button{
+		width: 10rem;
+		padding: 4px 8px;
+		margin-top: 2.3rem;
+		margin-left: 8rem;
+	}
+	.header button a{
+		font-size: 11px;
+		font-weight: 400;
+	}
+	main p{
+		font-size: 9px;
+		font-weight: 400;
+		width: 85%;
+		padding-left: 8rem;
+		line-height: 15px;
+		margin-bottom: 3rem;
+	}
+	.sidebar{
+		width: 25%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 10px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 12rem;
+		margin-bottom: 3rem;
+	}
+	.card{
+		width: 98%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 4rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 77%;
+		height: 140px;
+	}
+	.text h1{
+		font-size: 18px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 12px;
+	}
+	.text ul li{
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	.text .buttons a{
+		width: 9rem;
+		padding: 3px 5px;
+		font-size: 10px;
+		font-weight: 400;
+	}
+}
+@media(max-width:289px){
+	.header h1{
+		font-size: 20px;
+		letter-spacing: 3px;
+		font-weight: 500;
+		padding-left: 8rem;
+	}
+	.header button{
+		width: 9rem;
+		padding: 4px 6px;
+		margin-top: 1.5rem;
+		margin-left: 7rem;
+	}
+	.header button a{
+		font-size: 10px;
+		font-weight: 400;
+	}
+	main p{
+		font-size: 9px;
+		font-weight: 400;
+		width: 85%;
+		padding-left: 7rem;
+		line-height: 15px;
+		margin-bottom: 1.5rem;
+	}
+	.sidebar{
+		width: 26%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 9px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 11rem;
+		margin-bottom: 3rem;
+	}
+	.card{
+		width: 97%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 3rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 75%;
+		height: 130px;
+	}
+	.text h1{
+		font-size: 16px;
+		letter-spacing: none;
 	}
 	.text .size{
 		font-size: 10px;
 	}
 	.text ul li{
-		font-size: 9px;
+		font-size: 10px;
+		margin-bottom: 10px;
 	}
 	.text .buttons a{
-		width: 6rem;
+		width: 8rem;
 		padding: 3px 5px;
-		font-size: 7px;
-		font-weight: 300;
+		font-size: 9px;
+		font-weight: 400;
 	}
-	.text .buttons .btn-1{
-		margin-right: 8px;
-	}
-	content{
-		margin: 0 6%;
-	}
-	.card{
-		width: 112%;
-		height: 60%;
-		margin-bottom: 5rem
+	.top-btn ion-icon{
+		width: 35px;
+		height: 35px;
+		font-size: 40px;
+		color: black;
+		float: right;
+		padding-right: 3rem;
 	}
 }
-/*///////End of responsive view/////////*/
-/*/////////////////////////////////////*/
+@media(max-width:272px){
+	.header h1{
+		font-size: 20px;
+		letter-spacing: 3px;
+		font-weight: 500;
+		padding-left: 8rem;
+	}
+	.header button{
+		width: 9rem;
+		padding: 4px 6px;
+		margin-top: 1.5rem;
+		margin-left: 7rem;
+	}
+	.header button a{
+		font-size: 10px;
+		font-weight: 400;
+	}
+	main p{
+		font-size: 9px;
+		font-weight: 400;
+		width: 85%;
+		padding-left: 7rem;
+		line-height: 15px;
+		margin-bottom: 1.5rem;
+	}
+	.sidebar{
+		width: 26%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 9px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 10rem;
+		margin-bottom: 3rem;
+	}
+	.card{
+		width: 97%;
+		height: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 3rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 75%;
+		height: 125px;
+	}
+	.text h1{
+		font-size: 16px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 10px;
+	}
+	.text ul li{
+		font-size: 10px;
+		margin-bottom: 10px;
+	}
+	.text .buttons a{
+		width: 8rem;
+		padding: 3px 5px;
+		font-size: 9px;
+		font-weight: 400;
+	}
+	.top-btn ion-icon{
+		width: 35px;
+		height: 35px;
+		font-size: 40px;
+		color: black;
+		float: right;
+		padding-right: 3rem;
+	}
+}
+@media(max-width:250px){
+	.header h1{
+		font-size: 18px;
+		letter-spacing: 2px;
+		font-weight: 500;
+		padding-left: 7rem;
+	}
+	.header button{
+		width: 9rem;
+		padding: 2px 6px;
+		margin-top: 1.2rem;
+		margin-left: 7rem;
+	}
+	.header button a{
+		font-size: 10px;
+		font-weight: 400;
+	}
+	main p{
+		font-size: 8px;
+		font-weight: 400;
+		width: 87%;
+		padding-left: 7rem;
+		line-height: 13px;
+		margin-bottom: 1.5rem;
+	}
+	.sidebar{
+		width: 27%;
+		padding-top: 15rem;	
+	}
+	.sidebar a{
+		font-size: 8px;
+		font-weight: 400;;
+		padding-bottom: 34px;
+	}
+	.rows{
+		display: block;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		grid-gap:3rem ;
+		padding-left: 9rem;
+		margin-bottom: 3rem;
+	}
+	.card{
+		width: 99%;
+		height: 100%;
+		padding-left: 3px;
+		padding-right: 3px;
+		margin-bottom: 3rem;
+	}
+	.card img{
+		padding-top: 15px;
+		margin-bottom: 1rem;
+		width: 70%;
+		height: 118px;
+	}
+	.text h1{
+		font-size: 17px;
+		letter-spacing: none;
+	}
+	.text .size{
+		font-size: 10px;
+	}
+	.text ul li{
+		font-size: 10px;
+		margin-bottom: 10px;
+	}
+	.text .buttons a{
+		width: 8rem;
+		padding: 3px 5px;
+		font-size: 8px;
+		font-weight: 400;
+	}
+	.top-btn ion-icon{
+		width: 35px;
+		height: 35px;
+		font-size: 40px;
+		color: black;
+		float: right;
+		padding-right: 3rem;
+	}
+}
+/*////lowest responsive view at 214px/////*/
+/*///////////////////////////////////////*/
