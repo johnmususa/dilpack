@@ -298,7 +298,7 @@ header .logo{
 .input-box{
 	padding: 100px 0;
 }
-#section-1 h1{
+/*#section-1 h1{
 	font-size: 15rem;
 	letter-spacing: 25px;
 	font-weight: 410;
@@ -314,7 +314,7 @@ h4 strong{
 	letter-spacing: 7px;
 	font-weight: 450;
 	text-align: center;
-}
+}*/
 .banner-button{
 	margin-top: 28rem;
 	margin-bottom: 2rem;
@@ -506,7 +506,6 @@ h4 strong{
 	font-weight: 400;
 	margin-bottom: 5%;
 	letter-spacing: 1px;
-	font-family: 'Poppins', sans-serif;
 }
 .btn-1{
 	width: 10rem;
@@ -613,7 +612,6 @@ h4 strong{
 	line-height: 24px;
 	max-width: 600px;
 	margin-bottom: 3.5%;
-	font-family: 'Poppins', sans-serif;
 }
 .contact-box h3{
 	font-size: 30px;
@@ -630,7 +628,6 @@ h4 strong{
 	letter-spacing: 1px;
 	color: black;
 	font-weight: 400;
-	font-family: 'Poppins', sans-serif;
 }
 .mail{
 	list-style: none;
@@ -674,7 +671,6 @@ h4 strong{
 .order-link a{
 	font-size: 13px;
 	color: white;
-	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	text-decoration: none;
 }
@@ -799,7 +795,6 @@ form .submit:active{
 	margin-bottom: 4.5%;
 	letter-spacing: 1px;
 	text-align: left;
-	font-family: 'Poppins', sans-serif;
 }
 .footer-list li:hover{
 	transform: scale(1.1);
@@ -823,7 +818,6 @@ form .submit:active{
 	margin-bottom: 1.2rem;
 	letter-spacing: 2px;
 	margin-left: 1rem;
-	font-family: 'Poppins', sans-serif;
 }
 .hours .hours-rate{
 	font-size: 18px;
@@ -833,7 +827,6 @@ form .submit:active{
 	padding-top: 10px;
 	font-weight: 400;
 	margin-bottom: 1rem;
-	font-family: 'Poppins', sans-serif;
 }
 .owner{
 	display: flex;
@@ -847,8 +840,7 @@ form .submit:active{
 .owner a{
 	color: orange;
 	font-size: 15px;
-	font-size: 400;
-	font-family: 'Poppins', sans-serif;
+	font-size: 400;f;
 }
 .owner p{
 	font-size: 15px;
@@ -856,14 +848,12 @@ form .submit:active{
 	font-weight: 350;
 	letter-spacing: 1px;
 	text-align: center;
-	font-family: 'Poppins', sans-serif;
 }
 .owner h1 span{
 	color: white;
 	letter-spacing: 1px;
 	font-weight: 350;
 	margin-left: 5px;
-	font-family: 'Poppins', sans-serif;
 	font-size: 15px;
 }
 .owner h1{
@@ -871,7 +861,6 @@ form .submit:active{
 	letter-spacing: 1px;
 	font-size: 15px;
 	font-weight: 350;
-	font-family: 'Poppins', sans-serif;
 }
 /*////////////COMPLETE FULL WEBSITE/////////*/
 /*/////////////////////////////////////////*/
@@ -909,8 +898,21 @@ form .submit:active{
 }
 @media(max-width:1240px){
 	#section-1{
-		height: 85vh;
+		height: 95vh;
 		height:-webkit-fill-avaliabl;
+	}
+	.banner-button{
+		margin-top: 26rem;
+		margin-bottom: 2rem;
+		width: 18rem;
+		padding: 12px 23px;
+		outline: none;
+		border-radius: 10px;
+		border: none;
+		margin-right: 1.5rem;
+		cursor: pointer;
+		box-shadow: 4px 6px 8px 0 rgba(0,0,0,0.4);	
+		background-color:seagreen; 
 	}
 	form textarea{
 		margin:0 auto;
@@ -982,7 +984,7 @@ form .submit:active{
 }
 @media(max-width:1134px){
 	#section-1{
-		height: 85vh;
+		height: 92vh;
 		height:-webkit-fill-avaliabl;
 	}
 	.input-box{
@@ -1007,7 +1009,6 @@ form .submit:active{
 		font-weight: 400;
 		line-height: 28px;
 		margin-bottom: 3rem;
-		font-family: 'Poppins', sans-serif;
 	}
 	.about-image img{
 		max-width: 350px;
@@ -1039,20 +1040,20 @@ form .submit:active{
 	header{
 		width: 100%;
 		top: 0;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 5px;
+		padding-right: 5px;
 		z-index:1000;
 	}
 	.menu-bar ul li a{
-		padding: 5px 14px;
-		font-size: 1.9rem;
+		padding: 7px 10px;
+		font-size: 1.5rem;
 		letter-spacing:0px;
 	}
 	.solid-1,.solid-10,.solid-11{
 		display: none;
 	}
 	#section-1{
-		height: 85vh;
+		height: 92vh;
 		height:-webkit-fill-avaliabl;
 	}
 	#contact-us{
@@ -1142,12 +1143,12 @@ form .submit:active{
 	header{
 		width: 100%;
 		top: 0;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 5px;
+		padding-right: 5px;
 		z-index:1000;
 	}
 	#section-1{
-		height: 85vh;
+		height: 92vh;
 		height:-webkit-fill-avaliabl;
 	}
 	.row-col{
@@ -1155,10 +1156,13 @@ form .submit:active{
 		height: 80%;
 		padding: 12px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgb(0, 68, 0);
+		background-color:#69b280;
 		text-align: center;
 		margin-bottom: 3%;
 		border-radius: 10px;
+	}
+	.about-button{
+		background-color: rgb(57 119 57);;
 	}
 	.btn-1,.btn-2{
 		margin-bottom: 3.2rem;
@@ -1217,20 +1221,38 @@ form .submit:active{
 	header{
 		width: 100%;
 		top: 0;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 8px;
+		padding-right: 8px;
 		z-index:1000;
 	}
+	header .logo{
+		max-width: 118px;
+		margin-right: 5px;
+	}
 	.menu-bar ul li a{
-		padding: 5px 14px;
-		font-size: 1.9rem;
+		padding: 5px 8px;
+		font-size: 1.5rem;
 		letter-spacing:0px;
 	}
 	.solid-1,.solid-10,.solid-11{
 		display: none;
 	}
+	.search-bar{
+		position: relative;
+		max-width: 135px;
+	}
+	.icons ion-icon{
+		font-size: 28px;
+		width: 23px;
+		height: 23px;
+		color:black;
+		border-radius: .5rem;
+		padding: .2rem 1.2rem;
+		cursor: pointer;
+		border: .1px solid black;
+	}
 	#section-1{
-		height: 85vh;
+		height: 92vh;
 		height:-webkit-fill-avaliabl;
 	}
 	.input-box{
@@ -1253,9 +1275,8 @@ form .submit:active{
 		color: black;
 		letter-spacing: 1px;
 		font-weight: 400;
-		line-height: 28px;
+		line-height: 26px;
 		margin-bottom: 3rem;
-		font-family: 'Poppins', sans-serif;
 	}
 	.about-image img{
 		max-width: 350px;
@@ -1266,7 +1287,7 @@ form .submit:active{
 		height: 85%;
 		padding: 10px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgb(0, 68, 0);
+		background-color:#69b280;
 		text-align: center;
 		margin-bottom: 3%;
 		border-radius: 10px;
@@ -1274,11 +1295,60 @@ form .submit:active{
 	.btn-1,.btn-2{
 		margin-bottom: 2rem;
 		width: 9rem;
-		padding: 5px 15px;
+		padding: 5px 13px;
 	}
 	#contact-us{
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	.contact-box h2{
+		font-size: 38px;
+		font-weight: 500;
+		text-align: center;
+		color: #000;
+		margin-bottom: 3.5rem;
+	}
+	.contact-box p{
+		font-size: 16px;
+		color: #000;
+		padding-left: 5rem;
+		text-align: left;
+		font-weight: 400;
+		line-height: 23px;
+		max-width: 500px;
+		margin-bottom: 3.5%;
+	}
+	.contact-box h3{
+		font-size: 25px;
+		color: black;
+		font-weight: 450;
+		padding-top: 10px;
+		padding-bottom: 1.5rem;
+	}
+	.contact-info{
+		text-align: center;
+		list-style: none;
+		font-size: 13px;
+		color: black;
+		font-weight: 500;
+	}
+	.order-link{
+		width: 15rem;
+		padding: 8px 25px;
+		justify-content: center;
+		margin: 0 auto;
+		border: .1px solid grey;
+		cursor: pointer;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		background-color: #69b280;
+	}
+	.order-link a{
+		font-size: 14px;
+		color: white;
+		font-weight: 400;
+		text-decoration: none;
 	}
 	form .form-message{
 		width: 25rem;
@@ -1289,13 +1359,80 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 	#footer h2{
-		font-size: 43px;
+		font-size: 41px;
 		font-weight: 500;
-		letter-spacing: 3px;
-		margin-bottom:1.5rem;
+		letter-spacing: 1px;
+		margin-bottom:2.5rem;
+	}
+	.footer-heading{
+		color: white;
+		font-size: 25px;
+		letter-spacing: 2px;
+		font-weight: 400;
+		margin-bottom: 3.2rem;
+		z-index: 5;
+	}
+	.footer-list{
+		margin-left: 1.3rem;
+	}
+	.footer-list ion-icon{
+		width: 16px;
+		height: 16px;
+		font-size: 23px;
+		color: white;
+		margin-right: 1rem;
+	}
+	.footer-list li{
+		display: block;
+		list-style: none;
+		font-size: 13px;
+		z-index: 50;
+		color: #fff;
+		font-weight: 300;
+		margin-bottom: 4.5%;
+		letter-spacing: 1px;
+		text-align: left;
+	}
+	.footer-list li a{
+		display: block;
+		list-style: none;
+		font-size: 12px;
+		z-index: 50;
+		color: #fff;
+		text-align: left;
+		font-weight: 300;
+		text-decoration: none;
+		margin-bottom: 1rem;
+		letter-spacing: 2px;
+		margin-left: 1rem;
+	}
+	.hours .hours-rate{
+		font-size: 18px;
+		color: white;
+		z-index: 50;
+		letter-spacing: 1px;
+		padding-top: 10px;
+		font-weight: 400;
+		margin-bottom: 1rem;
 	}	
 }
 @media(max-width:1020px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 118px;
+		margin-right: 5px;
+	}
+	.menu-bar ul li a{
+		padding: 5px 8px;
+		font-size: 1.4rem;
+		letter-spacing:0px;
+	}
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1306,6 +1443,22 @@ form .submit:active{
 	}
 }
 @media(max-width:1014px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 118px;
+		margin-right: 5px;
+	}
+	.menu-bar ul li a{
+		padding: 5px 8px;
+		font-size: 1.4rem;
+		letter-spacing:0px;
+	}
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1316,6 +1469,23 @@ form .submit:active{
 	}
 }
 @media(max-width:1000px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 118px;
+		margin-right: 5px;
+	}
+	.menu-bar ul li a{
+		padding: 5px 8px;
+		font-size: 1.4rem;
+		letter-spacing:0px;
+	}
+	
 	#contact-us{
 		padding: 20px 0;
 	}
@@ -1329,6 +1499,36 @@ form .submit:active{
 	}
 }
 @media(max-width:956px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 117px;
+		margin-right: 5px;
+	}
+	.menu-bar ul li a{
+		padding: 5px 7px;
+		font-size: 1.4rem;
+		letter-spacing:0px;
+	}
+	.search-bar{
+		position: relative;
+		max-width: 133px;
+	}
+	.icons ion-icon{
+		font-size: 27px;
+		width: 22px;
+		height: 22px;
+		color:black;
+		border-radius: .5rem;
+		padding: .2rem 1.2rem;
+		cursor: pointer;
+		border: .1px solid black;
+	}
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1338,13 +1538,192 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
+@media(max-width:930px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 4px;
+		padding-right: 4px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 115px;
+		margin-right: 3px;
+	}
+	.menu-bar ul li a{
+		padding: 7px 6px;
+		font-size: 1.4rem;
+		letter-spacing:0px;
+	}
+	.search-bar{
+		position: relative;
+		max-width: 130px;
+	}
+	.icons ion-icon{
+		font-size: 27px;
+		width: 20px;
+		height: 20px;
+		color:black;
+		border-radius: .3rem;
+		padding: .1rem 1.1rem;
+		cursor: pointer;
+		border: .1px solid black;
+	}
+	.about-content p{
+		max-width:500;
+		width: 85%;
+		font-size: 14px;
+		color: black;
+		padding-left: 1rem;
+		font-weight: 300;
+		letter-spacing: 1px;
+		line-height: 25px;
+		margin-bottom: 3rem;
+	}
+	.about-button{
+		margin-left: 1.2rem;
+		width: 13rem;
+	}
+	.about-image img{
+		max-width: 300px;
+		max-height: 350px;
+	}
+	#products h2{
+		text-align: center;
+		font-size: 35px;
+		color: black;
+		padding-top: 10px;
+		letter-spacing: 2px;
+		margin-bottom: 30px;
+		font-weight: 450;
+	}
+	.product-text p{
+		font-size: 15px;
+		color: black;
+		letter-spacing: 1px;
+		font-weight: 300;
+		width: 75%;
+		max-width: 500;
+		padding-left: 3rem;
+		margin: 0 auto;
+		text-align: center;
+		line-height: 22px;
+		margin-bottom: 2.5rem;
+	}
+	.row{
+		display: grid;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		margin-left: 8rem;
+		padding-top: 4.5%;
+		grid-gap:3rem ;
+	}
+	.row-col{
+		width: 95%;
+		height: 80%;
+		padding: 12px 0;
+		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+		background-color:#69b280;
+		text-align: center;
+		margin-bottom: 3%;
+		border-radius: 10px;
+	}
+	.row-col strong{
+		color: white;
+		font-size: 20px;
+		font-weight: 250;
+		margin-bottom: 1rem;
+		padding-top: 10px;
+		border-bottom: 1px solid white;
+	}
+	.row-col a{
+		color: gold;
+		font-weight: 300;
+	}
+	.row-col p{
+		font-size: 14px;
+		color:white;
+		font-weight: 400;
+		letter-spacing: 1px;
+		margin-top: 10px;
+		margin-bottom: 1rem;
+	}
+	.row-p-2{
+		font-size: 14px;
+		color:white;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+	.btn-1,.btn-2{
+		margin-bottom: 3.5rem;
+		width: 8rem;
+		padding: 5px 15px;
+	}
+	.btn-1 a,.btn-2 a{
+		color: #000;
+		font-weight: 450;
+		font-size: 15px;
+		border-radius: 5px;
+		text-decoration: none;
+	}
+	.products-link{
+		background-color:#69b280;
+		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+		color: white;
+		font-size: 15px;
+		width: 23rem;
+		font-weight: 400;
+		cursor: pointer;
+		outline: none;
+		border: .1px solid grey;
+		border-radius: 5px;
+		padding: 10px 23px;
+		text-decoration: none;
+		transition: .3s;
+	}
+	#contact-us{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.contact-box h2{
+		font-size: 38px;
+		font-weight: 500;
+		text-align: center;
+		color: #000;
+		margin-bottom: 3.5rem;
+	}
+	.contact-box p{
+		font-size: 16px;
+		color: #000;
+		padding-left: 5rem;
+		text-align: left;
+		font-weight: 400;
+		line-height: 23px;
+		max-width: 500px;
+		margin-bottom: 3.5%;
+	}
+	.contact-box h3{
+		font-size: 25px;
+		color: black;
+		font-weight: 450;
+		padding-top: 10px;
+		padding-bottom: 1.5rem;
+	}
+	.contact-info{
+		text-align: center;
+		list-style: none;
+		font-size: 13px;
+		color: black;
+		font-weight: 500;
+	}
+}
+
 @media(max-width:926px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
 		font-size: 14px;
 		font-weight: 500;
-		margin:0 1.5rem;
+		margin:0 1rem;
 		margin-bottom: 2.5rem;
 	}
 }
@@ -1352,25 +1731,54 @@ form .submit:active{
 	header{
 		width: 100%;
 		top: 0;
-		padding-left: 18px;
-		padding-right: 18px;
+		padding-left: 4px;
+		padding-right: 4px;
 		z-index:1000;
 	}
+	header .logo{
+		max-width: 115px;
+		margin-right: 3px;
+	}
+	.search-bar{
+		position: relative;
+		max-width: 130px;
+	}
+	.icons ion-icon{
+		font-size: 27px;
+		width: 20px;
+		height: 20px;
+		color:black;
+		border-radius: .3rem;
+		padding: .1rem 1.1rem;
+		cursor: pointer;
+		border: .1px solid black;
+	}
 	.menu-bar ul li a{
-		padding: 5px 12px;
-		font-size: 1.9rem;
+		padding: 7px 6px;
+		font-size: 1.3rem;
 		letter-spacing:0px;
 	}
+	.sub-menu-1 ul li a{
+		font-size: 12px;
+		font-weight: 400;
+		color: white;
+		text-align: left;
+	}
 	.menu-bar ul li:hover .sub-menu-1 ul li{
-		width: 105px;
+		width: 118px;
 		padding-bottom: 9px;
 		border-bottom: 1px solid #fff;
 		border-radius: 0;
 		text-align: left;
 	}
+	.sub-menu-2 ul li a{
+		font-size: 12px;
+		font-weight: 400;
+		color: white;
+	}
 	.menu-bar ul li:hover .sub-menu-2 ul li{
-		width: 110px;
-		padding-bottom: 15px;
+		width: 118px;
+		padding-bottom: 14px;
 		border-bottom: 1px solid #fff;
 		border-radius: 0;
 		text-align: left;
@@ -1379,7 +1787,7 @@ form .submit:active{
 		display: none;
 	}
 	#section-1{
-		height: 85vh;
+		height: 92vh;
 		height: -webkit-fill-avaliable;
 	}
 	.input-box{
@@ -1398,7 +1806,7 @@ form .submit:active{
 	}
 	#about-us h1{
 		text-align: center;
-		font-size: 50px;
+		font-size: 40px;
 		color: black;
 		letter-spacing: 2px;
 		margin-bottom: 2px;
@@ -1408,23 +1816,35 @@ form .submit:active{
 	.about-content p{
 		max-width:600;
 		width: 85%;
-		font-size: 14px;
+		font-size: 12px;
 		color: black;
-		font-weight: 400;
-		line-height: 26px;
+		font-weight: 300;
+		line-height: 25px;
 		margin-bottom: 3rem;
-		font-family: 'Poppins', sans-serif;
 	}
 	.about-image img{
 		max-width: 300px;
-		max-height: 300px;
+		max-height: 320px;
+	}
+	.product-text p{
+		font-size: 14px;
+		color: black;
+		letter-spacing: 1px;
+		font-weight: 300;
+		width: 75%;
+		max-width: 500;
+		padding-left: 3rem;
+		margin: 0 auto;
+		text-align: center;
+		line-height: 22px;
+		margin-bottom: 2.5rem;
 	}
 	.row-col{
-		width: 93%;
-		height: 80%;
+		width: 95%;
+		height: 85%;
 		padding: 12px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgb(0, 68, 0);
+		background-color:#69b280;
 		text-align: center;
 		margin-bottom: 3%;
 		border-radius: 10px;
@@ -1439,9 +1859,43 @@ form .submit:active{
 	}
 	.contact-form{
 		display: block;
-		background-color:#000;
+		background-color:#69b280;
 		padding: 20px 0;
 		width: 33%;
+	}
+	.contact-box h2{
+		font-size: 38px;
+		font-weight: 500;
+		text-align: center;
+		color: #000;
+		margin-bottom: 3.5rem;
+	}
+	.contact-box p{
+		font-size: 15px;
+		color: #000;
+		padding-left: 8rem;
+		text-align: left;
+		font-weight: 300;
+		line-height: 21px;
+		max-width: 500px;
+		margin-bottom: 3.5%;
+	}
+	.contact-box h3{
+		font-size: 25px;
+		color: black;
+		font-weight: 450;
+		padding-top: 10px;
+		padding-bottom: 1.5rem;
+	}
+	.contact-info{
+		text-align: center;
+		list-style: none;
+		font-size: 13px;
+		color: black;
+		font-weight: 300;
+	}
+	.contact-info ul li{
+		font-weight: 300;
 	}
 	form textarea{
 		margin:0 auto;
@@ -1450,7 +1904,35 @@ form .submit:active{
 		width: 25rem;
 		padding: 8px 25px;
 		font-size: 14px;
-		margin: 0 2.7rem;
+		margin: 0 2.4rem;
+		font-weight: 500;
+		margin-bottom: 2.5rem;
+	}
+}
+@media(max-width:880PX){
+	.row-col{
+		width: 97%;
+		height: 85%;
+		padding: 12px 0;
+		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+		background-color:#69b280;
+		text-align: center;
+		margin-bottom: 3%;
+		border-radius: 10px;
+	}
+	.btn-1,.btn-2{
+		margin-bottom: 3.5rem;
+		width: 8rem;
+		padding: 5px 17px;
+	}
+	form textarea{
+		margin:0 auto;
+	}
+	form .form-message{
+		width: 25rem;
+		padding: 8px 25px;
+		font-size: 14px;
+		margin: 0 1.5rem;
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
@@ -1465,24 +1947,24 @@ form .submit:active{
 	}
 	.row-col{
 		width: 95%;
-		height: 80%;
+		height: 85%;
 		padding: 14px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgb(0, 68, 0);
+		background-color:#69b280;
 		text-align: center;
 		margin-bottom: 3%;
 		border-radius: 10px;
 	}
 	.btn-1,.btn-2{
 		margin-bottom: 3.5rem;
-		width: 9rem;
-		padding: 5px 18px;
+		width: 8rem;
+		padding: 5px 17px;
 	}
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
 		font-size: 14px;
-		margin: 0 1.9rem;
+		margin: 0 1.5rem;
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
@@ -1491,8 +1973,8 @@ form .submit:active{
 	header{
 		width: 100%;
 		top: 0;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 4px;
+		padding-right: 4px;
 		z-index:1000;
 	}
 	.about-content p{
@@ -1503,41 +1985,113 @@ form .submit:active{
 		font-weight: 400;
 		line-height: 26px;
 		margin-bottom: 3rem;
-		font-family: 'Poppins', sans-serif;
 	}
 	.about-image img{
 		max-width: 250px;
 		max-height: 350px;
 	}
+	.row{
+		display: grid;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		margin-left: 4.5rem;
+		padding-top: 4.5%;
+		grid-gap:3rem ;
+	}
 	.row-col{
 		width: 95%;
-		height: 80%;
-		padding: 12px 0;
+		height: 85%;
+		padding: 14px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgb(0, 68, 0);
+		background-color:#69b280;
 		text-align: center;
 		margin-bottom: 3%;
 		border-radius: 10px;
 	}
 	.btn-1,.btn-2{
-		margin-bottom: 4rem;
+		margin-bottom: 3.5rem;
 		width: 8rem;
-		padding: 5px 15px;
-	}
-	.contact-form{
-		display: block;
-		background-color:#000;
-		padding: 20px 0;
-		width: 34%;
-	}
-	form textarea{
-		margin:0 auto;
+		padding: 5px 17px;
 	}
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
 		font-size: 14px;
-		margin: 0 2rem;
+		margin: 0 1.3rem;
+		font-weight: 500;
+		margin-bottom: 2.5rem;
+	}
+}
+@media(max-width:834px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 4px;
+		padding-right: 4px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 112px;
+		margin-right: 3px;
+	}
+	.search-bar{
+		position: relative;
+		max-width: 125px;
+	}
+	.icons ion-icon{
+		font-size: 25px;
+		width: 20px;
+		height: 20px;
+		color:black;
+		border-radius: .3rem;
+		padding: .1rem 1rem;
+		cursor: pointer;
+		border: .1px solid black;
+	}
+	.menu-bar ul li a{
+		padding: 5px 4px;
+		font-size: 1.2rem;
+		letter-spacing:0px;
+	}
+	.about-content p{
+		width: 90%;
+		font-size: 12px;
+		color: black;
+		padding-left: 10px;
+		font-weight: 400;
+		line-height: 26px;
+		margin-bottom: 3rem;
+	}
+	.about-image img{
+		max-width: 250px;
+		max-height: 350px;
+	}
+	.row{
+		display: grid;
+		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
+		margin-left: 4.5rem;
+		padding-top: 4.5%;
+		grid-gap:3rem ;
+	}
+	.row-col{
+		width: 95%;
+		height: 85%;
+		padding: 14px 0;
+		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+		background-color:#69b280;
+		text-align: center;
+		margin-bottom: 3%;
+		border-radius: 10px;
+	}
+	.btn-1,.btn-2{
+		margin-bottom: 3.5rem;
+		width: 8rem;
+		padding: 5px 17px;
+	}
+	form .form-message{
+		width: 25rem;
+		padding: 8px 25px;
+		font-size: 14px;
+		margin: 0 1rem;
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
@@ -1550,12 +2104,12 @@ form .submit:active{
 		margin-bottom: 3rem;
 	}
 	.row-col strong{
-		font-size: 26px;
+		font-size: 23px;
 		font-weight: 300;
 		letter-spacing: 1px;
 	}
 	.row-col p,.row-p-2{
-		font-size: 12px;
+		font-size: 14px;
 		font-weight: 400;
 	}
 	.btn-1,.btn-2{
@@ -1565,13 +2119,19 @@ form .submit:active{
 	}
 	.btn-1 a,.btn-2 a{
 		font-size: 13px;
-		font-weight: 550;
+		font-weight: 400;
+	}
+	.contact-form{
+		display: block;
+		background-color:#69b280;
+		padding: 20px 0;
+		width: 36%;
 	}
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
 		font-size: 14px;
-		margin: 0 1.4rem;
+		margin: 0 1.7rem;
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
@@ -1580,28 +2140,21 @@ form .submit:active{
 	header{
 		width: 100%;
 		top: 0;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 4px;
+		padding-right: 4px;
 		z-index:1000;
 	}
 	.menu-bar ul li a{
-		padding: 5px 10px;
-		font-size: 1.8rem;
+		padding: 7px 6px;
+		font-size: 1.2rem;
 		letter-spacing:0px;
 	}
 	#section-1{
-		height: 85vh;
+		height: 92vh;
 		height: -webkit-fill-avaliable;
 	}
-	#section-1 h1{
-		font-size: 14rem;
-		letter-spacing: 23px;
-		font-weight: 410;
-		color: white;
-		text-shadow: 0px 0.5px 7px rgb(1, 66, 1);
-	}
+	
 	.banner-button{
-		margin-top: 1.5rem;
 		margin-bottom: 2rem;
 		width: 16rem;
 		padding: 12px 23px;
@@ -1610,7 +2163,6 @@ form .submit:active{
 		border: none;
 		cursor: pointer;
 		box-shadow: 4px 6px 8px 0 rgba(0,0,0,0.4);	
-		background-color: rgb(1, 66, 1);
 	}
 	.about-button{
 		margin-left: 2rem;
@@ -1622,16 +2174,16 @@ form .submit:active{
 	}
 	.row-col{
 		width: 97%;
-		height: 80%;
+		height: 83%;
 		padding: 12px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgb(0, 68, 0);
+		background-color:#69b280;
 		text-align: center;
 		margin-bottom: 3%;
 		border-radius: 10px;
 	}
 	.row-col strong{
-		font-size: 26px;
+		font-size: 20px;
 		font-weight: 300;
 		letter-spacing: 1px;
 	}
@@ -1655,7 +2207,7 @@ form .submit:active{
 		width: 25rem;
 		padding: 8px 25px;
 		font-size: 14px;
-		margin: 0 1.2rem;
+		margin: 0 1.5rem;
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
@@ -1665,6 +2217,16 @@ form .submit:active{
 	}
 }
 @media(max-width:780px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		z-index:1000;
+	}
+	.icons ion-icon{
+		display: none;
+	}
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1677,9 +2239,12 @@ form .submit:active{
 @media(max-width:778px){
 	.contact-form{
 		display: block;
-		background-color:#000;
+		background-color:#69b280;
 		padding: 20px 0;
 		width: 36%;
+	}
+	.contact-box p{
+		padding-left: 2rem;
 	}
 	form textarea{
 		margin:0 auto;
@@ -1688,9 +2253,12 @@ form .submit:active{
 		width: 25rem;
 		padding: 8px 25px;
 		font-size: 14px;
-		margin: 0 1.5rem;
+		margin: 0 1rem;
 		font-weight: 500;
 		margin-bottom: 2.5rem;
+	}
+	#footer h2{
+		font-size: 30px;
 	}
 }
 @media(max-width:768px){
@@ -1796,7 +2364,7 @@ form .submit:active{
 	/*///start of banner side////*/
 	/*//////////////////////////*/
 	#section-1{
-		height: 85vh;
+		height: 92vh;
 		width: 100%;
 		height: -webkit-fill-avaliable;
 	}
@@ -1804,15 +2372,9 @@ form .submit:active{
 		padding-top: 3rem;
 		padding-left: 2rem;
 	}
-	h1 .input{
-		font-size: 14rem;
-		letter-spacing: 23px;
-		font-weight: 400;
-		padding-top: 1.2rem;
-		margin-bottom:5px;
-	}
 	.banner-button{
 		margin-bottom: 3rem;
+		margin-top: 28rem;
 	}
 	/*///about us side view////*/
 	/*////////////////////////*/
@@ -1835,14 +2397,12 @@ form .submit:active{
 		margin: 0 auto;
 		text-align: left;
 		margin-bottom: 3.5rem;
-		font-family: 'Poppins', sans-serif;
 	}
 	.about-button{
 		margin-bottom: 7rem;
 		width: 15rem;
 		padding: 12px 24px;
 		border-radius: 10px;
-		background-color: rgb(1, 66, 1);
 		box-shadow: 2px 4px 3px 0 rgba(0,0,0,0.8);
 	}
 	.about-image{
@@ -1873,10 +2433,10 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 	}
 	.row-col{
-		width: 37%;
+		width: 38%;
 		padding: 10px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
+		background-color:#69b280;
 		margin:0 auto;
 		margin-bottom: 5.5rem;
 	}
@@ -1898,13 +2458,11 @@ form .submit:active{
 		font-size: 15px;
 		font-weight: 400;
 	}
-	.btn-2{
-		margin-left: 2rem;
-	}
+
 	.products-link{
-		font-size: 18px;
+		font-size: 16px;
 		width: 30rem;
-		font-weight: 410;
+		font-weight: 400;
 		letter-spacing: 2px;
 		padding: 10px 25px;
 		transition: .3s;
@@ -1927,19 +2485,19 @@ form .submit:active{
 		justify-content: center;
 	}
 	.contact-box h2{
-		font-size: 50px;
+		font-size: 40px;
 		font-weight: 500;
 		letter-spacing: 1px;
 		text-align: center;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2.5rem;
 	}
 	.contact-box p{
 		font-size: 14px;
 		text-align: center;
 		font-weight: 400;
-		line-height: 23px;
+		line-height: 20px;
 		width: 75%;
-		margin-bottom: 3.5%;
+		margin-bottom: 4.5rem;
 		margin: 0 auto;
 	}
 	.solid-2{
@@ -1948,11 +2506,11 @@ form .submit:active{
 		margin-bottom: 3rem;
 	}
 	.contact-box h3{
-		font-size: 30px;
+		font-size: 26px;
 		color: black;
-		font-weight: 420;
-		padding-top: 10px;
-		padding-bottom: 1rem;
+		font-weight: 500;
+		padding-top: 25px;
+		padding-bottom: 1.5rem;
 	}
 	.contact-info{
 		text-align: center;
@@ -1961,7 +2519,6 @@ form .submit:active{
 		letter-spacing: 1px;
 		color: black;
 		font-weight: 400;
-		font-family: 'Poppins', sans-serif;
 	}
 	.mail{
 		list-style: none;
@@ -1970,39 +2527,37 @@ form .submit:active{
 	}
 	.mail h1{
 		text-align: center;
-		font-size: 18px;
+		font-size: 20px;
 		color: black;
 		padding-top: 10px;
-		padding-bottom: 3px;
+		padding-bottom: 1.5rem;
 		letter-spacing: 1px;
 		font-weight: 500;
-		font-family: 'Poppins', sans-serif;
 	}
 	.mail ul li{
-		display: inline-block;
+		display: block;
 		text-align: center;
-		font-size: 16px;
+		font-size: 14px;
 		letter-spacing: 1px;
 		color: black;
 		padding: 5px 10px;
-		font-weight: 500;
-		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
 	}
 	.order-link{
 		margin-bottom: 2.5rem;
 	}
 	.contact-form{
 		display: block;
-		background-color:#000;
+		background-color:#69b280;
 		padding: 20px 0;
-		width: 40%;
+		width: 45%;
 		margin: 0 auto;
 	}
 	.contact-form h1{
 		color: #fff;
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 350;
-		letter-spacing: 2px;
+		letter-spacing:1px;
 		margin-bottom: 2.5rem;
 	}
 	form .form-message{
@@ -2032,44 +2587,55 @@ form .submit:active{
 	}
 	#footer h2{
 		text-align: center;
-		font-size: 40px;
+		font-size: 35px;
 		color: #fff;
 		font-weight: 400;
-		letter-spacing: 2px;
-		margin-bottom:1.5rem;
+		letter-spacing: 3px;
+		margin-bottom:2rem;
 	}
 	.footer-heading{
-		font-size: 35px;
-		letter-spacing: 3px;
+		font-size: 25px;
+		letter-spacing: 2px;
 		font-weight: 400;
-		margin-bottom: 2.5rem;
+		padding-top: 20px;
+		margin-bottom: 3rem;
 	}
 	.footer-list ion-icon{
 		width: 15px;
 		height: 15px;
-		font-size: 23px;
-		margin-right: 1rem;
+		font-size: 20px;
+		margin-top: 10px;
+		margin-right: 1.2rem;
 	}
 	.footer-list li{
 		display: block;
 		list-style: none;
-		font-size: 12px;
+		font-size: 13px;
 		color: #fff;
-		font-weight: 300;
-		margin-bottom: 10px;
+		letter-spacing: 1px;
+		font-weight: 250;
+		margin-bottom: 15px;
+	}
+	.footer-list  #list-2 li a{
+		display: block;
+		list-style: none;
+		font-size: 14px;
+		color: #fff;
+		letter-spacing: 1px;
+		font-weight: 250;
+		margin-bottom: 20px;
 	}
 	.hours{
 		padding-top: 15px;
 		margin-bottom: 25px;
 	}
 	.hours .hours-rate{
-		font-size: 16px;
+		font-size: 15px;
 		color: white;
 		letter-spacing: 1px;
 		padding-top: 10px;
 		font-weight: 400;
 		margin-bottom: 10px;
-		font-family: 'Poppins', sans-serif;
 	}
 	#gallery-head{
 		padding-top: 15px;
