@@ -57,7 +57,6 @@
 							</li>
 							<li><a href="products/accessories.html">Accessories</a>
 							</li>
-							
 						</ul>
 					</div>
 				</li>
@@ -98,11 +97,28 @@
 		<div id="searchItems"class="search-bar search-loading">
 
 			<div class="search-box">
-				<input type="text"class="search-btn" spellcheck="false" placeholder="Search...">
-				<!--<ion-icon name="search-outline" class="searcher"></ion-icon>-->
+			<!--<form>-->
+				<input list="product-list" type="text" name="q" class="search-btn" id="searchbar" placeholder="Search...">
+
+				<!--<datalist id="product-list">
+					<a href=""></a>
+					<option value="Kraft paper"></option>
+					<option value="Pot covers"></option>
+					<option value="Pot covers"></option>
+					<option value="Pot covers"></option>
+				</datalist>
+			</form>-->
+				
 			</div>
 
-			<!--<div class="results">
+		<div class="icons">
+			<a href="order/orderpage.html">
+				<ion-icon name="cart-outline"></ion-icon>
+			</a>
+		</div>
+	</header>
+	<!-----------section 1 start off-------------->
+	<!--<div class="results">
 				<a href="#" class="search-results">
 					<div class="search-title">Item Name</div>
 					<p class="search-paragraph">
@@ -117,15 +133,34 @@
 						the item name discription size
 					</p>
 				</a>
-			</div>-->
-		</div>
-		<div class="icons">
-			<a href="order/order.html">
-				<ion-icon name="cart-outline"></ion-icon>
-			</a>
-		</div>
-	</header>
-	<!-----------section 1 start off-------------->
+			</div>
+		</div>-->
+		<!--<form>
+			<input id="searchbar" onkeyup="search_animal()" type="search"
+				name="search" name="q" placeholder="Search animals..">
+	
+			<- ordered list --
+			<ol id='list'>
+				<li class="animals">
+					<a href="products/sleeves.html">Sleeves</a>
+				</li>
+				<li class="animals">
+					<a href="products/potcovers.html">Pot Covers</a>
+				</li>
+				<li class="animals">
+					<a href="products/kraft.html">Kraft Paper</a>
+				</li>
+				<li class="animals">
+					<a href="products/sheets.html">Sheets</a>
+				</li>
+				<li class="animals">
+					<a href="products/tissue.html">Tissue</a>
+				</li>
+				<li class="animals">
+					<a href="products/accessories.html">Accessories</a>
+				</li>
+			</ol>
+		</form>-->
 	<!-----//////////////////////////////////----->
 	<section id="section-1">
 		<div class="input-box">
@@ -133,7 +168,7 @@
 			<h4><strong>Packaging is Our Passion</strong></h4>-->
 
 			<button class="banner-button">
-				<a href="order/order.html">Enquire</a>
+				<a href="order/orderpage.html">Enquire</a>
 			</button>	
 		</div>
 	</section>
@@ -168,7 +203,7 @@
 		<div class="products-content">
 			<div class="row">
 				<div class="row-col"> 
-					<img src="images/sleeve-12.jpg" class="row-image">
+					<img src="images/img-4.png" class="row-image">
 					<p class="row-p"><strong>Natural Sleeve</strong></p>
 					<br>	
 					<p class="row-p-2">Item Code: <a href="#"><b>F120001200</b><br></a> <br> 50 x 40 x 17cm
@@ -182,10 +217,12 @@
 						</button>
 				</div>
 				<div class="row-col"> 
-					<img src="images/gallery-images/kraft-2.jpg" class="row-image">
-					<p class="row-p"><strong>Blue Kraft Paper</strong></p>
+					<img src="images/img-3.png" class="row-image">
+
+					<p class="row-p"><strong>Red Val Kraft</strong></p>
+
 					<br>
-					<p class="row-p-2">Item Code: <a href="#"><b>5028745</b> <br></a> <br> 50 x 61cm 50gsm.
+					<p class="row-p-2">Item Code: <a href="#"><b>502852</b> <br></a> <br> 50 x 61cm 50gsm.
 					</p>
 
 						<button class="btn-1">
@@ -196,7 +233,8 @@
 						</button>
 					</div>
 				<div class="row-col"> 
-					<img src="images/gallery-images/pots-2.jpg" class="row-image">
+					<img src="images/img-1.png" class="row-image">
+
 					<p class="row-p"><strong>Pot Cover Lime</strong></p>
 					<br>	
 					<p class="row-p-2">Item Code: <a href="#"><b>520064</b> <br></a> <br> 16.5cm 80gsm
@@ -212,7 +250,7 @@
 			</div>
 
 			<div class="rows-btn">
-				<a class="products-link" href="order/order.html"> Click to View Products <ion-icon name="arrow-forward-outline" class="right-arrow"></ion-icon>
+				<a class="products-link" href="order/orderpage.html"> Click to View Products <ion-icon name="arrow-forward-outline" class="right-arrow"></ion-icon>
 				</a>
 			</div>
 		</div>
@@ -252,7 +290,7 @@
 
 			<hr class="solid-2" color="grey">
 			<div class="order-link">
-				<a href="order/order.html">Click to Order</a>
+				<a href="order/orderpage.html">Click to Order</a>
 			</div>	
 		</div>
 		<div class="contact-form">
@@ -343,6 +381,7 @@
 		</div>
 
 		<br>
+</div>
 	<script>
 		window.onbeforeunload = () => {
   		for(const form of document.getElementsByTagName('form')) {
@@ -350,11 +389,45 @@
   		}
 	}
 	</script>
-	<script src="./instant-search.js/search.js" type="module">
-		
+	
+	<!---javascript for searchbar------>
+	<!-- linking javascript -->
+	<script src="./animals.js"></script>
+
+	<script>
+		// JavaScript code
+		function search_animal() {
+			let input = document.getElementById('searchbar').value
+			input=input.toLowerCase();
+			let x = document.getElementsByClassName('animals');
+			
+			for (i = 0; i < x.length; i++) {
+				if (!x[i].innerHTML.toLowerCase().includes(input)) {
+					x[i].style.display="none";
+				}
+				else {
+					x[i].style.display="list-item";				
+				}
+			}
+		}
+		// JavaScript code
+		function search_animal() {
+			let input = document.getElementById('searchbar').value
+			input=input.toLowerCase();
+			let x = document.getElementsByClassName('animals');
+			
+			for (i = 0; i < x.length; i++) {
+				if (!x[i].innerHTML.toLowerCase().includes(input)) {
+					x[i].style.display="none";
+				}
+				else {
+					x[i].style.display="list-item";				
+				}
+			}
+		}
 	</script>
 </body>
 </html>
-	<!--------------Complete off Full Website--------------->
-	<!-----///////////////////////////////////////////------>
-	<!------------------------------------------------------>
+	<!-----------Complete off Full Website--------------->
+	<!-----////////////////////////////////////////------>
+	<!--------------------------------------------------->
