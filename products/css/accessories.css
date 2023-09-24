@@ -183,7 +183,7 @@ main p{
 	margin-right: 1.5rem;
 }
 .buttons a:hover{
-	background-color:rgb(57 119 57);
+	background-color:#69b280;
 	cursor: pointer;
 	color: white;
 	transition: .3s ease-in-out;
