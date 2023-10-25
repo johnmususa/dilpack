@@ -8,8 +8,8 @@
 	<!-----////////////////////////////------>
 	<!--This the logo link below wanted for the words-->
 	<link href="https://www.dafontfree.net/embed/ZXVyb3N0aWxlZXh0ZW5kZWQtcm9tYW4tZHRjLXJlZ3VsYXImZGF0YS8yNC9lLzEyMzg2MS9FVVJPU1RJMy50dGY" rel="stylesheet" type="text/css"/>
-	<!----////////////////////////////////--->
 	<!------google link for icons------------>
+	<!----////////////////////////////////--->
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -20,21 +20,16 @@
 	<title>Dilpack SA</title>
 </head>
 <body>
-	<!----------------start off point------------>
-	<!-----///////////////////////////////////--->
+	<!------------------start off point-------------->
+	<!-----///////////////////////////////////////--->
 	<header class="menu-bar" id="navLinks">
 		<a href="#" class="logo">	
 			<img src="images/2B.png" class="logo" alt="dilpack-logo">
 		</a>
 
-		<input type="checkbox" id="menu-bar" hidden> 
+		<input type="checkbox" id="menu-bar" hidden> 	
 		
-		<label for="menu-bar" class="checkbtn" alt="menu-btn">
-			<ion-icon name="menu-outline" class="menu-icon">Menu</ion-icon>
-		</label>
-
 		<nav class="nav-list">
-
 			<ul>
 				<li class="active">
 					<a href="#" class="active">HOME</a>
@@ -48,14 +43,23 @@
 					</a>
 					<div class="sub-menu-1">
 						<ul>
-							<li><a href="products/sleeves.html">Sleeves</a></li>
-							<li><a href="products/kraft.html">Kraft Paper</a></li>
-							<li><a href="products/potcovers.html">Pot Covers</a></li>
-							<li><a href="products/sheets.html">Sheets</a>
+							<li>
+								<a href="products/sleeves.html">Sleeves</a>
 							</li>
-							<li><a href="products/tissue.html">Tissue</a>
+							<li>
+								<a href="products/kraft.html">Kraft Paper</a>
 							</li>
-							<li><a href="products/accessories.html">Accessories</a>
+							<li>
+								<a href="products/potcovers.html">Pot Covers</a>
+							</li>
+							<li>
+								<a href="products/sheets.html">Sheets</a>
+							</li>
+							<li>
+								<a href="products/tissue.html">Tissue</a>
+							</li>
+							<li>
+								<a href="products/accessories.html">Accessories</a>
 							</li>
 						</ul>
 					</div>
@@ -92,76 +96,29 @@
 				<li>
 					<a href="events/sustainability.html">SUSTAINABILITY</a>
 				</li>
+				<div class="wrapper">
+					<div class="search-input">
+						<input type="text" value="" id="search" onchange="openpage()" placeholder="Search..">
+
+						<div class="icon">
+							<ion-icon name="search-outline"></ion-icon>
+						</div>
+					</div>
+				</div>
 			<ul>
 		</nav>
-		<div id="searchItems"class="search-bar search-loading">
-
-			<div class="search-box">
-			<!--<form>-->
-				<input list="product-list" type="text" name="q" class="search-btn" id="searchbar" placeholder="Search...">
-
-				<datalist id="product-list">
-					<option value="Sleeves"></option>
-					<option value="Kraft paper"></option>
-					<option value="Sheets"></option>
-					<option value="Tissue"></option>
-					<option value="Accessories"></option>
-				</datalist>
-			<!--</form>-->
-				
-			</div>
-		</div>
-
+		
+		<label for="menu-bar" class="checkbtn" alt="menu-btn">
+			<ion-icon name="menu-outline" class="menu-icon">Menu</ion-icon>
+		</label>
+		
 		<div class="icons">
-			<a href="order/orderpage.html">
+			<a href="order/openorder.html">
 				<ion-icon name="cart-outline"></ion-icon>
 			</a>
 		</div>
 	</header>
 	<!-----------section 1 start off-------------->
-	<!--<div class="results">
-				<a href="#" class="search-results">
-					<div class="search-title">Item Name</div>
-					<p class="search-paragraph">
-						the item name discription side
-					</p>
-				</a>
-			</div>
-			<div class="results">
-				<a href="#" class="search-results">
-					<div class="search-title">Item Size</div>
-					<p class="search-paragraph">
-						the item name discription size
-					</p>
-				</a>
-			</div>
-		</div>-->
-		<!--<form>
-			<input id="searchbar" onkeyup="search_animal()" type="search"
-				name="search" name="q" placeholder="Search animals..">
-	
-			<- ordered list --
-			<ol id='list'>
-				<li class="animals">
-					<a href="products/sleeves.html">Sleeves</a>
-				</li>
-				<li class="animals">
-					<a href="products/potcovers.html">Pot Covers</a>
-				</li>
-				<li class="animals">
-					<a href="products/kraft.html">Kraft Paper</a>
-				</li>
-				<li class="animals">
-					<a href="products/sheets.html">Sheets</a>
-				</li>
-				<li class="animals">
-					<a href="products/tissue.html">Tissue</a>
-				</li>
-				<li class="animals">
-					<a href="products/accessories.html">Accessories</a>
-				</li>
-			</ol>
-		</form>-->
 	<!-----//////////////////////////////////----->
 	<section id="section-1">
 		<div class="input-box">
@@ -192,8 +149,8 @@
 			</div>
 		</div>
 	</section>
-	<!--------------End off Section--------------->
-	<!---////////////////////////////////////----->
+	<!------------------End off Section--------------->
+	<!---////////////////////////////////////////----->
 	<section id="products">
 		<h2 class="product-1"> Our Products</h2>
 
@@ -205,48 +162,55 @@
 			<div class="row">
 				<div class="row-col"> 
 					<img src="images/img-4.png" class="row-image">
-					<p class="row-p"><strong>Natural Sleeve</strong></p>
+					<p class="row-p">
+						<strong>Natural Sleeve</strong>
+					</p>
 					<br>	
-					<p class="row-p-2">Item Code: <a href="#"><b>F120001200</b><br></a> <br> 50 x 40 x 17cm
+					<p class="row-p-2">Item Code:<a href="#"><b>F120001200</b><br></a> <br> 50 x 40 x 17cm
 					</p>
 
 						<button class="btn-1">
 							<a href="products/sleeves.html">View</a>
 						</button>
 						<button class="btn-2">
-							<a href="order/order.html">Order</a>
+							<a href="order/orderpage.html">Order</a>
 						</button>
 				</div>
 				<div class="row-col"> 
 					<img src="images/img-3.png" class="row-image">
 
-					<p class="row-p"><strong>Red Val Kraft</strong></p>
+					<p class="row-p">
+						<strong>Red Val Kraft</strong>
+					</p>
 
 					<br>
 					<p class="row-p-2">Item Code: <a href="#"><b>502852</b> <br></a> <br> 50 x 61cm 50gsm.
 					</p>
 
-						<button class="btn-1">
-							<a href="products/kraft.html">View</a>
-						</button>
-						<button class="btn-2">
-							<a href="order/order.html">Order</a>
-						</button>
-					</div>
+					<button class="btn-1">
+						<a href="products/kraft.html">View</a>
+					</button>
+
+					<button class="btn-2">
+						<a href="order/orderpage.html">Order</a>
+					</button>
+				</div>
 				<div class="row-col"> 
 					<img src="images/img-1.png" class="row-image">
 
-					<p class="row-p"><strong>Pot Cover Lime</strong></p>
+					<p class="row-p">
+						<strong>Pot Cover Lime</strong>
+					</p>
 					<br>	
 					<p class="row-p-2">Item Code: <a href="#"><b>520064</b> <br></a> <br> 16.5cm 80gsm
 					</p>
 
-						<button class="btn-1">
-							<a href="products/potcovers.html">View</a>
-						</button>
-						<button class="btn-2">
-							<a href="order/order.html">Order</a>
-						</button>
+					<button class="btn-1">
+						<a href="products/potcovers.html">View</a>
+					</button>
+					<button class="btn-2">
+						<a href="order/orderpage.html">Order</a>
+					</button>
 				</div>
 			</div>
 
@@ -290,10 +254,8 @@
 			</div>
 
 			<hr class="solid-2" color="grey">
-			<div class="order-link">
-				<a href="order/orderpage.html">Click to Order</a>
-			</div>	
 		</div>
+		
 		<div class="contact-form">
 			<h1>Always ready to serve You</h1>
 
@@ -308,12 +270,12 @@
 
 				<textarea name="Message" class="form-message" placeholder="Message us.." rows="4" cols="80"></textarea>
 
-				<input type="submit" name="submit" class="submit" value="Contact Us" required>
+				<input type="submit" class="submit" value="Contact Us" required>
 			</form>
 		</div>
 	</section>
-	<!--------------End off Section------------->
-	<!------/////////////////////////////------->
+	<!----------------End off Section-------------->
+	<!------////////////////////////////////------->
 	<footer id="footer">
 		<h2> Thank You for your Visit</h2>
 		<div class="footer-box">
@@ -377,8 +339,6 @@
 			<p>2023 &copy;copyrights Dilpack SA All Rights Reserved</p>
 
 			<h1>Designed by <span class="ownertag">John Mususa</span></h1>
-			
-			<!--<a href="copyrights/copyrights.html" class="rights">Privacy Terms</a>-->
 		</div>
 
 		<br>
@@ -390,45 +350,56 @@
   		}
 	}
 	</script>
-	
-	<!---javascript for searchbar------>
-	<!-- linking javascript -->
-	<script src="./animals.js"></script>
 
+	<!-----script for input search------>
 	<script>
-		// JavaScript code
-		function search_animal() {
-			let input = document.getElementById('searchbar').value
-			input=input.toLowerCase();
-			let x = document.getElementsByClassName('animals');
-			
-			for (i = 0; i < x.length; i++) {
-				if (!x[i].innerHTML.toLowerCase().includes(input)) {
-					x[i].style.display="none";
-				}
-				else {
-					x[i].style.display="list-item";				
-				}
+		function openpage(){
+			var x = document.getElementById("search").value;
+
+			if (x === "kraft") {
+				window.open("./products/kraft.html","_self");
 			}
-		}
-		// JavaScript code
-		function search_animal() {
-			let input = document.getElementById('searchbar').value
-			input=input.toLowerCase();
-			let x = document.getElementsByClassName('animals');
+
+			if (x === "sleeves") {
+				window.open("./products/sleeves.html","_self");
+			}
 			
-			for (i = 0; i < x.length; i++) {
-				if (!x[i].innerHTML.toLowerCase().includes(input)) {
-					x[i].style.display="none";
-				}
-				else {
-					x[i].style.display="list-item";				
-				}
+			if (x === "accesories") {
+				window.open("./products/accesories.html","_self");
+			}
+			
+			if (x === "pot") {
+				window.open("./products/potcovers.html","_self");
+			}
+			
+			if (x === "sleeve") {
+				window.open("./products/sleeves.html","_self");
+			}
+			
+			if (x === "potcovers") {
+				window.open("./products/potcovers.html","_self");
+			}
+
+			if (x === "holder") {
+				window.open("./products/accessories.html","_self");
+			}
+
+			if (x === "bouquetholder") {
+				window.open("./products/accessories.html","_self");
+			}
+
+			if (x === "boquet") {
+				window.open("./products/accessories.html","_self");
 			}
 		}
 	</script>
+	<!---/////////////////////////////-->
+	
+	<script src="java/suggestions.js"></script>
+	<script src="java/script.js"></script>
 </body>
 </html>
 	<!-----------Complete off Full Website--------------->
 	<!-----////////////////////////////////////////------>
 	<!--------------------------------------------------->
+	
