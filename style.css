@@ -20,16 +20,17 @@ header{
 	width: 100%;
 	display: flex;
 	scroll-behavior: smooth;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: center;
 	background-color: white;
 	position: sticky;
 	top: 0;
+	flex-grow: 1;
 	padding-top: 8px;
 	padding-bottom: 8px;
 	left: 0;
 	right: 0;
-	padding-left: 10px;
+	padding-left: 5px;
 	padding-right: 5px;
 	z-index:1000;
 	box-shadow: 4px 5px 3px 2px rgb(37, 34,28);
@@ -37,6 +38,10 @@ header{
 header .logo{
 	max-width: 120px;
 	margin-right: 10px;
+}
+.wrapper{
+	display: inline-block;
+	margin-left: 1.5rem;
 }
 .menu-bar ul li{
 	display: inline-block;
@@ -46,11 +51,11 @@ header .logo{
 .menu-bar ul li a{
 	text-decoration: none;
 	color: black;
-	padding: 9px 12px;
+	padding: 9px 13px;
 	font-weight: 530;
 	text-transform: uppercase;
 	cursor: pointer;
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 	letter-spacing:1px;
 }
 .nav-list .active{
@@ -71,8 +76,8 @@ header .logo{
 	transition: .3s ease-in-out;
 	border-radius: 2px;
 }
-/*///////drop down links///////*/
-/*////////////////////////////*/
+/*////////////drop down links//////////*/
+/*////////////////////////////////////*/
 .sub-menu-1{
 	display: none;
 }
@@ -116,8 +121,8 @@ header .logo{
 .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
 	color: yellow;
 }
+/*/////////////////////////////*/
 /*////sub-menu-2 part/////////*/
-/*///////////////////////////*/
 .sub-menu-2{
 	display: none;
 }
@@ -159,114 +164,45 @@ header .logo{
 .menu-bar ul li:hover .sub-menu-2 ul li a:hover{
 	color: yellow;
 }
-/*/////////for search-bar/////*/
-.search-bar{
+.wrapper{
+	max-width: 170px;
+	transition: .3s ease-in-out;
+}
+.wrapper .search-input{
 	position: relative;
-	/*max-width: 250px;*/
-	max-width: 140px;
-}
-.search-bar,.search-bar input{
-	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
-}
-.search-bar,.search-bar input{
-	transition: background 0.15s,
-	box-shadow: 0.15s;
-}
-.search-bar,.search-box input{
-	border-radius: 3px;
-}
-.search-box{
-	display: inline-flex;
-	box-shadow: border-box;
-	width: 100%;
-	padding: 6px;
-	background: #eeeeee;
-
-}
-.search-box:focus-within{
-	box-shadow: 0 0 3px rgba(0,0,0,0.2);
-}
-.search-box:focus-within{
-	/*background: #fff;*/
-	background-color: seagreen;
-}
-.search-loading::after{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 2px;
-	background: #009578;
+	background: white;
+	word-break: 50%;
 	border-radius: 5px;
-	animation: searchIndicator 0.5s /*infinite*/ ease-in-out;
+	box-shadow: 0px 1px 2px 3px rgba(0, 0, 0, 0.12);
 }
-@keyframes searchIndicator{
-	0%{width: 15%}
-	50%{width: 100%}
-	100%{width: 15%}
-}
-.search-box input{
-	flex-grow: 1;
-	border: none;
-	outline: none;
+.search-input input{
 	width: 100%;
-	/*padding: 0 6px;*/
-	padding: 5px 10px;
-	/*background: transparent;*/
+	height: 35px;
+	outline: none;
+	color: seagreen;
+	flex-grow: 1;
+	border: 1px solid seagreen;
+	border-radius: 5px;
+	padding: 0 5px 0 10px;
+	font-size: 15px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
-.search-bar,.results{
-	max-height: 250px;
-	overflow-y: auto;
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0.1s, opacity 0.1s;
-}
-.search-bar,.results--visible{
-	visibility: visible;
-	opacity: 1;
-}
-.search-bar .results{
-	display: block;
-	color: black;
-	text-decoration: none;
-	padding: 10px;
-	font-size: 0.8rem;
+.search-input .icon{
+	height: 45px;
+	width: 45px;
+	line-height: 35px;
+	position: absolute;
+	top: 5px;
+	bottom: 1px;
+	right: 0;
+	text-align: center;
+	font-size: 20px;
+	color: seagreen;
 	cursor: pointer;
-}
-.search-bar .results:hover{
-	background-color: seagreen;
-	color: white;
-}
-.search-bar .results:not(:last-of-type){
-	border-bottom: 1px solid #333;
-}
-.search-title{
-	font-size: 1.1em;
-	font-weight: bold;
-	text-decoration: none;
-}
-.search-paragraph{
-	line-height: 1.5;
-	margin: 8px 0;
-	text-decoration: none;
 }
 /*///////////////////////////*/
 .icons{
 	display: flex;
-}
-.icons ion-icon{
-	font-size: 30px;
-	width: 25px;
-	height: 25px;
-	color:black;
-	border-radius: .5rem;
-	padding: .3rem 1.2rem;
-	cursor: pointer;
-	border: .1px solid black;
-}
-.icons ion-icon:hover{
-	background-color:#69b280; 
-	color: white;
 }
 .checkbtn{
 	float: right;
@@ -282,6 +218,21 @@ header .logo{
 	padding: .1rem 1.1rem;
 	cursor: pointer;
 }
+.icons ion-icon{
+	font-size: 30px;
+	width: 23px;
+	height: 23px;
+	color:seagreen;
+	box-shadow: 0px 1px 2px 3px rgba(0, 0, 0, 0.12);
+	border-radius: .5rem;
+	padding: .3rem 1.2rem;
+	cursor: pointer;
+	border: .1px solid seagreen;
+}
+.icons ion-icon:hover{
+	background-color:#69b280; 
+	color: white;
+}
 /*///////////End off/////////////*/
 /*//////////////////////////////*/
 #section-1{
@@ -292,31 +243,16 @@ header .logo{
 	background-image: url(../images/new.png);
 	background-position: center;
 	background-size: cover;
+	flex-grow: 1;
+	overflow: hidden;
 	background-repeat: no-repeat;
 	text-align: center;
 }
 .input-box{
 	padding: 100px 0;
 }
-/*#section-1 h1{
-	font-size: 15rem;
-	letter-spacing: 25px;
-	font-weight: 410;
-	color: white;
-	text-shadow: 0px 0.5px 7px rgb(1, 66, 1);
-}
-#section-1 span{
-	color:white;
-}
-h4 strong{
-	color:darkgreen;
-	font-size: 30px;
-	letter-spacing: 7px;
-	font-weight: 450;
-	text-align: center;
-}*/
 .banner-button{
-	margin-top: 28rem;
+	margin-top: 30rem;
 	margin-bottom: 2rem;
 	width: 18rem;
 	padding: 12px 23px;
@@ -418,6 +354,7 @@ h4 strong{
 	cursor: pointer;
 }
 /*/////////////////////////////*/
+/*/////////////////////////////*/
 #products{
 	width: 100%;
 	padding: 40px 0;
@@ -437,14 +374,14 @@ h4 strong{
 	color: black;
 	letter-spacing: 1px;
 	font-weight: 400;
-	width: 80%;
+	width: 75%;
+	max-width: 600;
 	margin: 0 auto;
 	text-align: center;
 	line-height: 24px;
 	margin-bottom: 3rem;
 }
 .products-content{
-	/*background-color: #2bab0dd9;*/
 	width: 100%;
 	scroll-behavior: smooth;
 	cursor: pointer;
@@ -455,25 +392,28 @@ h4 strong{
 	margin-left: 8.5rem;
 	padding-top: 4.5%;
 	grid-gap:3rem ;
+	flex-grow: 1;
+	overflow: hidden;
 }
 .row-col{
 	width: 85%;
-	height: 80%;
-	padding: 8px 0;
+	height: 87%;
+	padding: 10px 0;
 	box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
 	background-color:#69b280;
 	text-align: center;
 	margin-bottom: 3%;
 	border-radius: 10px;
+	flex-grow: 1;
 	border: 1px solid grey;
 }
 .row-image{
 	padding-top: 10px;
-	margin-bottom: 1.3rem;
-	width: 60%;
+	margin-bottom: 1.5rem;
+	width: 65%;
 	height: 45%;
 	backface-visibility: hidden;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 .row-image:hover{
 	transform: scale(1.1);
@@ -485,15 +425,16 @@ h4 strong{
 	font-size: 23px;
 	font-weight: 250;
 	margin-bottom: 1rem;
-	padding-top: 10px;
+	padding-top: 12px;
 	border-bottom: 1px solid white;
 }
 .row-col a{
-	color: rgb(255, 180, 2);
+	color: gold;
 	font-weight: 300;
+	letter-spacing: 1px;
 }
 .row-col p{
-	font-size: 14px;
+	font-size: 15px;
 	color:white;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -597,7 +538,7 @@ h4 strong{
 	padding: 20px 0;
 }
 .contact-box h2{
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: 500;
 	letter-spacing: 1px;
 	text-align: center;
@@ -609,17 +550,17 @@ h4 strong{
 	color: #000;
 	text-align: left;
 	font-weight: 400;
-	line-height: 24px;
-	max-width: 600px;
+	line-height: 19px;
+	max-width: 400px;
 	margin-bottom: 3.5%;
 }
 .contact-box h3{
-	font-size: 30px;
+	font-size: 28px;
 	color: black;
 	letter-spacing: 1px;
 	font-weight: 450;
 	padding-top: 10px;
-	padding-bottom: 1rem;
+	padding-bottom: 1.2rem;
 }
 .contact-info{
 	text-align: center;
@@ -685,6 +626,7 @@ form input{
 	display: block;
 	margin:0 auto;
 	margin-bottom: 3rem;
+	flex-grow: 1;
 }
 .contact-form h1{
 	color: #fff;
@@ -749,11 +691,12 @@ form .submit:active{
 	rgb(0, 0, 0, 0.86)),url(../images/about-image.png);
 	background-position: center;
 	background-size: cover;
+	flex-grow: 1;
 	background-repeat: no-repeat;
 }
 #footer h2{
 	text-align: center;
-	font-size: 40px;
+	font-size: 35px;
 	color: #fff;
 	font-weight: 500;
 	letter-spacing: 2px;
@@ -769,8 +712,8 @@ form .submit:active{
 }
 .footer-heading{
 	color: white;
-	font-size: 30px;
-	letter-spacing: 3px;
+	font-size: 27px;
+	letter-spacing: 2px;
 	font-weight: 400;
 	margin-bottom: 3.5rem;
 	z-index: 5;
@@ -788,11 +731,11 @@ form .submit:active{
 .footer-list li{
 	display: block;
 	list-style: none;
-	font-size: 13px;
+	font-size: 12px;
 	z-index: 50;
+	margin-bottom: 1rem;
 	color: #fff;
 	font-weight: 300;
-	margin-bottom: 4.5%;
 	letter-spacing: 1px;
 	text-align: left;
 }
@@ -824,9 +767,7 @@ form .submit:active{
 	color: white;
 	z-index: 50;
 	letter-spacing: 1px;
-	padding-top: 10px;
 	font-weight: 400;
-	margin-bottom: 1rem;
 }
 .owner{
 	display: flex;
@@ -836,11 +777,6 @@ form .submit:active{
 	width: 100%;
 	background-color:#69b280;
 	padding: 15px 0;
-}
-.owner a{
-	color: orange;
-	font-size: 15px;
-	font-size: 400;f;
 }
 .owner p{
 	font-size: 15px;
@@ -864,39 +800,7 @@ form .submit:active{
 }
 /*////////////COMPLETE FULL WEBSITE/////////*/
 /*/////////////////////////////////////////*/
-/*/////////Start of Responsive View///////*/
-/*///////////////////////////////////////*/
-@media(max-width:2560px){
-	.solid-1,.solid-10,.solid-11{
-		display: none;
-	}
-	form textarea{
-		margin:0 auto;
-	}
-	form .form-message{
-		width: 25rem;
-		padding: 8px 25px;
-		font-size: 14px;
-		font-weight: 500;
-		margin-bottom: 2.5rem;
-	}
-}
-@media(max-width:2480px){
-	.solid-1,.solid-10,.solid-11{
-		display: none;
-	}
-	form textarea{
-		margin:0 auto;
-	}
-	form .form-message{
-		width: 25rem;
-		padding: 8px 25px;
-		font-size: 14px;
-		font-weight: 500;
-		margin-bottom: 2.5rem;
-	}
-}
-@media(max-width:1240px){
+@media screen and (max-width:1240px){
 	#section-1{
 		height: 95vh;
 		height:-webkit-fill-avaliabl;
@@ -926,7 +830,20 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1190px){
+@media screen and (max-width:1190px){
+	.banner-button{
+		margin-top: 25rem;
+		margin-bottom: 2rem;
+		width: 18rem;
+		padding: 12px 23px;
+		outline: none;
+		border-radius: 10px;
+		border: none;
+		margin-right: 1.5rem;
+		cursor: pointer;
+		box-shadow: 4px 6px 8px 0 rgba(0,0,0,0.4);	
+		background-color:seagreen; 
+	}
 	form textarea{
 		margin:0 auto;
 	}
@@ -939,7 +856,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1186px){
+@media screen and (max-width:1186px){
 	form textarea{
 		margin:0 auto;
 	}
@@ -952,7 +869,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1180px){
+@media screen and (max-width:1180px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -962,7 +879,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1156px){
+@media screen and (max-width:1156px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -972,7 +889,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1148px){
+@media screen and (max-width:1148px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -982,13 +899,26 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1134px){
+@media screen and (max-width:1134px){
 	#section-1{
 		height: 92vh;
 		height:-webkit-fill-avaliabl;
 	}
 	.input-box{
 		padding-top: 5rem;
+	}
+	.banner-button{
+		margin-top: 27rem;
+		margin-bottom: 2rem;
+		width: 18rem;
+		padding: 12px 23px;
+		outline: none;
+		border-radius: 10px;
+		border: none;
+		margin-right: 1.5rem;
+		cursor: pointer;
+		box-shadow: 4px 6px 8px 0 rgba(0,0,0,0.4);	
+		background-color:seagreen; 
 	}
 	.about-container{
 		display: flex;
@@ -1026,7 +956,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1118px){
+@media screen and (max-width:1118px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1036,7 +966,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1102px){
+@media screen and (max-width:1102px){
 	header{
 		width: 100%;
 		top: 0;
@@ -1070,6 +1000,11 @@ form .submit:active{
 	}
 }
 @media(max-width:1092px){
+	.btn-1,.btn-2{
+		margin-bottom: 2rem;
+		width: 8rem;
+		padding: 5px 15px;
+	}
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1079,7 +1014,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1084px){
+@media screen and (max-width:1084px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1089,7 +1024,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1076px){
+@media screen and (max-width:1076px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1099,7 +1034,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1074px){
+@media screen and (max-width:1074px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1109,7 +1044,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1072px){
+@media screen and (max-width:1072px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1119,7 +1054,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1068px){
+@media screen and (max-width:1068px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1129,7 +1064,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1064px){
+@media screen and (max-width:1064px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1139,7 +1074,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1048px){
+@media screen and (max-width:1048px){
 	header{
 		width: 100%;
 		top: 0;
@@ -1154,7 +1089,7 @@ form .submit:active{
 	.row-col{
 		width: 85%;
 		height: 80%;
-		padding: 12px 0;
+		padding: 15px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
 		background-color:#69b280;
 		text-align: center;
@@ -1165,7 +1100,7 @@ form .submit:active{
 		background-color: rgb(57 119 57);;
 	}
 	.btn-1,.btn-2{
-		margin-bottom: 3.2rem;
+		margin-bottom: 7rem;
 		width: 9rem;
 		padding: 5px 18px;
 	}
@@ -1181,7 +1116,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1046px){
+@media screen and (max-width:1046px){
 	form textarea{
 		margin:0 auto;
 	}
@@ -1194,7 +1129,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1040px){
+@media screen and (max-width:1040px){
 	form textarea{
 		margin:0 auto;
 	}
@@ -1207,7 +1142,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1028px){
+@media screen and (max-width:1028px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1217,12 +1152,12 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1024px){
+@media screen and (max-width:1026px){
 	header{
 		width: 100%;
 		top: 0;
-		padding-left: 8px;
-		padding-right: 8px;
+		padding-left: 5px;
+		padding-right: 5px;
 		z-index:1000;
 	}
 	header .logo{
@@ -1237,9 +1172,74 @@ form .submit:active{
 	.solid-1,.solid-10,.solid-11{
 		display: none;
 	}
-	.search-bar{
-		position: relative;
+	.wrapper{
 		max-width: 135px;
+	}
+	.wrapper .search-input{
+		position: relative;
+		word-break: 50%;
+	}
+	.search-input input{
+		width: 100%;
+		height: 33px;
+		font-size: 14px;
+	}
+	.search-input .icon{
+		height: 45px;
+		width: 45px;
+		line-height: 35px;
+		position: absolute;
+		top: 3px;
+		bottom: 5px;
+		right: 0;
+		text-align: center;
+		font-size: 20px;
+		cursor: pointer;
+	}
+}
+@media screen and (max-width:1024px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 118px;
+		margin-right: 5px;
+	}
+	.menu-bar ul li a{
+		padding: 5px 8px;
+		font-size: 1.5rem;
+		letter-spacing:0px;
+	}
+	.solid-1,.solid-10,.solid-11{
+		display: none;
+	}
+	.wrapper{
+		max-width: 135px;
+	}
+	.wrapper .search-input{
+		position: relative;
+		word-break: 50%;
+	}
+	.search-input input{
+		width: 100%;
+		height: 33px;
+		font-size: 14px;
+	}
+	.search-input .icon{
+		height: 45px;
+		width: 45px;
+		line-height: 35px;
+		position: absolute;
+		top: 5px;
+		bottom: 1px;
+		right: 0;
+		text-align: center;
+		font-size: 20px;
+		cursor: pointer;
 	}
 	.icons ion-icon{
 		font-size: 28px;
@@ -1285,7 +1285,7 @@ form .submit:active{
 	.row-col{
 		width: 85%;
 		height: 85%;
-		padding: 10px 0;
+		padding: 15px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
 		background-color:#69b280;
 		text-align: center;
@@ -1293,8 +1293,8 @@ form .submit:active{
 		border-radius: 10px;
 	}
 	.btn-1,.btn-2{
-		margin-bottom: 2rem;
-		width: 9rem;
+		margin-bottom: 6rem;
+		width: 8rem;
 		padding: 5px 13px;
 	}
 	#contact-us{
@@ -1309,17 +1309,17 @@ form .submit:active{
 		margin-bottom: 3.5rem;
 	}
 	.contact-box p{
-		font-size: 16px;
+		font-size: 15px;
 		color: #000;
-		padding-left: 5rem;
+		padding-left: 7rem;
 		text-align: left;
 		font-weight: 400;
-		line-height: 23px;
-		max-width: 500px;
+		line-height: 20px;
+		max-width: 450px;
 		margin-bottom: 3.5%;
 	}
 	.contact-box h3{
-		font-size: 25px;
+		font-size: 23px;
 		color: black;
 		font-weight: 450;
 		padding-top: 10px;
@@ -1359,14 +1359,14 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 	#footer h2{
-		font-size: 41px;
+		font-size: 38px;
 		font-weight: 500;
 		letter-spacing: 1px;
 		margin-bottom:2.5rem;
 	}
 	.footer-heading{
 		color: white;
-		font-size: 25px;
+		font-size: 24px;
 		letter-spacing: 2px;
 		font-weight: 400;
 		margin-bottom: 3.2rem;
@@ -1385,7 +1385,7 @@ form .submit:active{
 	.footer-list li{
 		display: block;
 		list-style: none;
-		font-size: 13px;
+		font-size: 12px;
 		z-index: 50;
 		color: #fff;
 		font-weight: 300;
@@ -1416,7 +1416,7 @@ form .submit:active{
 		margin-bottom: 1rem;
 	}	
 }
-@media(max-width:1020px){
+@media screen and (max-width:1020px){
 	header{
 		width: 100%;
 		top: 0;
@@ -1468,7 +1468,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:1000px){
+@media screen and (max-width:1000px){
 	header{
 		width: 100%;
 		top: 0;
@@ -1498,7 +1498,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:956px){
+@media screen and (max-width:956px){
 	header{
 		width: 100%;
 		top: 0;
@@ -1538,7 +1538,39 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:930px){
+@media screen and (max-width:942px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 4px;
+		padding-right: 4px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 115px;
+		margin-right: 3px;
+	}
+	.menu-bar ul li a{
+		padding: 7px 6px;
+		font-size: 1.4rem;
+		letter-spacing:0px;
+	}
+	.search-bar{
+		position: relative;
+		max-width: 130px;
+	}
+	.icons ion-icon{
+		font-size: 27px;
+		width: 20px;
+		height: 20px;
+		color:black;
+		border-radius: .3rem;
+		padding: .1rem 1.1rem;
+		cursor: pointer;
+		border: .1px solid black;
+	}
+}
+@media screen and (max-width:930px){
 	header{
 		width: 100%;
 		top: 0;
@@ -1620,7 +1652,7 @@ form .submit:active{
 	.row-col{
 		width: 95%;
 		height: 80%;
-		padding: 12px 0;
+		padding: 15px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
 		background-color:#69b280;
 		text-align: center;
@@ -1654,7 +1686,7 @@ form .submit:active{
 		letter-spacing: 1px;
 	}
 	.btn-1,.btn-2{
-		margin-bottom: 3.5rem;
+		margin-bottom: 6rem;
 		width: 8rem;
 		padding: 5px 15px;
 	}
@@ -1715,9 +1747,20 @@ form .submit:active{
 		color: black;
 		font-weight: 500;
 	}
+	form textarea{
+		margin:0 auto;
+	}
+	form .form-message{
+		width: 25rem;
+		padding: 8px 25px;
+		font-size: 14px;
+		margin: 0 1.1rem;
+		font-weight: 500;
+		margin-bottom: 2.5rem;
+	}
 }
 
-@media(max-width:926px){
+@media screen and (max-width:926px){
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -1727,7 +1770,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:922px){
+@media screen and (max-width:922px){
 	header{
 		width: 100%;
 		top: 0;
@@ -1873,15 +1916,15 @@ form .submit:active{
 	.contact-box p{
 		font-size: 15px;
 		color: #000;
-		padding-left: 8rem;
+		padding-left: 6rem;
 		text-align: left;
 		font-weight: 300;
-		line-height: 21px;
-		max-width: 500px;
-		margin-bottom: 3.5%;
+		line-height: 19px;
+		max-width: 420px;
+		margin-bottom: 3.5rem;
 	}
 	.contact-box h3{
-		font-size: 25px;
+		font-size: 23px;
 		color: black;
 		font-weight: 450;
 		padding-top: 10px;
@@ -1909,7 +1952,20 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:880PX){
+@media screen and (max-width:900px){
+	form textarea{
+		margin:0 auto;
+	}
+	form .form-message{
+		width: 25rem;
+		padding: 8px 25px;
+		font-size: 14px;
+		margin: 0 2.1rem;
+		font-weight: 500;
+		margin-bottom: 2.5rem;
+	}
+}
+@media screen and (max-width:880px){
 	.row-col{
 		width: 97%;
 		height: 85%;
@@ -1932,12 +1988,38 @@ form .submit:active{
 		width: 25rem;
 		padding: 8px 25px;
 		font-size: 14px;
-		margin: 0 1.5rem;
+		margin: 0 1.7rem;
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:860px){
+@media screen and (max-width:860px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		z-index:1000;
+	}
+	.wrapper{
+		max-width: 123px;
+		margin-left: 1rem;
+	}
+	.search-input input{
+		width: 100%;
+		height: 30px;
+		font-size: 14px;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 1px;
+		bottom: 3px;
+		right: 0;
+		font-size: 20px;
+	}
 	.row{
 		display: grid;
 		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
@@ -1969,13 +2051,35 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:858px){
+@media screen and (max-width:858px){
 	header{
 		width: 100%;
 		top: 0;
 		padding-left: 4px;
 		padding-right: 4px;
 		z-index:1000;
+	}
+	.wrapper{
+		max-width: 125px;
+	}
+	.wrapper .search-input{
+		position: relative;
+		word-break: 50%;
+	}
+	.search-input input{
+		width: 100%;
+		height: 30px;
+		font-size: 14px;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 1px;
+		bottom: 3px;
+		right: 0;
+		font-size: 20px;
 	}
 	.about-content p{
 		width: 90%;
@@ -2021,7 +2125,96 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:834px){
+@media screen and (max-width:846px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 112px;
+		margin-right: 3px;
+	}
+	.search-bar{
+		position: relative;
+		max-width: 125px;
+	}
+	.icons ion-icon{
+		font-size: 25px;
+		width: 20px;
+		height: 20px;
+		color:black;
+		border-radius: .3rem;
+		padding: .1rem 1rem;
+		cursor: pointer;
+		border: .1px solid black;
+	}
+	.menu-bar ul li a{
+		padding: 5px 5px;
+		font-size: 1.2rem;
+		letter-spacing:0px;
+	}
+}
+@media screen and (max-width:838px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 4px;
+		padding-right: 4px;
+		z-index:1000;
+	}
+	header .logo{
+		max-width: 112px;
+		margin-right: 3px;
+	}
+	.search-bar{
+		position: relative;
+		max-width: 125px;
+	}
+	.icons ion-icon{
+		font-size: 25px;
+		width: 20px;
+		height: 20px;
+		color:black;
+		border-radius: .3rem;
+		padding: .1rem 1rem;
+		cursor: pointer;
+		border: .1px solid black;
+	}
+	.menu-bar ul li a{
+		padding: 5px 4px;
+		font-size: 1.2rem;
+		letter-spacing:0px;
+	}
+	form .form-message{
+		width: 25rem;
+		padding: 8px 25px;
+		font-size: 14px;
+		margin: 0 1rem;
+		font-weight: 500;
+		margin-bottom: 2.5rem;
+	}
+	.owner p{
+		font-size: 14px;
+		color: #fff;
+		font-weight: 340;
+		text-align: center;
+	}
+	.owner h1 span{
+		color: white;
+		font-weight: 340;
+		margin-left: 5px;
+		font-size: 14px;
+	}
+	.owner h1{
+		color: white;
+		font-size: 14px;
+		font-weight: 340;
+	}
+}
+@media screen and (max-width:834px){
 	header{
 		width: 100%;
 		top: 0;
@@ -2095,8 +2288,127 @@ form .submit:active{
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
+	.owner p{
+		font-size: 15px;
+		color: #fff;
+		font-weight: 350;
+		letter-spacing: 1px;
+		text-align: center;
+	}
+	.owner h1 span{
+		color: white;
+		letter-spacing: 1px;
+		font-weight: 350;
+		margin-left: 5px;
+		font-size: 15px;
+	}
+	.owner h1{
+		color: white;
+		letter-spacing: 1px;
+		font-size: 15px;
+		font-weight: 350;
+	}
 }
-@media(max-width:814px){
+@media screen and (max-width:820px){
+	.contact-box p{
+		font-size: 14px;
+		color: #000;
+		padding-left: 5rem;
+		text-align: left;
+		font-weight: 400;
+		line-height: 19px;
+		max-width: 360px;
+		margin-bottom: 3.5%;
+	}
+	.contact-form{
+		display: block;
+		background-color:#69b280;
+		padding: 20px 0;
+		width: 35%;
+	}
+	form .form-message{
+		width: 25rem;
+		padding: 8px 25px;
+		font-size: 14px;
+		margin: 0 1.5rem;
+		font-weight: 500;
+		margin-bottom: 2.5rem;
+	}
+	#footer h2{
+		font-size: 33px;
+		font-weight: 500;
+		letter-spacing: 1px;
+		margin-bottom:2.5rem;
+	}
+	.footer-heading{
+		color: white;
+		font-size: 22px;
+		letter-spacing: 1px;
+		font-weight: 400;
+		margin-bottom: 3.2rem;
+		z-index: 5;
+	}
+	.footer-list{
+		margin-left: 1.3rem;
+	}
+	.footer-list ion-icon{
+		width: 15px;
+		height: 15px;
+		font-size: 22px;
+		color: white;
+		margin-right: 1rem;
+	}
+	.footer-list li{
+		display: block;
+		list-style: none;
+		font-size: 12px;
+		z-index: 50;
+		color: #fff;
+		font-weight: 300;
+		margin-bottom: 4.5%;
+		text-align: left;
+	}
+	.footer-list li a{
+		display: block;
+		list-style: none;
+		font-size: 12px;
+		z-index: 50;
+		color: #fff;
+		text-align: left;
+		font-weight: 300;
+		text-decoration: none;
+		margin-bottom: 1rem;
+		letter-spacing: 1px;
+		margin-left: 1rem;
+	}
+	.hours .hours-rate{
+		font-size: 17px;
+		color: white;
+		z-index: 50;
+		letter-spacing: 1px;
+		padding-top: 10px;
+		font-weight: 400;
+		margin-bottom: 1rem;
+	}	
+	.owner p{
+		font-size: 13px;
+		color: #fff;
+		font-weight: 320;
+		text-align: center;
+	}
+	.owner h1 span{
+		color: white;
+		font-weight: 320;
+		margin-left: 5px;
+		font-size: 13px;
+	}
+	.owner h1{
+		color: white;
+		font-size: 13px;
+		font-weight: 320;
+	}
+}
+@media screen and (max-width:814px){
 	.input-box{
 		padding-top: 50px 0;
 	}
@@ -2136,13 +2448,22 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:802px){
+@media screen and (max-width:802px){
 	header{
 		width: 100%;
 		top: 0;
-		padding-left: 4px;
-		padding-right: 4px;
+		padding-left: 5px;
+		padding-right: 5px;
 		z-index:1000;
+	}
+	.wrapper{
+		max-width: 118px;
+	}
+	.search-input input{
+		width: 100%;
+		height: 27px;
+		font-size: 14px;
+		flex-grow: 1;
 	}
 	.menu-bar ul li a{
 		padding: 7px 6px;
@@ -2153,7 +2474,6 @@ form .submit:active{
 		height: 92vh;
 		height: -webkit-fill-avaliable;
 	}
-	
 	.banner-button{
 		margin-bottom: 2rem;
 		width: 16rem;
@@ -2192,13 +2512,13 @@ form .submit:active{
 		font-weight: 400;
 	}
 	.btn-1,.btn-2{
-		margin-bottom: 4rem;
-		width: 8rem;
-		padding: 5px 15px;
+		margin-bottom: 6rem;
+		width: 7rem;
+		padding: 5px 13px;
 	}
 	.btn-1 a,.btn-2 a{
 		font-size: 13px;
-		font-weight: 550;
+		font-weight: 500;
 	}
 	form textarea{
 		margin:0 auto;
@@ -2216,7 +2536,57 @@ form .submit:active{
 		letter-spacing: none;
 	}
 }
-@media(max-width:780px){
+@media screen and (max-width:794px){
+	header{
+		width: 100%;
+		top: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		z-index:1000;
+	}
+	.wrapper{
+		max-width: 114px;
+		margin-left: 15px;
+	}
+	.search-input input{
+		width: 100%;
+		height: 27px;
+		font-size: 14px;
+		flex-grow: 1;
+	}
+	.menu-bar ul li a{
+		padding: 7px 6px;
+		font-size: 1.2rem;
+		letter-spacing:0px;
+	}
+}
+@media screen and (max-width:790px){
+	form .form-message{
+		width: 25rem;
+		padding: 8px 25px;
+		font-size: 14px;
+		margin: 0 1.3rem;
+		font-weight: 500;
+		margin-bottom: 2.5rem;
+	}
+	.icons ion-icon{
+		display: none;
+	}
+}
+@media(max-width:784px){
+	form .form-message{
+		width: 25rem;
+		padding: 8px 25px;
+		font-size: 14px;
+		margin: 0 1.3rem;
+		font-weight: 500;
+		margin-bottom: 2.5rem;
+	}
+	.icons ion-icon{
+		display: none;
+	}
+}
+@media screen and (max-width:780px){
 	header{
 		width: 100%;
 		top: 0;
@@ -2227,6 +2597,45 @@ form .submit:active{
 	.icons ion-icon{
 		display: none;
 	}
+	.wrapper{
+		max-width: 130px;
+	}
+	.wrapper .search-input{
+		position: relative;
+		word-break: 50%;
+	}
+	.search-input input{
+		width: 100%;
+		height: 33px;
+		font-size: 13px;
+	}
+	.search-input .icon{
+		height: 35px;
+		width: 35px;
+		line-height: 35px;
+		position: absolute;
+		top: 1px;
+		bottom: 3px;
+		right: 0;
+		font-size: 20px;
+	}
+	.search-input.active .autocom-box{
+		padding: 8px 8px;
+		opacity: 1;
+		pointer-events: auto;
+	}
+	.search-input .autocom-box{
+		max-height: 60px;
+		overflow: auto;
+		opacity: 0;
+		pointer-events: none;
+	}
+	.autocom-box li{
+		list-style: none;
+		padding: 4px 4px;
+		width: 100%;
+		font-size: 12px;
+	}
 	form .form-message{
 		width: 25rem;
 		padding: 8px 25px;
@@ -2236,7 +2645,7 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:778px){
+@media screen and (max-width:778px){
 	.contact-form{
 		display: block;
 		background-color:#69b280;
@@ -2261,7 +2670,7 @@ form .submit:active{
 		font-size: 30px;
 	}
 }
-@media(max-width:768px){
+@media screen and (max-width:768px){
 	.checkbtn{
 		display: block;
 		float: right;
@@ -2286,7 +2695,7 @@ form .submit:active{
 		transition: .3s ease-in-out;
 		scroll-behavior: smooth;
 		display: none;
-		background-color: #333;
+		background-color: #000;
 		border-top: 1px solid rgba(0,0,0,.1);
 	}
 	.menu-bar .nav-list ul li{
@@ -2298,19 +2707,18 @@ form .submit:active{
 	.menu-bar .nav-list ul li a{
 		color: white;
 		font-weight: 400;
-		font-size: 17px;
-		letter-spacing: 2px;
+		font-size: 15px;
+		letter-spacing: 1px;
 	}
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 20%;
-		padding: 3px 0;
+		width: 25%;
+		padding: 2px 0;
 		margin-left: 125px;
 	}
 	.nav-list .sub-menu-1 ul li a{
-		font-size: 18px;
-		font-weight: 360;
-		letter-spacing: 1px;
+		font-size: 13px;
+		font-weight: 350;
 	}
 	.menu-bar ul li:hover .sub-menu-1{
 		display: block;
@@ -2326,14 +2734,14 @@ form .submit:active{
 	}
 	.menu-bar .nav-list .sub-menu-2{
 		position: relative;
-		width: 24%;
+		width: 27%;
 		padding: 5px 0;
 		margin-left: 120px;
 		text-align: left;
 	}
 	.menu-bar .sub-menu-2 ul li a{
-		font-size: 15px;
-		font-weight: 360;
+		font-size: 12px;
+		font-weight: 340;
 		margin-bottom: 10px;
 		letter-spacing: none;
 	}
@@ -2359,7 +2767,36 @@ form .submit:active{
 	.menu-bar ul li{
 		display: block;
 		margin-right: 0 6px;
-		line-height: 30px;
+		line-height: 40px;
+	}
+	.wrapper{
+		max-width: 500%;
+		margin-left: 5px;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+		flex-grow: 2;
+		display: none;
+	}
+	.wrapper .search-input{
+		position: relative;
+		word-break: 50%;
+	}
+	.search-input input{
+		width: 170%;
+		height: 35px;
+		border: 1px solid black;
+		font-size: 15px;
+		flex-grow: 2;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 5px;
+		bottom: 3px;
+		left: 30rem;
+		font-size: 20px;
 	}
 	/*///start of banner side////*/
 	/*//////////////////////////*/
@@ -2374,7 +2811,8 @@ form .submit:active{
 	}
 	.banner-button{
 		margin-bottom: 3rem;
-		margin-top: 28rem;
+		margin-top: 26rem;
+		padding: 11px 25px;
 	}
 	/*///about us side view////*/
 	/*////////////////////////*/
@@ -2392,7 +2830,7 @@ form .submit:active{
 		width: 85%;
 		font-size: 15px;
 		letter-spacing: 1px;
-		font-weight: 400;
+		font-weight: 300;
 		line-height: 28px;
 		margin: 0 auto;
 		text-align: left;
@@ -2421,35 +2859,34 @@ form .submit:active{
 		margin: 0 auto;
 		text-align: left;
 		max-width: 600;
-		line-height: 26px;
+		line-height: 23px;
 		padding-top: 1.3rem;
-		margin-bottom: 3.5%;
+		margin-bottom: 3.5rem;
 	}
 	.row{
 		display: block;
 		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		padding-top: 4.5%;
 		grid-gap:4rem ;
 		margin-bottom: 1.5rem;
 	}
 	.row-col{
-		width: 38%;
+		width: 39%;
 		padding: 10px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
 		background-color:#69b280;
 		margin:0 auto;
 		margin-bottom: 5.5rem;
 	}
-	.row-col strong{
-		font-size: 28px;
-	}
-	.row-col p{
-		font-size: 15px;
-	}
-	.row-image{
+	.row-image img{
 		margin-bottom: 1.5rem;
 		width: 65%;
-		max-height: 20%;
+		max-height: 15%;
+	}
+	.row-col strong{
+		font-size: 25px;
+	}
+	.row-col p{
+		font-size: 16px;
 	}
 	.btn-1,.btn-2{
 		margin-bottom: 10px;
@@ -2458,13 +2895,13 @@ form .submit:active{
 		font-size: 15px;
 		font-weight: 400;
 	}
-
 	.products-link{
-		font-size: 16px;
-		width: 30rem;
+		font-size: 15px;
+		width: 28rem;
 		font-weight: 400;
-		letter-spacing: 2px;
-		padding: 10px 25px;
+		letter-spacing: 1px;
+		padding: 8px 23px;
+		margin-left: 5rem;
 		transition: .3s;
 		margin-top: 2rem;
 	}
@@ -2485,7 +2922,7 @@ form .submit:active{
 		justify-content: center;
 	}
 	.contact-box h2{
-		font-size: 40px;
+		font-size: 35px;
 		font-weight: 500;
 		letter-spacing: 1px;
 		text-align: center;
@@ -2494,9 +2931,9 @@ form .submit:active{
 	.contact-box p{
 		font-size: 14px;
 		text-align: center;
-		font-weight: 400;
+		font-weight: 300;
 		line-height: 20px;
-		width: 75%;
+		width: 76%;
 		margin-bottom: 4.5rem;
 		margin: 0 auto;
 	}
@@ -2581,10 +3018,6 @@ form .submit:active{
 	.footer-link ul li,.footer-link ul li a{
 		text-align: center;
 	}
-	.gallery{
-		justify-content: center;
-		margin: 0  auto;
-	}
 	#footer h2{
 		text-align: center;
 		font-size: 35px;
@@ -2637,12 +3070,151 @@ form .submit:active{
 		font-weight: 400;
 		margin-bottom: 10px;
 	}
-	#gallery-head{
-		padding-top: 15px;
-	}
-	.owner a{
+	.owner p{
 		font-size: 13px;
-		font-size: 400;
+		font-weight: 350;
+	}
+	.owner h1 span{
+		font-weight: 350;
+		margin-left: 5px;
+		font-size: 13px;
+	}
+	.owner h1{
+		font-size: 13px;
+		font-weight: 350;
+	}
+}
+@media screen and (max-width:766px){
+	#section-1{
+		height: 92vh;
+		height: -webkit-fill-avaliable;
+	}
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		margin-top: 27rem;
+		padding: 11px 25px;
+	}
+	.input-box{
+		padding: 50px 0;
+		padding-top: 2rem;
+		margin-bottom: 1.3rem;
+	}
+	#about-us h1{
+		margin-bottom: 33px;
+	}
+	.about-content p{
+		max-width:500;
+		width: 75%;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 23px;
+		margin: 0 auto;
+		margin-bottom: 3.5rem;
+	}
+	.about-button{
+		margin-bottom: 7rem;
+		width: 15rem;
+		padding: 12px 24px;
+		border-radius: 10px;
+		box-shadow: 2px 4px 3px 0 rgba(0,0,0,0.8);
+	}
+	h1 .input{
+		font-size: 15rem;
+		letter-spacing: 15px;
+		font-weight: 400;
+		padding-top: 1.1rem;
+	}
+	#products h2{
+		font-size: 35px;
+		letter-spacing: 1px;
+		font-weight: 500;
+	}
+	.row-col{
+		width: 40%;
+		padding: 10px 0;
+		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+		margin:0 auto;
+		margin-bottom: 5rem;
+	}
+	.row-image{
+		margin-bottom: 1.5rem;
+		width: 70%;
+		max-height: 200px;
+	}
+	.contact-form{
+		display: block;
+		padding: 20px 0;
+		width: 45%;
+	}
+	form input{
+		margin-bottom: 2.5rem;
+	}
+	form input{
+		width: 25rem;
+		padding: 8px 25px;
+		font-size: 13px;
+		font-weight: 500;
+	}
+	form .form-message{
+		width: 25rem;
+		padding: 7px 25px;
+		font-size: 13px;
+		font-weight: 500;
+		margin:0 auto;
+		margin-bottom: 2.5rem;
+	}
+	#footer h2{
+		text-align: center;
+		font-size: 35px;
+		color: #fff;
+		font-weight: 400;
+		letter-spacing: 2px;
+		margin-bottom:1.5rem;
+	}
+	.footer-heading{
+		font-size: 25px;
+		letter-spacing: 1px;
+		font-weight: 400;
+		padding-top: 17px;
+		margin-bottom: 2.5rem;
+	}
+	.footer-list ion-icon{
+		width: 15px;
+		height: 15px;
+		font-size: 20px;
+		margin-top: 8px;
+		margin-right: 1.2rem;
+	}
+	.footer-list li{
+		display: block;
+		list-style: none;
+		font-size: 13px;
+		color: #fff;
+		letter-spacing: 1px;
+		font-weight: 250;
+		margin-bottom: 10px;
+	}
+	.footer-list li a{
+		display: block;
+		list-style: none;
+		font-size: 14px;
+		color: #fff;
+		letter-spacing: 1px;
+		font-weight: 250;
+		margin-bottom: 18px;
+	}
+	.hours{
+		padding-top: 15px;
+		margin-bottom: 25px;
+	}
+	.hours .hours-rate{
+		font-size: 15px;
+		color: white;
+		letter-spacing: 1px;
+		padding-top: 10px;
+		font-weight: 400;
+		margin-bottom: 10px;
 	}
 	.owner p{
 		font-size: 13px;
@@ -2658,106 +3230,22 @@ form .submit:active{
 		font-weight: 350;
 	}
 }
-@media(max-width:766px){
+@media screen and (max-width:726px){
 	#section-1{
-		height: 85vh;
-		height: -webkit-fill-avaliable;
-	}
-	.input-box{
-		padding: 50px 0;
-		padding-top: 2rem;
-		margin-bottom: 1.3rem;
-	}
-	#about-us h1{
-		margin-bottom: 25px;
-	}
-	.about-content p{
-		max-width:500;
-		width: 70%;
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 27px;
-		margin: 0 auto;
-		margin-bottom: 3.5rem;
-	}
-	.about-button{
-		margin-bottom: 7rem;
-		width: 15rem;
-		padding: 12px 24px;
-		border-radius: 10px;
-		background-color: rgb(1, 66, 1);
-		box-shadow: 2px 4px 3px 0 rgba(0,0,0,0.8);
-	}
-	h1 .input{
-		font-size: 15rem;
-		letter-spacing: 15px;
-		font-weight: 400;
-		padding-top: 1.1rem;
-	}
-	#products h2{
-		font-size: 45px;
-		letter-spacing: 1px;
-		font-weight: 500;
-	}
-	.row-col{
-		width: 40%;
-		padding: 10px 0;
-		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
-		margin:0 auto;
-		margin-bottom: 5rem;
-	}
-	.row-image{
-		margin-bottom: 1.5rem;
-		width: 70%;
-		max-height: 200px;
-	}
-	.contact-form{
-		display: block;
-		background-color:#000;
-		padding: 20px 0;
-		width: 40%;
-	}
-	form input{
-		margin-bottom: 2.5rem;
-	}
-	form input{
-		width: 20rem;
-		padding: 7px 25px;
-		font-size: 13px;
-		font-weight: 500;
-	}
-	form .form-message{
-		width: 20rem;
-		padding: 7px 25px;
-		font-size: 13px;
-		font-weight: 500;
-		margin:0 auto;
-		margin-bottom: 2.5rem;
-	}
-}
-@media(max-width:726px){
-	#section-1{
-		height: 85dvh;
+		height: 91vh;
 		height: -webkit-fill-avaliable;
 	}
 	.input-box{
 		padding: 30px 0;
 	}
-	#section-1 h1{
-		font-size: 14rem;
-		letter-spacing: 19px;
-		font-weight: 400;
-		color: white;
-		text-shadow: 0px 0.5px 7px rgb(1, 66, 1);
-	}
 	.banner-button{
-		margin-top: 1.3rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		margin-top: 25rem;
+		padding: 11px 25px;
 	}
 	.contact-form{
 		display: block;
-		background-color:#000;
 		padding: 20px 0;
 		width: 45%;
 	}
@@ -2779,47 +3267,39 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:712px){
+@media screen and (max-width:712px){
 	#section-1{
-		height: 85dvh;
+		height: 91vh;
 		height: -webkit-fill-avaliable;
 	}
-	.input-box{
-		padding: 50px 0;
-	}
-	#section-1 h1{
-		font-size: 13rem;
-		letter-spacing: 20px;
-		font-weight: 405;
-		color: white;
-		text-shadow: 0px 0.5px 7px rgb(1, 66, 1);
-	}
 	.banner-button{
-		margin-top: 1.3rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		margin-top: 25rem;
+		padding: 11px 25px;
 	}
 	.about-content p{
-		max-width:600;
-		width: 75%;
+		max-width:500;
+		width: 78%;
 		font-size: 14px;
 		font-weight: 400;
-		line-height: 27px;
+		line-height: 23px;
 		text-align: left;
 		margin: 0 auto;
 		margin-bottom: 3.5rem;
 	}
 	.product-text p{
-		max-width:600;
-		width: 75%;
+		max-width:500;
+		width: 78%;
 		font-size: 14px;
 		font-weight: 400;
-		line-height: 27px;
+		line-height: 22px;
 		text-align: left;
 		margin: 0 auto;
 		margin-bottom: 3.5rem;
 	}
 	form input{
-		width: 20rem;
+		width: 23rem;
 		padding: 8px 25px;
 		font-size: 14px;
 		font-weight: 500;
@@ -2832,9 +3312,9 @@ form .submit:active{
 		padding: 10px 0;
 	}
 	#footer h2{
-		font-size: 40px;
+		font-size: 36px;
 		font-weight: 400;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 		margin-bottom:1.4rem;
 	}
 	.footer-heading{
@@ -2843,7 +3323,7 @@ form .submit:active{
 	.footer-list li{
 		font-size: 12px;
 		font-weight: 300;
-		margin-bottom: 1.5%;
+		margin-bottom: 1.3rem;
 	}
 	.footer-list li a:hover{
 		transform: scale(1.0);
@@ -2866,48 +3346,55 @@ form .submit:active{
 		font-weight: 350;
 	}
 }
-@media(max-width:700px){
+@media screen and (max-width:700px){
+	.menu-bar .nav-list ul li a{
+		color: white;
+		font-weight: 400;
+		font-size: 13px;
+		letter-spacing: 1px;
+	}
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 19%;
+		width: 24%;
 		padding: 3px 0;
 		margin-left: 125px;
 	}
+	.nav-list .sub-menu-1 ul li a{
+		font-size: 12px;
+		font-weight: 350;
+	}
+	.menu-bar .sub-menu-2 ul li a{
+		font-size: 11px;
+		font-weight: 340;
+		margin-bottom: 10px;
+		letter-spacing: none;
+	}
 	.menu-bar .nav-list .sub-menu-2{
 		position: relative;
-		width: 21%;
+		width: 24%;
 		padding: 3px 0;
 		margin-left: 120px;
 	}
 	#section-1{
-		height: 85vh;
+		height: 91vh;
 		height: -webkit-fill-avaliable;
 		scroll-behavior: smooth;
 	}
-	#section-1 h1{
-		font-size: 14rem;
-		letter-spacing: 18px;
-		font-weight: 400;
-	}
-	.input-box{
-		padding: 30px 0;
-		margin-bottom: 2rem;
-	}
 	.banner-button{
-		margin-top: 1rem;
-		width: 15rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		margin-top: 25rem;
 		padding: 11px 25px;
 	}
 	#about-us h1{
-		margin-bottom: 15px;
+		margin-bottom: 25px;
 	}
 	.about-content p{
 		font-size: 13px;;
-		font-weight: 400;
-		width: 65%;
+		font-weight: 300;
+		width: 70%;
 		margin: 0 auto;
-		line-height: 25px;
+		line-height: 23px;
 		padding-top: 1.2rem;
 		margin-bottom: 3.5rem;
 	}
@@ -2917,19 +3404,19 @@ form .submit:active{
 		border-radius: 10px;
 	}
 	#products h2{
-		font-size: 45px;
+		font-size: 35px;
 		letter-spacing: 1px;
 		font-weight: 500;
 	}
 	.product-text p{
 		font-size: 12px;
-		font-weight: 400;
-		width: 65%;
+		font-weight: 300;
+		width: 70%;
 		margin: 0 auto;
-		line-height: 23px;
+		line-height: 21px;
 		text-align: left;
 		padding-top: 1.3rem;
-		margin-bottom: 3.5%;
+		margin-bottom: 3.5rem;
 	}
 	.btn-1,.btn-2{
 		width: 8rem;
@@ -2938,37 +3425,36 @@ form .submit:active{
 		font-size: 12px;
 	}
 	.contact-box h2{
-		font-size: 40px;
+		font-size: 33px;
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
 	.contact-box p{
 		font-size: 13px;
-		font-weight: 400;
-		line-height: 22px;
-		width: 70%;
-		max-width: 500;
+		font-weight: 300;
+		line-height: 21px;
+		width: 75%;
+		max-width: 450;
 		text-align: left;
-		margin-bottom: 3.5%;
+		margin-bottom: 3rem;
 		margin: 0 auto;
 	}
 	.contact-form{
 		display: block;
-		background-color:#000;
 		padding: 20px 0;
-		width: 40%;
+		width: 45%;
 	}
 	form input{
 		margin-bottom: 2.5rem;
 	}
 	form input{
-		width: 20rem;
+		width: 23rem;
 		padding: 8px 25px;
 		font-size: 13px;
 		font-weight: 500;
 	}
 	form .form-message{
-		width: 20rem;
+		width: 23rem;
 		padding: 7px 25px;
 		font-size: 13px;
 		font-weight: 500;
@@ -2979,48 +3465,31 @@ form .submit:active{
 		padding-top: 15px;
 	}
 }
-@media(max-width:644px){
+@media screen and (max-width:644px){
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 85vh;
-	}
-	#section-1 h1{
-		font-size: 14rem;
-		letter-spacing: 13px;
-		font-weight: 400;
+		height: 90vh;
 	}
 	.banner-button{
-		margin-top: 1.3rem;
-		width: 15rem;
-		margin-bottom: 2rem;
-		padding: 11px 25px;
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		margin-top: 25rem;
+		padding: 9px 20px;
 	}
 	#about-us h1{
-		font-size: 45px;
+		font-size: 40px;
 		letter-spacing: 2px;
 		font-weight: 500;
-		margin-bottom: 8px;
+		margin-bottom: 1.5rem;
 	}
 	.about-content p{
 		font-size: 13px;;
-		font-weight: 400;
+		font-weight: 300;
 		width: 83%;
 		margin: 0 auto;
-		line-height: 26px;
+		line-height: 24px;
 		text-align: left;
 		margin-bottom: 3.5rem;
-	}
-	.contact-box p{
-		font-size: 12px;
-		font-weight: 400;
-		line-height: 20px;
-		width: 83%;
-		text-align: left;
-		margin-bottom: 3.5%;
-		margin: 0 auto;
-	}
-	.contact-box{
-		width:80%;
 	}
 	.row-col{
 		width: 45%;
@@ -3031,15 +3500,18 @@ form .submit:active{
 		width: 9rem;
 		padding: 5px 16px;
 	}
+	.contact-box{
+		width:85%;
+	}
 	.contact-box h2{
-		font-size: 45px;
+		font-size: 35px;
 		font-weight: 500;
 		margin-bottom: 1.5rem;
 	}
 	.contact-box p{
-		font-size: 12px;
-		font-weight: 400;
-		line-height: 20px;
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 18px;
 		width: 80%;
 		padding-left: 20px;
 		text-align: left;
@@ -3051,9 +3523,8 @@ form .submit:active{
 	}
 	.contact-form{
 		display: block;
-		background-color:#000;
 		padding: 20px 0;
-		width: 45%;
+		width: 50%;
 	}
 	form input{
 		margin-bottom: 2.5rem;
@@ -3073,13 +3544,17 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:620px){
+@media screen and (max-width:620px){
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 22%;
+		width: 26%;
 		padding: 3px 0;
 		margin-left: 125px;
 		overflow: hidden;
+	}
+	.nav-list .sub-menu-1 ul li a{
+		font-size: 12px;
+		font-weight: 350;
 	}
 	.menu-bar ul li:hover .sub-menu-1 ul li{
 		margin: 0 auto;
@@ -3087,7 +3562,7 @@ form .submit:active{
 	}
 	.menu-bar .nav-list .sub-menu-2{
 		position: relative;
-		width: 23%;
+		width: 26%;
 		padding: 3px 0;
 		margin-left: 120px;
 		overflow: hidden;
@@ -3097,40 +3572,61 @@ form .submit:active{
 		border-bottom: 1px solid #fff;
 	}
 	#section-1{
-		height: 85vh;
+		height: 90vh;
 		height: -webkit-fill-avaliable;
 	}
 	.banner-button{
-		margin-top: 1rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
 	}
 	#about-us{
 		padding: 20px 0;
 	}
 	#about-us h1{
-		font-size: 45px;
+		font-size: 38px;
 		letter-spacing: 2px;
 		font-weight: 500;
-		margin-bottom: 10px;
+		margin-bottom: 25px;
 	}
 	.about-content p{
-		font-size: 13px;;
-		font-weight: 400;
-		width: 78%;
+		font-size: 12px;;
+		font-weight: 300;
+		width: 79%;
 		margin: 0 auto;
-		line-height: 24px;
+		line-height: 22px;
 		text-align: left;
 		margin-bottom: 3.5rem;
 	}
 	#products h2{
-		font-size: 43px;
+		font-size: 36px;
 		letter-spacing: 1px;
 		font-weight: 500;
+		margin-bottom: 1.5rem;
+	}
+	.product-text p{
+		font-size: 12px;;
+		font-weight: 300;
+		width: 75%;
+		max-width: 500;
+		padding-left: 3rem;
+		margin: 0 auto;
+		line-height: 22px;
+		text-align: left;
+		margin-bottom: 3.5rem;
 	}
 	.row-col{
 		width: 44%;
 		margin:0 auto;
 		margin-bottom: 5rem;
+	}
+	.row-col img{
+		max-height: 170px;
+	}
+	.row-p strong{
+		font-size: 20px;
 	}
 	.btn-1,.btn-2{
 		width: 8rem;
@@ -3141,30 +3637,32 @@ form .submit:active{
 		padding: 10px 0;
 	}
 	.contact-box h2{
-		font-size: 45px;
+		font-size: 35px;
 		font-weight: 500;
-		margin-bottom: 1.3rem;
+		margin-bottom: 1.5rem;
 	}
 	.contact-box p{
-		font-size: 13px;
-		font-weight: 400;
-		line-height: 20px;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 18px;
 		width: 85%;
 		text-align: left;
-		margin-bottom: 3.5%;
+		margin-bottom: 3.5rem;
 		margin: 0 auto;
 	}
+	.contact-box h3{
+		font-size: 21px;
+	}
 	.mail ul li{
-		font-size: 14px;
+		font-size: 13px;
 		color: black;
 		padding: 5px 8px;
 		font-weight: 500;
 	}
 	.contact-form{
 		display: block;
-		background-color:#000;
 		padding: 20px 0;
-		width: 45%;
+		width: 50%;
 		margin: 0 auto;
 	}
 	form input{
@@ -3184,17 +3682,28 @@ form .submit:active{
 		margin:0 auto;
 		margin-bottom: 2.5rem;
 	}
-}
-@media(max-width:600px){
-	#section-1{
-		height: 85vh;
-		height: -webkit-fill-avaliable;
+	#footer h2{
+		font-size: 30px;
 	}
-	.input-box{
-		padding: 30px 0;
+	.footer-link .footer-heading{
+		font-size: 23px;
+		letter-spacing: 3px;
+	}
+	.footer-link ul li{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width:600px){
+	#section-1{
+		height: 90vh;
+		height: -webkit-fill-avaliable;
 	}
 	.banner-button{
 		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
 	}
 	#products h2{
 		margin-bottom: 1rem;
@@ -3205,21 +3714,25 @@ form .submit:active{
 		align-items: center;
 		text-align: center;
 		width: 100%;
-		background-color: #141414;
 		padding: 15px 0;
 	}
 	.owner p,.owner h1 span{
 		font-size: 14px;
 		font-weight: 350;
-		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 }
-@media(max-width:584px){
+@media screen and (max-width:584px){
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 25%;
+		padding: 3px 0;
+		margin-left: 125px;
+	}
 	.row-col{
 		width: 46%;
 		padding: 10px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
 		margin:0 auto;
 		margin-bottom: 5rem;
 	}
@@ -3230,19 +3743,40 @@ form .submit:active{
 		padding: 3px 0;
 		margin-left: 130px;
 	}
-	#section-1 h1{
-		font-size: 13rem;
-		letter-spacing: 13px;
-		font-weight: 400;
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
 	}
 	.owner p,.owner h1 span{
 		padding-top: 12px;
 	}
 }
-@media(max-width:570px){
+@media screen and (max-width:570px){
+	.wrapper{
+		max-width: 400%;
+	}
+	.search-input input{
+		width: 160%;
+		height: 33px;
+		font-size: 14px;
+		flex-grow: 2;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 3px;
+		bottom: 5px;
+		left: 25rem;
+		font-size: 20px;
+	}
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 25%;
+		width: 30%;
 		padding: 3px 0;
 		margin-left: 130px;
 		overflow: hidden;
@@ -3260,34 +3794,29 @@ form .submit:active{
 	}
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 85dvh;
+		height: 90vh;
 	}
-	h1 .input{
-		font-size: 12rem;
-		letter-spacing: 12px;
-		font-weight: 400;
-		padding-top: 1.1rem;
-	}
-	h4 strong{
-		font-size: 24px;
-		letter-spacing: 5px;
-		font-weight: 450;
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
 	}
 	.about-content p{
 		font-size: 13px;;
-		font-weight: 400;
+		font-weight: 300;
 		width: 80%;
 		margin: 0 auto;
-		line-height: 25px;
+		line-height: 23px;
 		padding-top: 1.2rem;
 		margin-bottom: 3.5rem;
 	}
 	.about-button{
 		width: 15rem;
-		padding: 7px 24px;
+		padding: 8px 24px;
 		border-radius: 10px;
 		margin-bottom: 5rem;
-		background-color: rgb(1, 66, 1);
 		box-shadow: 2px 4px 3px 0 rgba(0,0,0,0.8);
 	}
 	.about-image{
@@ -3298,7 +3827,7 @@ form .submit:active{
 		max-height: 250px;
 	}
 	.products h2{
-		font-size: 35px;
+		font-size: 33px;
 		letter-spacing: 1px;
 		font-weight: 500;
 	}
@@ -3306,7 +3835,6 @@ form .submit:active{
 		width: 47%;
 		padding: 10px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
 		margin:0 auto;
 		margin-bottom: 5rem;
 	}
@@ -3321,16 +3849,17 @@ form .submit:active{
 		font-size: 11px;
 	}
 	.contact-box p{
-		font-size: 11px;
+		font-size: 12px;
 		font-weight: 400;
-		line-height: 23px;
+		line-height: 19px;
 		width: 75%;
+		padding-left: 2rem;
 		margin-bottom: 2.5rem;
 		margin: 0 auto;
 	}
 	.contact-box h3{
-		font-size: 25px;
-		font-weight: 450;
+		font-size: 23px;
+		font-weight: 400;
 		padding-top: 10px;
 		padding-bottom: 1rem;
 	}
@@ -3345,18 +3874,36 @@ form .submit:active{
 	}
 	.contact-form{
 		display: block;
-		background-color:#000;
 		padding: 20px 0;
-		width: 45%;
+		width: 50%;
 		margin: 0 auto;
 	}
 }
-@media(max-width:534px){
-	#section-1 h1{
-		font-size: 11rem;
-		letter-spacing: 12px;
-		font-weight: 400;
-		padding-top: 1.5rem;
+@media screen and (max-width:546px){
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 27%;
+		padding: 3px 0;
+		margin-left: 130px;
+		overflow: hidden;
+	}
+	.menu-bar ul li:hover .sub-menu-1 ul li{
+		margin: 0 auto;
+		border-bottom: 1px solid white;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 30%;
+		overflow: hidden;
+		padding: 3px 0;
+		margin-left: 130px;
+	}
+	.banner-button{
+		margin-bottom: 2rem;
+		width: 14rem;
+
+		margin-top: 23rem;
+		padding: 9px 20px;
 	}
 	.about-content p{
 		font-size: 12px;;
@@ -3380,7 +3927,6 @@ form .submit:active{
 		width: 50%;
 		padding: 10px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
 		margin:0 auto;
 		margin-bottom: 5rem;
 	}
@@ -3390,23 +3936,14 @@ form .submit:active{
 		width: 50%;
 		margin: 0 auto;
 	}
-	.owner p{
-		margin-bottom:5px;
-	}
 }
-@media(max-width:528px){
-	#section-1{
-		height: -webkit-fill-avaliable;
-		height: 85dvh;
-	}
-	.menu-bar .logo{
-		max-width: 100px;
-	}
+@media screen and (max-width:534px){
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 25%;
+		width: 27%;
 		padding: 3px 0;
 		margin-left: 130px;
+		overflow: hidden;
 	}
 	.menu-bar ul li:hover .sub-menu-1 ul li{
 		margin: 0 auto;
@@ -3414,7 +3951,81 @@ form .submit:active{
 	}
 	.menu-bar .nav-list .sub-menu-2{
 		position: relative;
-		width: 27%;
+		width: 30%;
+		overflow: hidden;
+		padding: 3px 0;
+		margin-left: 130px;
+	}
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
+	}
+	.about-content p{
+		font-size: 12px;;
+		font-weight: 400;
+		width: 80%;
+		margin: 0 auto;
+		line-height: 25px;
+		padding-top: 1.2rem;
+		margin-bottom: 3.5rem;
+	}
+	.product-text p{
+		font-size: 12px;;
+		font-weight: 400;
+		width: 80%;
+		margin: 0 auto;
+		line-height: 25px;
+		padding-top: 1.2rem;
+		margin-bottom: 4rem;
+	}
+	.row-col{
+		width: 50%;
+		padding: 10px 0;
+		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+		margin:0 auto;
+		margin-bottom: 5rem;
+	}
+	.contact-form{
+		display: block;
+		padding: 20px 0;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:528px){
+	#section-1{
+		height: -webkit-fill-avaliable;
+		height: 90dvh;
+	}
+	.menu-bar .logo{
+		max-width: 100px;
+	}
+	.menu-bar .nav-list ul li a{
+		color: white;
+		font-weight: 400;
+		font-size: 12px;
+		letter-spacing: 1px;
+	}
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 33%;
+		padding: 3px 0;
+		margin-left: 130px;
+	}
+	.nav-list .sub-menu-1 ul li a{
+		font-size: 11px;
+		font-weight: 350;
+	}
+	.menu-bar ul li:hover .sub-menu-1 ul li{
+		margin: 0 auto;
+		border-bottom: 1px solid white;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 33%;
 		padding: 3px 0;
 		margin-left: 130px;
 	}
@@ -3430,40 +4041,60 @@ form .submit:active{
 		height: 22px;;
 		padding: .1rem 1.1rem;
 	}
-	#section-1 h1{
-		font-size: 11rem;
-		letter-spacing: 12px;
-		font-weight: 400;
-		padding-top: 1.5rem;
+	.wrapper{
+		max-width: 250%;
+	}
+	.wrapper .search-input{
+		position: relative;
+		word-break: 50%;
+	}
+	.search-input input{
+		width: 135%;
+		height: 35px;
+		font-size: 14px;
+		flex-grow: 2;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 3px;
+		bottom: 3px;
+		left: 20rem;
+		font-size: 20px;
+	}
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
 	}
 	.about-content p{
 		font-size: 12px;;
-		font-weight: 400;
+		font-weight: 300;
 		width: 83%;
 		margin: 0 auto;
-		line-height: 25px;
-		padding-top: 1.2rem;
+		line-height: 22px;
+		padding-top: 1rem;
 		margin-bottom: 3.5rem;
 	}
 	.row-col{
 		width: 50%;
 		padding: 10px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
 		margin:0 auto;
 		margin-bottom: 5rem;
 	}
 	.row-col strong{
-		font-size:25px ;
+		font-size:20px ;
 		font-weight: 300;
 		letter-spacing: none;
 	}
-	.btn-2{
-		margin-left: 1.2rem;
-	}
 	.btn-1,.btn-2{
-		width: 8rem;
-		padding: 5px 15px;
+		width: 7rem;
+		padding: 5px 13px;
 		margin-bottom: 1.5rem;
 	}
 	.btn-1 a,.btn-2 a{
@@ -3481,10 +4112,9 @@ form .submit:active{
 		margin-bottom: 3.5rem;
 	}
 	.products-link{
-		font-size: 16px;
-		width: 30rem;
+		font-size: 15px;
+		width: 26rem;
 		font-weight: 400;
-		letter-spacing: 1px;
 		padding: 8px 23px;
 		transition: .3s;
 	}
@@ -3500,17 +4130,18 @@ form .submit:active{
 		text-align: center;
 	}
 	.contact-box h2{
-		font-size: 43px;
+		font-size: 34px;
 		font-weight: 500;
 		margin-bottom: 2.2rem;
 	}
 	.contact-box p{
 		font-size: 12px;
-		font-weight: 400;
+		font-weight: 300;
 		line-height: 18px;
 		width: 80%;
-		padding-left: 10px;
+		padding-left: 3rem;
 		margin: 0 auto;
+		max-width: 450;
 		margin-bottom: 12px;
 	}
 	.mail h1{
@@ -3530,31 +4161,73 @@ form .submit:active{
 		margin: 0 auto;
 	}
 	#footer h2{
+		font-size: 30px;
 		font-weight: 400;
+		letter-spacing: 1px;
+		margin-bottom:1.5rem;
 	}
-	.gallery-images{
-		margin-left: 2rem;
+	.footer-heading{
+		font-size: 20px;
+		letter-spacing: 1px;
+		font-weight: 400;
+		padding-top: 19px;
+		margin-bottom: 2.5rem;
 	}
-	.owner p{
-		margin-bottom: 8px;
+	.footer-list ion-icon{
+		width: 13px;
+		height: 13px;
+		font-size: 15px;
+		margin-top: 8px;
+		margin-right: 1.2rem;
+	}
+	.footer-list li{
+		display: block;
+		list-style: none;
+		font-size: 12px;
+		color: #fff;
+		font-weight: 250;
+		margin-bottom: 10px;
+	}
+	.footer-list li a{
+		display: block;
+		list-style: none;
+		font-size: 12px;
+		color: #fff;
+		font-weight: 250;
+		margin-bottom: 18px;
+	}
+	.hours{
+		padding-top: 15px;
+		margin-bottom: 25px;
+	}
+	.hours .hours-rate{
+		font-size: 15px;
+		color: white;
+		letter-spacing: 1px;
+		padding-top: 10px;
+		font-weight: 400;
+		margin-bottom: 10px;
 	}
 }
-@media(max-width:502px){
+@media screen and (max-width:502px){
 	.row-col{
 		width: 52%;
 		padding: 10px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
 		margin:0 auto;
 		margin-bottom: 5rem;
 	}
 	.row-col strong{
-		font-size:25px ;
+		font-size:20px ;
 		font-weight: 300;
 		letter-spacing: none;
 	}
-	.btn-2{
-		margin-left: 1.7rem;
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
 	}
 	.btn-1,.btn-2{
 		width: 7rem;
@@ -3572,13 +4245,13 @@ form .submit:active{
 		margin: 0 auto;
 	}
 }
-@media(max-width:490px){
+@media screen and (max-width:490px){
 	.menu-bar .logo{
 		max-width: 100px;
 	}
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 27%;
+		width: 29%;
 		padding: 3px 0;
 		margin-left: 130px;
 	}
@@ -3604,31 +4277,67 @@ form .submit:active{
 		height: 22px;;
 		padding: .1rem 1.1rem;
 	}
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
+	}
 	.row-col{
 		width: 52%;
 		padding: 10px 0;
 		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
 		margin:0 auto;
 		margin-bottom: 5rem;
 	}
 	.contact-form{
 		padding: 15px 0;
-		width: 52%;
+		width: 55%;
 		margin: 0 auto;
 	}
+	.contact-box h2{
+		font-size: 30px;
+	}
+	.contact-box h3{
+		font-size: 20px;
+	}
 }
-@media(max-width:480px){
+@media screen and (max-width:484px){
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 27%;
+		width: 35%;
 		padding: 3px 0;
 		margin-left: 130px;
 	}
 	.nav-list .sub-menu-1 ul li a{
-		font-size: 16px;
+		font-size: 11px;
 		font-weight: 400;
-		letter-spacing: 1px;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 35%;
+		padding: 3px 0;
+		margin-left: 130px;
+	}
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
+	}
+}
+@media screen and (max-width:480px){
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 30%;
+		padding: 3px 0;
+		margin-left: 130px;
+	}
+	.nav-list .sub-menu-1 ul li a{
+		font-size: 11px;
+		font-weight: 400;
 	}
 	.menu-bar .nav-list .sub-menu-2{
 		position: relative;
@@ -3638,60 +4347,59 @@ form .submit:active{
 	}
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 85dvh;
-	}
-	.input-box{
-		padding-top: 5rem;
-		margin-bottom: 1.5rem;
-	}
-	#section-1 h1{
-		font-size: 11rem;
-		letter-spacing: 10px;
-		font-weight: 400;
-		padding-top: 1.5rem;
+		height: 90dvh;
 	}
 	.banner-button{
-		margin-top: 2rem;
+		margin-bottom: 1.5rem;
 		width: 14rem;
-		padding: 9px 23px;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
 	}
 	.row-col{
 		width: 53%;
 		padding: 10px 0;
 	}
 	.row-col strong{
-		font-size: 24px;
+		font-size: 20px;
 		font-weight: 400;
 	}
 	.btn-2{
 		margin-left: 2rem;
 	}
 	.btn-1,.btn-2{
-		width: 7rem;
+		width: 8rem;
 		padding: 5px 6px;
 		font-weight: 500;
 		font-size: 12px;
 	}
 	.contact-form{
 		padding: 15px 0;
-		width: 52%;
+		width: 55%;
 		margin: 0 auto;
 	}
 	form input{
-		width: 19rem;
+		width: 22rem;
 		padding: 8px 24px;
 		font-size: 12px;
 		font-weight: 500;
 	}
 	form .form-message{
-		width: 19rem;
+		width: 22rem;
 		padding: 8px 23px;
 		font-size: 12px;
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
 }
-@media(max-width:478px){
+@media screen and (max-width:478px){
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
+	}
 	.row-col{
 		width: 53%;
 		padding: 10px 0;
@@ -3712,25 +4420,10 @@ form .submit:active{
 		margin: 0 auto;
 	}
 }
-@media(max-width:466px){
-	.menu-bar .logo{
-		max-width: 100px;
-	}
-	.icons ion-icon{
-		font-size: 25px;
-		width: 22px;
-		height: 22px;
-		padding: .1rem 1.1rem;
-	}
-	.checkbtn ion-icon{
-		font-size: 25px;
-		width: 22px;
-		height: 22px;;
-		padding: .1rem 1rem;
-	}
+@media screen and (max-width:468px){
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 31%;
+		width: 34%;
 		padding: 3px 0;
 		margin-left: 140px;
 	}
@@ -3741,9 +4434,71 @@ form .submit:active{
 		margin-top: -0px;
 	}
 	.nav-list .sub-menu-1 ul li a{
-		font-size: 14px;
+		font-size: 11px;
 		font-weight: 400;
-		letter-spacing: 1px;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 34%;
+		padding: 3px 0;
+		margin-left: 140px;
+	}
+	.menu-bar .sub-menu-2 ul li a{
+		font-size: 11px;
+		font-weight: 400;
+		letter-spacing: 0px;
+	}
+}
+@media screen and (max-width:466px){
+	.menu-bar .logo{
+		max-width: 100px;
+	}
+	.icons ion-icon{
+		font-size: 23px;
+		width: 22px;
+		height: 22px;
+		padding: .1rem 1rem;
+	}
+	.checkbtn ion-icon{
+		font-size: 23px;
+		width: 22px;
+		height: 22px;;
+		padding: .1rem 1rem;
+	}
+	.wrapper{
+		max-width: 250%;
+	}
+	.search-input input{
+		width: 135%;
+		height: 35px;
+		font-size: 14px;
+		flex-grow: 2;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 1px;
+		bottom: 3px;
+		left: 20rem;
+		font-size: 18px;
+	}
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 34%;
+		padding: 3px 0;
+		margin-left: 140px;
+	}
+	.menu-bar ul li:hover .sub-menu-1{
+		margin-top: -1px;
+	}
+	.menu-bar ul li:hover .sub-menu-2{
+		margin-top: -0px;
+	}
+	.nav-list .sub-menu-1 ul li a{
+		font-size: 11px;
+		font-weight: 400;
 	}
 	.menu-bar .nav-list .sub-menu-2{
 		position: relative;
@@ -3751,37 +4506,31 @@ form .submit:active{
 		padding: 3px 0;
 		margin-left: 140px;
 	}
-	header .sub-menu-2 ul li a{
-		font-size: 14px;
+	.menu-bar .sub-menu-2 ul li a{
+		font-size: 11px;
 		font-weight: 400;
 		letter-spacing: 0px;
 	}
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 85vh;
-	}
-	.input-box{
-		padding-top: 3rem;
-		margin-bottom: 2.5rem;
-	}
-	#section-1 h1{
-		font-size: 10rem;
-		letter-spacing: 10px;
-		font-weight: 400;
-		padding-top: 1.5rem;
+		height: 90vh;
 	}
 	.banner-button{
-		margin-top: 1.5rem;
-		width: 14rem;
-		padding: 9px 25px;
+		margin-bottom: 1.5rem;
+		width: 13rem;
+		font-size: 6px;
+		margin-top: 25rem;
+		padding: 9px 20px;
 	}
 	.about-content p{
 		font-size: 12px;;
-		font-weight: 400;
-		width: 80%;
+		font-weight: 300;
+		width: 85%;
+		padding-left: 1.5rem;
 		margin: 0 auto;
 		line-height: 23px;
 		padding-top: 1rem;
+		max-width: 450;
 		margin-bottom: 3.5rem;
 	}
 	.about-button{
@@ -3796,13 +4545,13 @@ form .submit:active{
 		max-width: 300px;
 		max-height: 300px;
 	}
-	.products h2{
+	#products h2{
 		font-size: 31px;
 		font-weight: 500;
 	}
 	.product-text p{
 		font-size: 11px;
-		font-weight: 400;
+		font-weight: 300;
 		width: 80%;
 		line-height: 20px;
 		padding-top: 1.3rem;
@@ -3818,7 +4567,7 @@ form .submit:active{
 		letter-spacing: none;
 	}
 	.row-col p,.row-p-2{
-		font-size: 11px;
+		font-size: 12px;
 		font-weight: 400;
 	}
 	.btn-1,.btn-2{
@@ -3828,20 +4577,16 @@ form .submit:active{
 		font-size: 10px;
 	}
 	.contact-box h2{
-		font-size: 42px;
+		font-size: 35px;
 		font-weight: 500;
 		margin-bottom: 2.2rem;
 	}
-	#products h2{
-		font-size: 40px;
-		letter-spacing: 1px;
-		font-weight: 500;
-	}
 	.contact-box p{
 		font-size: 12px;
-		font-weight: 400;
+		font-weight: 300;
 		line-height: 18px;
 		width: 80%;
+		max-width: 400;
 		margin-bottom: 3.5%;
 	}
 	.mail h1{
@@ -3850,7 +4595,7 @@ form .submit:active{
 	}
 	.contact-form{
 		padding: 15px 0;
-		width: 53%;
+		width: 55%;
 		margin: 0 auto;
 	}
 	form input{
@@ -3874,17 +4619,17 @@ form .submit:active{
 		font-size: 12px;
 	}
 	.contact-form h1{
-		font-size: 18px;
+		font-size: 15px;
 		font-weight: 400;
 		margin-bottom: 2.5rem;
 	}
 	#footer h2{
 		font-weight: 400;
-		font-size: 35px;
+		font-size: 30px;
 	}
 	.footer-heading{
-		font-size: 27px;
-		letter-spacing: 2px;
+		font-size: 25px;
+		letter-spacing: 3px;
 		font-weight: 400;
 		margin-bottom: 2.5rem;
 	}
@@ -3898,7 +4643,7 @@ form .submit:active{
 		padding-bottom: 10px;
 	}
 	.hours .hours-rate{
-		font-size: 15px;
+		font-size: 14px;
 		padding-top: 16px;
 		font-weight: 400;
 		margin-bottom: 1rem;
@@ -3906,7 +4651,7 @@ form .submit:active{
 }
 /*/////Mobile phones view/////////*/
 /*///////////////////////////////*/
-@media(max-width:425px){
+@media screen and (max-width:425px){
 	header{
 		width: 100%;
 		position: sticky;
@@ -3916,14 +4661,20 @@ form .submit:active{
 	.menu-bar .logo{
 		max-width: 100px;
 	}
+	.menu-bar .nav-list ul li{
+		width: 100%;
+		position: relative;
+		padding: 5px 0;
+		padding-bottom: 5px;
+	}
 	.menu-bar .nav-list .sub-menu-1 ul li a{
-		font-size: 15px;
+		font-size: 10px;
 		font-weight: 400;
 		letter-spacing: 1px;
 	}
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 29%;
+		width: 35%;
 		padding: 3px 0;
 		margin-left: 130px;
 	}
@@ -3932,13 +4683,13 @@ form .submit:active{
 		border-bottom: 1px solid white;
 	}
 	.menu-bar .nav-list .sub-menu-2 ul li a{
-		font-size: 15px;
+		font-size: 10px;
 		font-weight: 400;
 		letter-spacing: none;
 	}
 	.menu-bar .nav-list .sub-menu-2{
 		position: relative;
-		width: 34%;
+		width: 35%;
 		padding: 3px 0;
 		margin-left: 130px;
 	}
@@ -3954,47 +4705,54 @@ form .submit:active{
 		height: 18px;;
 		padding: .1rem 1rem;
 	}
-	.input-box{
-		padding-top: 8.5rem;
-		margin-bottom: 1rem;
+	.wrapper{
+		max-width: 200%;
+	}
+	.search-input input{
+		width: 130%;
+		height: 33px;
+		font-size: 13px;
+		flex-grow: 1;
+	}
+	.search-input .icon{
+		height: 35px;
+		width: 35px;
+		line-height: 35px;
+		position: absolute;
+		top: 3px;
+		bottom: 3px;
+		left: 20rem;
+		font-size: 18px;
 	}
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 85vh;
-	}
-	#section-1 h1{
-		font-size: 10rem;
-		letter-spacing: 8px;
-		font-weight: 400;
-		padding-top: 1.3rem;
+		height: 90vh;
+		background-image: url(../images/logo-png.png);
 	}
 	.banner-button{
-		margin-top: 1.3rem;
 		margin-bottom: 1.5rem;
 		width: 13rem;
 		font-size: 6px;
+		margin-top: 25rem;
 		padding: 9px 20px;
-	}
-	h4 strong{
-		font-size: 20px;
-		letter-spacing: 4px;
-		font-weight: 450;
-		/*text-shadow: 0px 0.8px 12px #333;*/
 	}
 	#about-us{
 		padding: 13px 0;
 	}
 	#about-us h1{
-		font-size: 40px;
+		font-size: 35px;
 		letter-spacing: 1px;
 		margin-bottom: 2px;
 		font-weight: 450;
 	}
 	.about-content p{
 		font-size: 11px;;
-		font-weight: 400;
-		width: 82%;
-		line-height: 22px;
+		font-weight: 300;
+		width: 86%;
+		max-width: 400;
+		line-height: 20px;
+		max-width: 400px;
+		padding-left: 1rem;
 		padding-top: 1.2rem;
 		margin-bottom: 3.5rem;
 	}
@@ -4015,7 +4773,7 @@ form .submit:active{
 		width: 80%;
 	}
 	.row-col{
-		width: 65%;
+		width: 68%;
 		padding: 10px 0;
 	}
 	.row-image{
@@ -4030,21 +4788,20 @@ form .submit:active{
 		font-size: 11px;
 	}
 	.row-col .row-p strong{
-		font-size: 23px;
+		font-size: 20px;
 		letter-spacing: 1px;
 		font-weight: 400;
-		/*text-shadow: 0px 0.8px 12px #333;*/
 	}
 	.products-link{
-		font-size: 16px;
-		width: 30rem;
-		font-weight: 350;
+		font-size: 14px;
+		width: 21rem;
+		margin-left: 2rem;
+		font-weight: 300;
 		letter-spacing: 0px;
-		padding: 6px 21px;
-		letter-spacing: 1px;
+		padding: 6px 18px;
 	}
 	.right-arrow{
-		padding-left: 10px;
+		padding-left: 5px;
 		padding-top: 4px;
 	}
 	#contact-us{
@@ -4056,13 +4813,13 @@ form .submit:active{
 		text-align: center;
 	}
 	.contact-box h2{
-		font-size: 43px;
+		font-size: 35px;
 		font-weight: 500;
-		margin-bottom: 1.3rem;
+		margin-bottom: 2rem;
 	}
 	.contact-box p{
 		font-size: 12px;
-		font-weight: 400;
+		font-weight: 300;
 		line-height: 18px;
 		width: 80%;
 		margin-bottom: 3.5%;
@@ -4076,7 +4833,7 @@ form .submit:active{
 	}
 	.contact-form{
 		padding: 15px 0;
-		width: 58%;
+		width: 60%;
 		margin: 0 auto;
 	}
 	form input{
@@ -4097,54 +4854,201 @@ form .submit:active{
 		padding-top: 15px;
 	}
 	#footer h2{
-		font-weight: 350;
-		font-size: 35px;
-		letter-spacing: 1px;
+		font-size: 25px;
+		font-weight: 400;
+		margin-bottom:1rem;
 	}
-	.owner a{
+	.footer-heading{
+		font-size: 18px;
+		font-weight: 400;
+		padding-top: 19px;
+		margin-bottom: 2.5rem;
+	}
+	.footer-list ion-icon{
+		width: 13px;
+		height: 13px;
+		font-size: 15px;
+		margin-top: 8px;
+		margin-right: 1.2rem;
+	}
+	.footer-list li{
+		display: block;
+		list-style: none;
 		font-size: 12px;
-		font-size: 400;
+		color: #fff;
+		font-weight: 250;
+		margin-bottom: 8px;
+	}
+	.footer-list li a{
+		display: block;
+		list-style: none;
+		font-size: 12px;
+		color: #fff;
+		font-weight: 250;
+		margin-bottom: 18px;
+	}
+	.hours{
+		padding-bottom: 10px;
+	}
+	.hours .hours-rate{
+		font-size: 14px;
+		padding-top: 16px;
+		font-weight: 400;
+		margin-bottom: 1rem;
+	}
+	.owner{
+		padding: 10px 0;
 	}
 	.owner p{
-		font-size: 11px;
-		font-weight: 320;
+		font-size: 12px;
+		font-weight: 300;
 	}
 	.owner h1 span{
-		font-weight: 350;
+		font-weight: 300;
 		margin-left: 3px;
 		font-size: 12px;
 	}
 	.owner h1{
 		font-size: 12px;
-		font-weight: 350;
+		font-weight: 300;
 	}
 }
-@media(max-width:412px){
-	#section-1{
-		height: 85dvh;
-		height: -webkit-fil-avaliable;
-	}
-}
-@media(max-width:394px){
+@media screen and (max-width:414px){
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 85vh;
-	}
-	#section-1 h1{
-		font-size: 9rem;
-		letter-spacing: 8px;
-		font-weight: 400;
-		padding-top: 1.3rem;
-	}
-}
-@media(max-width:375px){
-	#section-1{
-		height: -webkit-fill-avaliable;
-		height: 85vh;
+		height: 90vh;
+		background-image: url(../images/logo-png.png);
 	}
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 35%;
+		width: 38%;
+		padding: 3px 0;
+		margin-left: 135px;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 40%;
+		padding: 3px 0;
+		margin-left: 135px;
+	}
+	.banner-button{
+		width: 14rem;
+		margin-top: 26rem;
+		padding: 9px 23px;
+	}
+}
+@media screen and (max-width:412px){
+	#section-1{
+		height: 90vh;
+		height: -webkit-fil-avaliable;
+		background-image: url(../images/logo-png.png);
+	}
+	.banner-button{
+		width: 14rem;
+		margin-top: 26rem;
+		padding: 9px 23px;
+	}
+}
+@media screen and (max-width:394px){
+	#section-1{
+		height: -webkit-fill-avaliable;
+		height: 90vh;
+		background-image: url(../images/logo-png.png);
+	}
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 38%;
+		padding: 3px 0;
+		margin-left: 135px;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 40%;
+		padding: 3px 0;
+		margin-left: 135px;
+	}
+	.wrapper{
+		max-width: 200%;
+	}
+	.search-input input{
+		width: 110%;
+		height: 35px;
+		font-size: 14px;
+		flex-grow: 1;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 3px;
+		bottom: 3px;
+		left: 16rem;
+		font-size: 17px;
+	}
+	.banner-button{
+		width: 14rem;
+		margin-top: 26rem;
+		padding: 9px 23px;
+	}
+}
+@media screen and (max-width:390px){
+	#section-1{
+		height: -webkit-fill-avaliable;
+		height: 90vh;
+		background-image: url(../images/logo-png.png);
+	}
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 38%;
+		padding: 3px 0;
+		margin-left: 135px;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 40%;
+		padding: 3px 0;
+		margin-left: 135px;
+	}
+	.wrapper{
+		max-width: 200%;
+	}
+	.search-input input{
+		width: 110%;
+		height: 35px;
+		font-size: 14px;
+		flex-grow: 1;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 3px;
+		bottom: 3px;
+		left: 16rem;
+		font-size: 17px;
+	}
+	.banner-button{
+		width: 14rem;
+		margin-top: 26rem;
+		padding: 9px 23px;
+	}
+}
+@media screen and (max-width:375px){
+	#section-1{	
+		height: -webkit-fill-avaliable;
+		height: 89svh;
+		background-image: url(../images/logo-png.png);
+	}
+	.banner-button{
+		width: 14rem;
+		margin-top: 26rem;
+		padding: 9px 23px;
+	}
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 37%;
 		padding: 3px 0;
 		margin-left: 140px;
 	}
@@ -4155,7 +5059,7 @@ form .submit:active{
 		margin-top: -0px;
 	}
 	.nav-list .sub-menu-1 ul li a{
-		font-size: 13px;
+		font-size: 11px;
 		font-weight: 400;
 		letter-spacing: 1px;
 	}
@@ -4165,25 +5069,31 @@ form .submit:active{
 		padding: 3px 0;
 		margin-left: 140px;
 	}
-	#section-1 h1{
-		font-size: 8rem;
-		letter-spacing: 8px;
-		font-weight: 400;
-		padding-top: 1.5rem;
+	.about-us h1{
+		font-size: 25px;
 	}
 	.about-content p{
-		font-size: 10px;;
-		font-weight: 400;
+		font-size: 11px;;
+		font-weight: 300;
 		width: 85%;
-		line-height: 22px;
-		padding-top: 1.2rem;
+		line-height: 20px;
+		padding-top: 2rem;
 		margin-bottom: 3.5rem;
+	}
+	#products h2{
+		font-size: 27px;
+		letter-spacing: 1px;
+		font-weight: 500;
+	}
+	.contact-box p{
+		font-size: 11px;;
+		width: 85%;
 	}
 	.product-text p{
 		font-size: 11px;;
 		font-weight: 400;
-		width: 85%;
-		line-height: 22px;
+		width: 83%;
+		line-height: 21px;
 		padding-top: 1.2rem;
 		margin-bottom: 3.5rem;
 	}
@@ -4207,25 +5117,13 @@ form .submit:active{
 		width: 60%;
 		max-height: 150px;
 	}
-	#products h2{
-		font-size: 38px;
-		letter-spacing: 1px;
-		font-weight: 500;
-	}
-	.about-content p{
-		width: 85%;
-	}
-	.product-text p{
-		width: 85%;
-	}
-	.contact-box p{
-		font-size: 11px;;
-		width: 85%;
-	}
 	.contact-form{
 		padding: 15px 0;
 		width: 66%;
 		margin: 0 auto;
+	}
+	.contact-box h2{
+		font-size: 27px;
 	}
 	.foooter h2{
 		font-size: 16px;
@@ -4245,8 +5143,38 @@ form .submit:active{
 		font-weight: 500;
 		margin-bottom: 2.5rem;
 	}
+	#footer h2{
+		font-size: 22px;
+		font-weight: 400;
+		margin-bottom:1rem;
+	}
+	.footer-link .footer-heading{
+		font-size: 18px;
+		font-weight: 400;
+		padding-top: 19px;
+		margin-bottom: 2.5rem;
+	}
+	.footer-list ion-icon{
+		width: 12px;
+		height: 12px;
+		font-size: 13px;
+		margin-top: 8px;
+		margin-right: 1.2rem;
+	}
+	.footer-list li{
+		font-size: 11px;
+		font-weight: 250;
+		margin-bottom: 8px;
+	}
+	.footer-list li a{
+		display: block;
+		list-style: none;
+		font-size: 11px;
+		font-weight: 250;
+		margin-bottom: 18px;
+	}
 }
-@media(max-width:360px){
+@media screen and (max-width:360px){
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
 		width: 37%;
@@ -4270,9 +5198,21 @@ form .submit:active{
 		padding: 3px 0;
 		margin-left: 140px;
 	}
+	.search-box{
+		max-width: 90px;
+		padding: 3px;
+		font-size: 10px;
+	}
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 85svh;
+		height: 87svh;
+		background-image: url(../images/logo-png.png);
+	}
+	.banner-button{
+		margin-top: 28rem;
+		margin-bottom: 1.5rem;
+		width: 13rem;
+		padding: 9px 20px;
 	}
 	.row{
 		width: 76%;
@@ -4293,25 +5233,25 @@ form .submit:active{
 		font-size: 10px;
 	}
 }
-@media(max-width:330px){
+@media screen and (max-width:330px){
 	.menu-bar .logo{
-		max-width: 90px;
+		max-width: 80px;
 	}
 	.icons ion-icon{
-		font-size: 23px;
-		width: 15px;
-		height: 15px;
+		font-size: 20px;
+		width: 13px;
+		height: 13px;
 		padding: .1rem 1rem;
 	}
 	.checkbtn ion-icon{
-		font-size: 24px;
-		width: 16px;
-		height: 16px;;
+		font-size: 22px;
+		width: 14px;
+		height: 14px;;
 		padding: .1rem 1rem;
 	}
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
-		width: 39%;
+		width: 38%;
 		padding: 2px 0;
 		margin-left: 112px;
 	}
@@ -4322,7 +5262,7 @@ form .submit:active{
 		margin-top: -0px;
 	}
 	.nav-list .sub-menu-1 ul li a{
-		font-size: 15px;
+		font-size: 10px;
 		font-weight: 400;
 		letter-spacing: 1px;
 	}
@@ -4332,23 +5272,36 @@ form .submit:active{
 		padding: 2px 0;
 		margin-left: 112px;
 	}
-	header .sub-menu-2 ul li a{
-		font-size: 14px;
+	.menu-bar .sub-menu-2 ul li a{
+		font-size: 10px;
 		font-weight: 400;
 		letter-spacing: 0px;
 	}
+	.wrapper{
+		max-width: 150%;
+	}
+	.search-input input{
+		width: 100%;
+		height: 35px;
+		font-size: 14px;
+		flex-grow: 1;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 3px;
+		bottom: 3px;
+		left: 14rem;
+		font-size: 17px;
+	}
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 85svh;
-	}
-	#section-1 h1{
-		font-size: 7rem;
-		letter-spacing: 7px;
-		font-weight: 400;
-		padding-top: 1.6rem;
+		height: 90vh;
+		background-image: url(../images/logo-png.png);
 	}
 	.banner-button{
-		margin-top: 2rem;
 		width: 13rem;
 		font-size: 5px;
 		font-weight: 300px;
@@ -4361,25 +5314,28 @@ form .submit:active{
 		max-width: 200px;
 		max-height: 200px;
 	}
-	.products h2{
-		font-size: 20px;
+	.about-content p{
+		width: 78%;
+		max-width: 400;
+		line-height: 18px;
+		font-size: 10px;
+	}
+	#products h2{
+		font-size: 24px;
 		font-weight: 400;
 		letter-spacing: none;
 	}
-	.about-content p{
-		width: 75%;
-		font-size: 10px;
-	}
 	.product-text p{
 		font-size: 11px;
-		font-weight: 400;
-		width: 75%;
+		font-weight: 300;
+		width: 77%;
 		line-height: 20px;
+		max-width: 400;
 		padding-top: 1.3rem;
 		margin-bottom: 4%;
 	}
 	.row-col{
-		width: 73%;
+		width: 75%;
 		padding: 10px 0;
 	}
 	.row-col strong{
@@ -4396,11 +5352,10 @@ form .submit:active{
 		font-size: 12px;
 	}
 	.products-link{
-		font-size: 16px;
-		width: 30rem;
+		font-size: 13px;
+		width: 18rem;
 		font-weight: 400;
-		letter-spacing: 1px;
-		padding: 6px 20px;
+		padding: 6px 9px;
 		transition: .3s;
 	}
 	.right-arrow{
@@ -4410,19 +5365,20 @@ form .submit:active{
 		padding: 10px 0;
 	}
 	.contact-box h2{
-		font-size: 38px;
-		font-weight: 450;
+		font-size: 26px;
+		font-weight: 400;
 		margin-bottom: 1.2rem;
 	}
 	.contact-box p{
 		font-size: 11px;
-		font-weight: 400;
-		line-height: 18px;
-		width: 80%;
+		font-weight: 300;
+		line-height: 14px;
+		width: 85%;
+		max-width: 400;
 		margin-bottom: 3.5%;
 	}
 	.contact-box h3{
-		font-size: 23px;
+		font-size: 17px;
 		font-weight: 400;
 		padding-top: 10px;
 		padding-bottom: 1rem;
@@ -4433,21 +5389,20 @@ form .submit:active{
 	}
 	.mail ul li{
 		font-size: 11px;
-		padding-top: 3px;
-		padding: 1px 2px;
-		font-weight: 450;
+		padding-top: 5px;
+		padding: 3px 10px;
+		font-weight: 400;
 	}
 	#footer h2{
-		font-size: 27px;;
-		font-weight: 350;
-		letter-spacing: 2px;
+		font-size: 23px;;
+		font-weight: 300;
+		letter-spacing: 1px;
 		margin-bottom:1rem;
 	}
 	.footer-heading{
-		font-size: 26px;
-		letter-spacing: 2px;
+		font-size: 20px;
 		font-weight: 400;
-		margin-bottom: 2.3rem;
+		margin-bottom: 1.5rem;
 	}
 	.footer-list ion-icon{
 		width: 13px;
@@ -4456,33 +5411,30 @@ form .submit:active{
 		margin-right: 1rem;
 	}
 	.footer-list li{
-		font-size: 11px;
+		font-size: 10px;
 		font-weight: 300;
-		margin-bottom: 3%;
+		margin-bottom: 13px;
 	}
 	.hours .hours-rate{
-		font-size: 14px;
+		font-size: 12px;
 		padding-top: 8px;
 		font-weight: 400;
 	}
-	#gallery-head{
-		padding-top: 15px;
-	}
 	.owner p{
-		font-size: 10px;
-		font-weight: 350;
+		font-size: 11px;
+		font-weight: 300;
 	}
 	.owner h1 span{
-		font-weight: 350;
+		font-weight: 300;
 		margin-left: 3px;
-		font-size: 10px;
+		font-size: 11px;
 	}
 	.owner h1{
-		font-size: 10px;
+		font-size: 11px;
 		font-weight: 350;
 	}
 }
-@media(max-width:320px){
+@media screen and (max-width:320px){
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
 		width: 41%;
@@ -4504,12 +5456,26 @@ form .submit:active{
 		font-size: 14px;
 		font-weight: 400;
 	}
-	#section-1{
-		height: 85svh;
+	#section-1{	
+		height: 85vh;
+		background-image: url(../images/logo-png.png);
 		height: -webkit-fill-avaliable;
 	}
+	.banner-button{
+		width: 14rem;
+		margin-top: 29rem;
+		padding: 9px 23px;
+	}
 	.about-content p{
-		width: 77%;
+		width: 79%;
+	}
+	.about-us h1{
+		font-size: 24px;
+	}
+	#products h2{
+		font-size: 26px;
+		font-weight: 400;
+		letter-spacing: none;
 	}
 	.product-text p{
 		width: 79%;
@@ -4524,47 +5490,44 @@ form .submit:active{
 		padding: 10px 0;
 	}
 	.row-col strong{
-		font-size: 21px;
+		font-size: 17px;
 		letter-spacing: none;
 		font-weight: 300;
 	}
 	.contact-form{
 		padding: 15px 0;
-		width: 70%;
+		width: 73%;
 		margin: 0 auto;
+	}
+	.contact-form h1{
+		font-size: 14px;
 	}
 	#footer h2{
 		font-weight: 350;
-		font-size: 27px;
+		font-size: 20px;
 	}
 	.footer-heading{
-		font-size: 25px;
-		letter-spacing: 2px;
-		font-weight: 400;
-		margin-bottom: 2.5rem;
-	}
-	#products h2{
-		font-size: 35px;
-		font-weight: 500;
-		letter-spacing: none;
+		font-size: 15px;
+		font-weight: 300;
+		margin-bottom: 1.5rem;
 	}
 	.footer-list ion-icon{
 		width: 12px;
 		height: 12px;
-		font-size: 20px;
+		font-size: 28px;
 		margin-right: 1rem;
 	}
 	.footer-list li{
 		font-size: 10px;
 		font-weight: 300;
-		margin-bottom: 3%;
+		margin-bottom: 10px;
 	}
 	.footer-link ul li a{
-		padding-bottom: 4px;
+		padding-bottom: 5px;
 		letter-spacing: none;
 	}
 }
-@media(max-width:288px){
+@media screen and (max-width:288px){
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
 		width: 47%;
@@ -4589,22 +5552,10 @@ form .submit:active{
 	}
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 84svh;
-	}
-	h4 strong{
-		font-size: 19px;
-		letter-spacing: 3px;
-		font-weight: 400;
-		/*text-shadow: 0px 0.8px 12px #333;*/
-	}
-	#section-1 h1{
-		font-size: 6rem;
-		letter-spacing: 7px;
-		font-weight: 400;
-		padding-top: 1.5rem;
+		height: 85svh;
+		background-image: url(../images/logo-png.png);
 	}
 	.banner-button{
-		margin-top: 2rem;
 		width: 12rem;
 		font-size: 5px;
 		padding: 8px 12px;
@@ -4616,24 +5567,31 @@ form .submit:active{
 		padding: 10px 0;
 	}
 	#about-us h1{
-		font-size: 35px;
-		margin-bottom: 2px;
+		font-size: 32px;
+		margin-bottom: 1px;
 		font-weight: 400;
 	}
 	.about-content p{
 		font-size: 10px;;
-		font-weight: 400;
-		width: 77%;
-		line-height: 20px;
-		padding-top: 1.2rem;
+		font-weight: 300;
+		width: 80%;
+		line-height: 18px;
+		padding-top: 1.5rem;
+		max-width: 400;
 		margin-bottom: 3.5rem;
+	}
+	#products h2{
+		font-size: 23px;
+		font-weight: 400;
+		letter-spacing: none;
 	}
 	.product-text p{
 		font-size: 10px;;
-		font-weight: 400;
-		width: 75%;
-		line-height: 23px;
+		font-weight: 300;
+		width: 79%;
+		line-height: 18px;
 		padding-top: 1.2rem;
+		max-width: 400;
 		margin-bottom: 3.5rem;
 	}
 	.about-button{
@@ -4649,17 +5607,12 @@ form .submit:active{
 		max-width: 150px;
 		max-height: 150px;
 	}
-	#products h2{
-		font-size: 33px;
-		font-weight: 500;
-		letter-spacing: none;
-	}
 	.row{
 		width: 90%;
 		margin: 0 auto;
 	}
 	.row-col{
-		width: 78%;
+		width: 75%;
 		padding: 10px 0;
 	}
 	.row-col strong{
@@ -4676,14 +5629,14 @@ form .submit:active{
 		padding: 9px 0;
 	}
 	.contact-box h2{
-		font-size: 35px;
+		font-size: 25px;
 		font-weight: 400;
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
 	}
 	.contact-box p{
-		font-size: 10px;
-		font-weight: 400;
-		line-height: 18px;
+		font-size: 11px;
+		font-weight: 300;
+		line-height: 15px;
 		width: 83%;
 		margin-bottom: 3.5%;
 	}
@@ -4692,6 +5645,9 @@ form .submit:active{
 	}
 	.contact-form{
 		width: 75%;
+	}
+	.contact-form h1{
+		font-size: 12px;
 	}
 	form input{
 		width: 17rem;
@@ -4707,49 +5663,61 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 	#footer h2{
-		font-weight: 320;
-		font-size: 25px;
-		letter-spacing: 1px;
+		font-weight: 300;
+		font-size: 20px;
 	}
 	.owner p{
 		font-size: 12px;
 	}
 }
-@media(max-width:280px){
+@media screen and (max-width:280px){
+	
 	.menu-bar .nav-list .sub-menu-1{
 		position: relative;
 		width: 47%;
 		padding: 1px 0;
-		margin-left: 111px;
+		margin-left: 109px;
 	}
 	.nav-list .sub-menu-1 ul li a{
-		font-size: 13px;
+		font-size: 10px;
 		font-weight: 400;
-		letter-spacing: 1px;
 		border-bottom: grey;
 	}
 	.menu-bar .nav-list .sub-menu-2{
 		position: relative;
 		width: 51%;
 		padding: 1px 0;
-		margin-left: 111px;
+		margin-left: 109px;
 	}
 	.nav-list .sub-menu-2 ul li a{
-		font-size: 13px;
+		font-size: 11px;
 		font-weight: 400;
+	}
+	.wrapper{
+		max-width: 55%;
+	}
+	.search-input input{
+		width: 100%;
+		height: 30px;
+		font-size: 14px;
+		flex-grow: 1;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 2px;
+		bottom: 3px;
+		left: 11rem;
+		font-size: 17px;
 	}
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 84svh;
-	}
-	h4 strong{
-		font-size: 20px;
-		letter-spacing: 3px;
-		font-weight: 400;
-		/*text-shadow: 0px 0.8px 12px #333;*/
+		height: 85svh;
+		background-image: url(../images/logo-png.png);
 	}
 	.banner-button{
-		margin-top: 2rem;
 		width: 12rem;
 		font-size: 5px;
 		padding: 8px 12px;
@@ -4761,17 +5729,18 @@ form .submit:active{
 		padding: 10px 0;
 	}
 	#about-us h1{
-		font-size: 35px;
-		margin-bottom: 2px;
+		font-size: 25px;
+		margin-bottom: 1px;
 		font-weight: 400;
 	}
 	.about-content p{
 		font-size: 10px;;
-		font-weight: 400;
+		font-weight: 300;
 		width: 80%;
-		padding-left: 1px;
-		line-height: 20px;
-		padding-top: 1.2rem;
+		padding-left: 10px;
+		max-width: 400;
+		line-height: 17px;
+		padding-top: 1.5rem;
 		margin-bottom: 3.5rem;
 	}
 	.about-button{
@@ -4788,20 +5757,30 @@ form .submit:active{
 		max-height: 150px;
 	}
 	#products h2{
-		font-size: 33px;
+		font-size: 24px;
 		font-weight: 500;
 		letter-spacing: none;
+	}
+	.product-text p{
+		font-size: 10px;;
+		font-weight: 300;
+		width: 80%;
+		padding-left: 10px;
+		max-width: 400;
+		line-height: 17px;
+		padding-top: 1.5rem;
+		margin-bottom: 3.5rem;
 	}
 	.row{
 		width: 90%;
 		margin: 0 auto;
 	}
 	.row-col{
-		width: 78%;
+		width: 75%;
 		padding: 10px 0;
 	}
 	.row-col strong{
-		font-size: 20px;
+		font-size: 17px;
 		letter-spacing: none;
 		font-weight: 300;
 	}
@@ -4818,59 +5797,108 @@ form .submit:active{
 		letter-spacing: none;
 	}
 	.contact-box h2{
-		font-size: 35px;
+		font-size: 23px;
+		font-weight: 400;
+		margin-bottom: 1rem;
+	}
+	.contact-box h3{
+		font-size: 15px;
 		font-weight: 400;
 		margin-bottom: 1rem;
 	}
 	.contact-box p{
 		font-size: 10px;
-		font-weight: 400;
-		line-height: 18px;
-		width: 75%;
+		font-weight: 300;
+		line-height: 15px;
+		padding-left: 8px;
+		width:80%;
+		max-width: 400;
 		margin-bottom: 3.5%;
 	}
 	.mail h1{
 		padding-bottom: 10px;
 	}
-	#footer h2{
-		font-weight: 320;
-		font-size: 25px;
-		letter-spacing: 1px;
-	}
-}
-@media(max-width:260px){
-	#section-1 h1{
-		font-size: 5rem;
-		letter-spacing: 8px;
-		font-weight: 400;
-		padding-top: 1.5rem;
-	}
-	h4 strong{
-		font-size: 18px;
-		letter-spacing: 2px;
-		font-weight: 400;
+	.contact-form h1{
+		font-size: 11px;
 	}
 	#footer h2{
 		font-weight: 320;
-		font-size: 23px;
+		font-size: 20px;
 		letter-spacing: 1px;
 	}
-}
-@media(max-width:236px){
-	#section-1{
-		height: 83vh;
-		height: -webkit-fill-avaliable;
-	}
-	#section-1 h1{
-		font-size: 5rem;
-		letter-spacing: 6px;
-		font-weight: 400;
-		padding-top: 1.5rem;
-	}
-	h4 strong{
+	.footer-heading{
 		font-size: 15px;
-		letter-spacing: 2px;
+		font-weight: 300;
+		margin-bottom: 1.5rem;
+	}
+	.footer-list ion-icon{
+		width: 10px;
+		height: 10px;
+		font-size: 25px;
+		margin-right: 1rem;
+	}
+	.footer-list li{
+		font-size: px;
+		font-weight: 300;
+		margin-bottom: 10px;
+	}
+	.footer-link ul li a{
+		padding-bottom: 5px;
+		letter-spacing: none;
+	}
+}
+@media screen and (max-width:260px){
+	#footer h2{
+		font-weight: 320;
+		font-size: 21px;
+		letter-spacing: 1px;
+	}
+}
+@media screen and (max-width:236px){
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 46%;
+		padding: 1px 0;
+		margin-left: 90px;
+	}
+	.nav-list .sub-menu-1 ul li a{
+		font-size: 8px;
 		font-weight: 400;
+		border-bottom: grey;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 46%;
+		padding: 1px 0;
+		margin-left: 85px;
+	}
+	.nav-list .sub-menu-2 ul li a{
+		font-size: 8px;
+		font-weight: 400;
+		border-bottom: grey;
+	}
+	.wrapper{
+		max-width: 55%;
+	}
+	.search-input input{
+		width: 100%;
+		height: 30px;
+		font-size: 12px;
+	}
+	.search-input .icon{
+		height: 40px;
+		width: 40px;
+		line-height: 35px;
+		position: absolute;
+		top: 1px;
+		bottom: 5px;
+		left: 9rem;
+		font-size: 15px;
+	}
+	#section-1{
+		height: 90vh;
+		background-image: url(../images/logo-png.png);
+		height: -webkit-fill-avaliable;
 	}
 	.about-button{
 		padding: 7px 10px;
@@ -4903,860 +5931,10 @@ form .submit:active{
 	}
 	#footer h2{
 		font-weight: 320;
-		font-size: 22px;
+		font-size: 20px;
 		letter-spacing: 1px;
 	}
 }
 /*////////End off Complete full Page///////*/
 /*////////////////////////////////////////*/
 /*///////////////////////////////////////*/
-/*@media(max-width:766px){
-	header{
-		width: 100%;
-		top: 0;
-		padding-left: 10px;
-		padding-right: 10px;
-		z-index:1000;
-	}
-	.menu-bar ul li a{
-		padding: 5px 12px;
-		font-size: 1.8rem;
-		letter-spacing:0px;
-	}
-	#section-1{
-		height: 90vh;
-		height: -webkit-fill-avaliable;
-	}
-	.about-container{
-		display: block;
-		align-items: center;
-		width: 100%;
-		margin-top: 2.5rem;
-		margin:0 auto;
-		text-align: center;
-		justify-content: center;
-	}
-	.about-content p{
-		max-width:600;
-		width: 70%;
-		text-align: left;
-		font-size: 15px;
-		letter-spacing: 1px;
-		font-weight: 400;
-		line-height: 28px;
-		margin: 0 auto;
-		margin-bottom: 3.5rem;
-		font-family: 'Poppins', sans-serif;
-	}
-	.product-text p{
-		max-width:600;
-		width: 70%;
-		text-align: left;
-		font-size: 15px;
-		letter-spacing: 1px;
-		font-weight: 400;
-		line-height: 28px;
-		margin: 0 auto;
-		margin-bottom: 3.5rem;
-		font-family: 'Poppins', sans-serif;
-	}
-	.about-button{
-		margin-bottom: 7rem;
-		width: 15rem;
-		padding: 12px 24px;
-		border-radius: 10px;
-		background-color: rgb(1, 66, 1);
-		box-shadow: 2px 4px 3px 0 rgba(0,0,0,0.8);
-	}
-	.about-image{
-		margin: 0 auto;
-	}
-	.about-image img{
-		max-width: 350px;
-		max-height: 300px;
-	}
-	.row-col{
-		width: 90%;
-		padding: 10px 0;
-		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
-		margin:0 auto;
-		margin-bottom: 5rem;
-	}
-	.btn-1,.btn-2{
-		width: 8rem;
-		margin-bottom: 45px;
-		padding: 5px 8px;
-		font-weight: 500;
-		font-size: 12px;
-	}
-	#contact-us{
-		width: 100%;
-		padding: 15px 0;
-		display: block;
-		justify-content: space-evenly;
-		align-items: center;
-		text-align: center;
-	}
-	.contact-box{
-		text-align: center;
-	}
-	.contact-box h2{
-		font-size: 50px;
-		font-weight: 500;
-		letter-spacing: 1px;
-		text-align: center;
-		margin-bottom: 1.5rem;
-	}
-	.contact-box p{
-		font-size: 13px;
-		text-align: center;
-		font-weight: 400;
-		line-height: 23px;
-		width: 65%;
-		margin-bottom: 3.5%;
-		margin: 0 auto;
-	}
-	.solid-2{
-		width: 50%;
-		margin: 0 auto;
-		margin-bottom: 3rem;
-	}
-	.contact-box h3{
-		font-size: 30px;
-		color: black;
-		font-weight: 450;
-		padding-top: 10px;
-		padding-bottom: 1rem;
-	}
-	.contact-form{
-		display: block;
-		background-color:#000;
-		padding: 20px 0;
-		width: 38%;
-		margin: 0 auto;
-	}
-	.contact-form h1{
-		color: #fff;
-		font-size: 20px;
-		font-weight: 400;
-		letter-spacing: 1px;
-		margin-bottom: 2.5rem;
-	}
-	form .form-message{
-		width: 25rem;
-		padding: 8px 25px;
-		color: #000;
-		font-size: 14px;
-		font-weight: 500;
-		margin:0 auto;
-		margin-bottom: 2.5rem;
-	}
-}
-@media(max-width:968px){
-	.btn-1,.btn-2{
-		width: 8rem;
-		padding: 5px 12px;
-	}
-	form .form-message{
-		width: 25rem;
-		padding: 8px 25px;
-		font-size: 14px;
-		font-weight: 500;
-		margin:0 2rem;
-		margin-bottom: 2.5rem;
-	}
-}
-@media(max-width:952px){
-	.checkbtn{
-		display: block;
-		float: right;
-	}
-	.icons{
-		display: none;
-	}
-	.nav-list .active:hover{
-		transform: scale(1.0);
-		cursor: pointer;
-	}
-	header label{
-		display: initial;
-	}
-	header .nav-list{
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		z-index: 2000;
-		width: 100%;
-		transition: .3s ease-in-out;
-		scroll-behavior: smooth;
-		display: none;
-		background-color: #333;
-		border-top: 1px solid rgba(0,0,0,.1);
-	}
-	header .nav-list ul li{
-		width: 100%;
-		position: relative;
-		padding: 9px 0;
-		padding-bottom: 5px;
-	}
-	.menu-bar .nav-list ul li a{
-		color: white;
-		font-weight: 400;
-		font-size: 17px;
-		margin-left: 15px;
-		letter-spacing: 2px;
-	}
-	.menu-bar .nav-list .sub-menu-1{
-		position: relative;
-		width: 18%;
-		padding: 3px 0;
-		margin-left: 125px;
-	}
-	.nav-list .sub-menu-1 ul li a{
-		font-size: 17px;
-		font-weight: 400;
-		letter-spacing: 1px;
-	}
-	.menu-bar ul li:hover .sub-menu-1{
-		display: block;
-		position: absolute;
-		margin-top: 1px;
-		z-index: 100;
-		border: 1px solid white;
-		cursor: pointer;
-	}
-	.menu-bar ul li:hover .sub-menu-1 ul li{
-		margin: 0 auto;
-		border-bottom: 1px solid #fff;
-	}
-	.menu-bar .nav-list .sub-menu-2{
-		position: relative;
-		width: 20%;
-		padding: 3px 0;
-		margin-left: 120px;
-	}
-	header .sub-menu-2 ul li a{
-		font-size: 17px;
-		font-weight: 400;
-		letter-spacing: 1px;
-	}
-	.menu-bar ul li:hover .sub-menu-2{
-		display: block;
-		position: absolute;
-		z-index: 100;
-		margin-top: 0px;
-		border: 1px solid white;
-		cursor: pointer;
-	}
-	.menu-bar ul li:hover .sub-menu-2 ul li{
-		margin: 0 auto;
-		padding-bottom: 1px;
-		border-bottom: 1px solid #fff;
-	}
-	#menu-bar:checked ~ .nav-list{
-		display: inline-block;
-	}
-	.solid-1,.solid-10,.solid-11{
-		display: none;
-	}
-	.menu-bar ul li{
-		display: block;
-		margin-right: 0 6px;
-		line-height: 30px;
-	}
-	/*///start of banner side////*/
-	/*//////////////////////////*/
-	#section-1{
-		height: 90vh;
-		height: -webkit-fill-avaliable;
-	}
-	.input-box{
-		padding-top: 5rem;
-		margin-bottom: 1.5rem;
-	}
-	h1 .input{
-		font-size: 15rem;
-		letter-spacing: 25px;
-		font-weight: 400;
-		padding-top: 1.2rem;
-		margin-bottom:5px;
-	}
-	/*///about us side view////*/
-	/*////////////////////////*/
-	.about-container{
-		display: block;
-		align-items: center;
-		width: 100%;
-		margin-top: 2.5rem;
-		margin:0 auto;
-		text-align: center;
-		justify-content: center;
-	}
-	.about-content p{
-		max-width:500;
-		width: 75%;
-		font-size: 15px;
-		letter-spacing: 1px;
-		font-weight: 400;
-		line-height: 28px;
-		margin: 0 auto;
-		margin-bottom: 3.5rem;
-		font-family: 'Poppins', sans-serif;
-	}
-	.about-button{
-		margin-bottom: 7rem;
-		width: 15rem;
-		padding: 12px 24px;
-		border-radius: 10px;
-		background-color: rgb(1, 66, 1);
-		box-shadow: 2px 4px 3px 0 rgba(0,0,0,0.8);
-	}
-	.about-image{
-		margin: 0 auto;
-	}
-	.about-image img{
-		max-width: 350px;
-		max-height: 300px;
-	}
-	/*///products side part//////*/
-	/*//////////////////////////*/
-	.product-text p{
-		font-size: 13px;
-		font-weight: 400;
-		width: 70%;
-		margin: 0 auto;
-		line-height: 26px;
-		padding-top: 1.3rem;
-		margin-bottom: 3.5%;
-	}
-	.row{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		padding-top: 4.5%;
-		grid-gap:4rem ;
-	}
-	.row-col{
-		width: 35%;
-		padding: 10px 0;
-		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
-		margin:0 auto;
-		margin-bottom: 5rem;
-	}
-	.row-image{
-		margin-bottom: 1.5rem;
-		width: 65%;
-		max-height: 20%;
-	}
-	.btn-1,.btn-2{
-		margin-bottom: 10px;
-		width: 9rem;
-		padding: 5px 15px;
-		font-size: 15px;
-		font-weight: 400;
-	}
-	.products-link{
-		font-size: 18px;
-		width: 30rem;
-		font-weight: 410;
-		letter-spacing: 2px;
-		padding: 10px 25px;
-		transition: .3s;
-	}
-	/*////start off contact side////*/
-	/*/////////////////////////////*/
-	#contact-us{
-		width: 100%;
-		padding: 15px 0;
-		display: block;
-		justify-content: space-evenly;
-		align-items: center;
-		text-align: center;
-	}
-	.contact-box{
-		text-align: center;
-	}
-	.contact-box h2{
-		font-size: 50px;
-		font-weight: 500;
-		letter-spacing: 1px;
-		text-align: center;
-		margin-bottom: 1.5rem;
-	}
-	.contact-box p{
-		font-size: 13px;
-		text-align: center;
-		font-weight: 400;
-		line-height: 23px;
-		width: 65%;
-		margin-bottom: 3.5%;
-		margin: 0 auto;
-	}
-	.solid-2{
-		width: 50%;
-		margin: 0 auto;
-		margin-bottom: 3rem;
-	}
-	.contact-box h3{
-		font-size: 30px;
-		color: black;
-		font-weight: 450;
-		padding-top: 10px;
-		padding-bottom: 1rem;
-	}
-	.contact-info{
-		text-align: center;
-		list-style: none;
-		font-size: 15px;
-		letter-spacing: 1px;
-		color: black;
-		font-weight: 400;
-		font-family: 'Poppins', sans-serif;
-	}
-	.mail{
-		list-style: none;
-		text-align: center;
-		padding-top: 10px;
-	}
-	.mail h1{
-		text-align: center;
-		font-size: 18px;
-		color: black;
-		padding-top: 10px;
-		padding-bottom: 3px;
-		letter-spacing: 1px;
-		font-weight: 500;
-		font-family: 'Poppins', sans-serif;
-	}
-	.mail ul li{
-		display: inline-block;
-		text-align: center;
-		font-size: 16px;
-		letter-spacing: 1px;
-		color: black;
-		padding: 5px 10px;
-		font-weight: 500;
-		font-family: 'Poppins', sans-serif;
-	}
-	.contact-form{
-		display: block;
-		background-color:#000;
-		padding: 20px 0;
-		width: 35%;
-		margin: 0 auto;
-	}
-	.contact-form h1{
-		color: #fff;
-		font-size: 20px;
-		font-weight: 400;
-		letter-spacing: 1px;
-		margin-bottom: 2.5rem;
-	}
-	form .form-message{
-		width: 25rem;
-		padding: 8px 25px;
-		color: #000;
-		font-size: 14px;
-		font-weight: 500;
-		margin:0 auto;
-		margin-bottom: 2.5rem;
-	}
-	/*/////footer side part/////*/
-	/*/////////////////////////*/
-	.footer-box{
-		display: flex;
-		justify-content: space-around;
-		text-align: center;
-		padding: 15px 0;
-	}
-	#footer h2{
-		text-align: center;
-		font-size: 40px;
-		color: #fff;
-		font-weight: 400;
-		letter-spacing: 2px;
-		margin-bottom:1.5rem;
-	}
-	.footer-heading{
-		font-size: 30px;
-		letter-spacing: 3px;
-		font-weight: 400;
-		margin-bottom: 2.5rem;
-	}
-	.footer-list ion-icon{
-		width: 15px;
-		height: 15px;
-		font-size: 23px;
-		margin-right: 1rem;
-	}
-	.footer-list li{
-		display: block;
-		list-style: none;
-		font-size: 12px;
-		color: #fff;
-		font-weight: 300;
-		margin-bottom: 3%;
-	}
-	.hours .hours-rate{
-		font-size: 16px;
-		color: white;
-		letter-spacing: 1px;
-		padding-top: 10px;
-		font-weight: 400;
-		margin-bottom: 1rem;
-		font-family: 'Poppins', sans-serif;
-	}
-	.owner a{
-		font-size: 13px;
-		font-size: 400;
-	}
-	.owner p{
-		font-size: 13px;
-		font-weight: 350;
-	}
-	.owner h1 span{
-		font-weight: 350;
-		margin-left: 5px;
-		font-size: 13px;
-	}
-	.owner h1{
-		font-size: 13px;
-		font-weight: 350;
-	}
-}
-@media(max-width:836px){
-	#section-1{
-		height: 85vh;
-		height: -webkit-fill-avaliable;
-	}
-	.input-box{
-		padding: 50px 0;
-		padding-top: 2rem;
-		margin-bottom: 1.3rem;
-	}
-	.row-col{
-		width: 35%;
-		padding: 10px 0;
-		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
-		margin:0 auto;
-		margin-bottom: 5rem;
-	}
-	.btn-1,.btn-2{
-		width: 8rem;
-		padding: 5px 8px;
-		font-weight: 500;
-		font-size: 12px;
-	}
-	.contact-form{
-		display: block;
-		background-color:#000;
-		padding: 20px 0;
-		width: 38%;
-	}
-	form input{
-		margin-bottom: 2.5rem;
-	}
-	form input{
-		width: 20rem;
-		padding: 7px 25px;
-		font-size: 13px;
-		font-weight: 500;
-	}
-	form .form-message{
-		width: 20rem;
-		padding: 7px 25px;
-		font-size: 13px;
-		font-weight: 500;
-		margin:0 auto;
-		margin-bottom: 2.5rem;
-	}
-	form .submit{
-		font-weight: 500;
-		font-size: 13px;
-		margin: 0 auto;
-	}
-	.products-link{
-		font-weight: 350;
-		letter-spacing: 2px;
-	}
-	/*/////footer side part/////*/
-	/*/////////////////////////*/
-	#footer{
-		width: 100%;
-		padding: 30px 0;	
-	}
-	.footer-box{
-		display: block;
-		justify-content: space-around;
-		text-align: center;
-		align-items: center;
-		padding: 15px 0;
-	}
-	#footer h2{
-		text-align: center;
-		font-size: 40px;
-		color: #fff;
-		font-weight: 400;
-		letter-spacing: 2px;
-		margin-bottom:1.5rem;
-	}
-	.footer-link{
-		margin: 0 auto;
-	}
-	.footer-heading{
-		font-size: 30px;
-		letter-spacing: 3px;
-		font-weight: 400;
-		text-align: center;
-		margin-bottom: 2.5rem;
-	}
-	.footer-list ion-icon{
-		width: 15px;
-		height: 15px;
-		font-size: 23px;
-		margin-right: 1rem;
-	}
-	.footer-list li{
-		display: block;
-		text-align: center;
-		font-weight: 300;
-		margin-bottom: 2%;
-	}
-	.hours .hours-rate{
-		font-size: 16px;
-		color: white;
-		padding-top: 10px;
-		font-weight: 400;
-		margin-bottom: 1rem;
-		font-family: 'Poppins', sans-serif;
-	}
-	.order-link{
-		margin-bottom: 2.5rem;
-	}
-	.gallery{
-		margin: 0 auto;
-	}
-	.owner{
-		display: block;
-		justify-content: space-evenly;
-		align-items: center;
-		text-align: center;
-		padding: 15px 0;
-	}
-	.owner a{
-		font-size: 13px;
-		font-size: 400;
-	}
-	.owner p{
-		font-size: 13px;
-		font-weight: 350;
-	}
-	.owner h1 span{
-		font-weight: 350;
-		margin-left: 5px;
-		font-size: 13px;
-	}
-	.owner h1{
-		font-size: 13px;
-		font-weight: 350;
-		padding-top: 5px;
-		padding-bottom: 5px;
-	}
-}
-@media(max-width:800px){
-	.input-box{
-		padding-top: 4rem;
-		margin-bottom: 1.3rem;
-	}
-	h1 .input{
-		font-size: 12rem;
-		letter-spacing: 18px;
-		font-weight: 400;
-		padding-top: 1.1rem;
-		margin-bottom:3px;
-	}
-	h4 strong{
-		color:darkgreen;
-		font-size: 25px;
-		letter-spacing: 6px;
-		font-weight: 450;
-		/*text-shadow: 0px 0.8px 12px #333;
-	}
-	.banner-button{
-		margin-top: 2.5rem;
-		width: 16rem;
-		padding: 10px 25px;
-	}
-	.banner-button a{
-		font-size: 15px;
-		font-weight: 540;
-	}
-	#about-us h1{
-		font-size: 45px;
-		letter-spacing: 2px;
-		margin-bottom: 2px;
-		font-weight: 500;
-	}
-	.about-content p{
-		font-size: 14px;;
-		font-weight: 400;
-		width: 70%;
-		margin: 0 auto;
-		line-height: 26px;
-		padding-top: 15px;
-		margin-bottom: 3.5rem;
-	}
-	.about-button{
-		width: 15rem;
-		padding: 10px 24px;
-		border-radius: 10px;
-		background-color: rgb(1, 66, 1);
-		box-shadow: 2px 4px 3px 0 rgba(0,0,0,0.8);
-	}
-	.products h2{
-		font-size: 40px;
-		letter-spacing: 1px;
-		font-weight: 500;
-	}
-	.row-col{
-		width: 35%;
-		padding: 10px 0;
-		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-		background-color:rgba(0,100,0);
-		margin:0 auto;
-		margin-bottom: 5rem;
-	}
-	.row-image{
-		margin-bottom: 1.5rem;
-		width: 70%;
-		max-height: 200px;
-	}
-	.row-col p,.row-p-2{
-		font-size: 12px;
-		font-weight: 500;
-	}
-	.btn-1,.btn-2{
-		width: 9rem;
-		padding: 5px 10px;
-		font-weight: 500;
-		font-size: 13px;
-	}
-	.products-link{
-		font-size: 18px;
-		width: 30rem;
-		font-weight: 400;
-		letter-spacing: 1px;
-		padding: 8px 23px;
-		transition: .3s;
-	}
-	#contact-us{
-		width: 100%;
-		padding: 10px 0;
-		display: block;
-		justify-content: space-evenly;
-		align-items: center;
-		text-align: center;
-	}
-	.contact-box h2{
-		font-size: 45px;
-		font-weight: 500;
-		margin-bottom: 2.5rem;
-	}
-	.contact-box p{
-		font-size: 12px;
-		font-weight: 400;
-		line-height: 24px;
-		width: 70%;
-		margin-bottom: 3.5%;
-		margin: 0 auto;
-	}
-	form input{
-		margin-bottom: 2.5rem;
-	}
-	form input{
-		width: 20rem;
-		padding: 6px 25px;
-		font-size: 13px;
-		font-weight: 500;
-	}
-	form .form-message{
-		width: 20rem;
-		padding: px 25px;
-		font-size: 13px;
-		font-weight: 500;
-		margin:0 auto;
-		margin-bottom: 2.5rem;
-	}
-	form .submit{
-		font-weight: 500;
-		font-size: 13px;
-		margin: 0 auto;
-	}
-	.footer-box{
-		display: flex;
-		justify-content: space-around;
-		text-align: center;
-		padding: 10px 0;
-	}
-	#footer h2{
-		font-size: 40px;
-		font-weight: 400;
-		letter-spacing: 2px;
-		margin-bottom:1.4rem;
-	}
-	.footer-list li{
-		font-size: 12px;
-		font-weight: 300;
-		margin-bottom: 1.5%;
-	}
-	.footer-list li a:hover{
-		transform: scale(1.0);
-	}
-	.owner a{
-		font-size: 12px;
-		font-size: 400;
-	}
-	.owner p{
-		font-size: 12px;
-		font-weight: 350;
-	}
-	.owner h1 span{
-		font-weight: 350;
-		margin-left: 3px;
-		font-size: 12px;
-	}
-	.owner h1{
-		font-size: 12px;
-		font-weight: 350;
-	}
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
