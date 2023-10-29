@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" ie="edge">
+	<!-------google link font family--------->
+	<!-----////////////////////////////------>
+	<!--This the logo link below wanted for the words-->
+	<link href="https://www.dafontfree.net/embed/ZXVyb3N0aWxlZXh0ZW5kZWQtcm9tYW4tZHRjLXJlZ3VsYXImZGF0YS8yNC9lLzEyMzg2MS9FVVJPU1RJMy50dGY" rel="stylesheet" type="text/css"/>
+	<!------google link for icons------------>
+	<!----////////////////////////////////--->
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<!---////////////////////////////////---->
+
+	<link rel="shortcut icon" href="../images/2A.png">
+	<link rel="stylesheet" href="order.css">
+	<title>Order Page</title>
+</head>
+<body>
+	<!-------------start off point---------->
+	<!---////////////////////////////////--->
+	<input type="checkbox" class="checkbox" id="click" hidden>
+	<div class="sidebar">
+		<label for="click">
+			<div class="menu-bars">
+				<ion-icon name="cart-outline" class="updown-animation"></ion-icon>
+			</div>
+		</label>
+
+		<div class="cart">
+			<div class="name">Cart List</div>
+			<div class="listCart"></div>
+		</div>
+	</div>
+	<!-----------start of navigation bar-------------->
+	<!----/////////////////////////////////////------->
+	<div class="navbar">
+		<div class="nav-header"> Place Your Order Below</div>
+		<hr class="solid-1" color="white">
+
+		<h3>*Please fill  the information of your order displayed on the Cart List for your order below*</h3>
+
+		<form action="https://formspree.io/f/xleygbpr" method="POST">
+
+			<input type="text" Name="Name" placeholder="Name & Surname..." required>
+
+			<input type="Email" name="Email Address" placeholder="Your Email..." required>
+
+			<input type="tel" name="Phone Number" placeholder="Phone Number..." required>
+
+			<label for="item-name">
+				<p>*Please indicate Item Names selected*</p>
+				<input type="text" name="Item Name" class="item-name" placeholder="Item Name.." required>
+			</label>
+
+			<input type="text" name="Home Address" placeholder="Home Address..." required>
+
+			<input type="text" name="Dilivery" placeholder="Delivery Yes or No?..." required>
+
+			<input type="submit" value="Submit" class="submit-btn" required>
+		</form>
+		
+	</div>
+
+	<div class="center" id="top">
+		<div class="header">
+			<h1> Place Order</h1>
+			<button class="header-btn">
+				<a href="../index.html">Home</a>
+			</button>
+		</div>
+		<h4>*Please click on Cart icon on <span>the top left corner</span> to complete your Order*</h4>
+			<div class="list">
+				<div class="item" data-key="1">
+					<div class="img">
+						<img src="../products/pot-images/potcover-1.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Potcover Red</div>
+						<div class="des">
+							14x15cm 80gsm
+						</div>
+						<div class="price" title="item-code">520046</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(1)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="2">
+					<div class="img">
+						<img src="../products/pot-images/potcover-2.jpg"  alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Potcover Lime</div>
+						<div class="des">
+							12cm 80gsm
+						</div>
+						<div class="price" title="item-code">520055</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(2)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="3">
+					<div class="img">
+						<img src="../products/pot-images/potcover-3.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Potcover Natural</div>
+						<div class="des">
+							12cm 80gsm
+						</div>
+						<div class="price" title="item-code">520060</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(3)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="4">
+					<div class="img">
+						<img src="../products/pot-images/potcover-8.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Potcover lightblue</div>
+						<div class="des">
+							White Dot 14cm
+						</div>
+						<div class="price" title="item-code">520066</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(4)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="5">
+					<div class="img">
+						<img src="../products/pot-images/potcover-6.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Potcover Lemon</div>
+						<div class="des">
+							12cm 80gsm
+						</div>
+						<div class="price" title="item-code">520056</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(5)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="6">
+					<div class="img">
+						<img src="../products/pot-images/potcover-7.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Potcover lime</div>
+						<div class="des">
+							white Dot 14cm 125gsm
+						</div>
+						<div class="price" title="item-code">520062</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(6)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="7">
+					<div class="img">
+						<img src="../products/pot-images/potcover-10.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Potcover Red</div>
+						<div class="des">
+							525x315 125gsm
+						</div>
+						<div class="price" title="item-code">520068</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(7)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="8">
+					<div class="img">
+						<img src="../products/pot-images/potcover-11.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Potcover lime<br>Pholoenopsis</div>
+						<div class="des">
+							 28x412.48 125gsm
+						</div>
+						<div class="price" title="item-code">520059</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(8)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+			</div>
+			<h3> Kraft Paper</h3>
+			<div class="list">
+				<div class="item" data-key="9">
+					<div class="img">
+						<img src="../products/kraft-images/kraft-1.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Red Val</div>
+						<div class="des">
+							50x61cm 50gsm
+						</div>
+						<div class="price" title="item-code">502852-IR</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(9)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="10">
+					<div class="img">
+						<img src="../products/kraft-images/kraft-2.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Blue Kraft</div>
+						<div class="des">
+							50x61cm 50gsm
+						</div>
+						<div class="price" title="item-code">5028745</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(10)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="11">
+					<div class="img">
+						<img src="../products/kraft-images/kraft-3.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Orange Kraft</div>
+						<div class="des">
+							50x61cm 50gsm
+						</div>
+						<div class="price" title="item-code">5028745</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(11)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="12">
+					<div class="img">
+						<img src="../products/kraft-images/kraft-4.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Purple Kraft</div>
+						<div class="des">
+							50x61cm 60gsm
+						</div>
+						<div class="price" title="item-code">5028804</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(12)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="13">
+					<div class="img">
+						<img src="../products/kraft-images/kraft-5.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Plum Deep Pink<br>Kraft</div>
+						<div class="des">
+							50x61cm 50gsm
+						</div>
+						<div class="price" title="item-code">5028745</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(13)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="14">
+					<div class="img">
+						<img src="../products/kraft-images/kraft-6.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Dusky Pink Kraft</div>
+						<div class="des">
+							50x61cm 60gsm
+						</div>
+						<div class="price" title="item-code">5028807-EN</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(14)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="15">
+					<div class="img">
+						<img src="../products/kraft-images/kraft-7.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Double Hit<br> Black Kraft</div>
+						<div class="des">
+							50x35cm 50gsm
+						</div>
+						<div class="price" title="item-code">520008</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(15)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="16">
+					<div class="img">
+						<img src="../products/kraft-images/kraft-8.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Natural Kraft</div>
+						<div class="des">
+							50x35cm 50gsm
+						</div>
+						<div class="price" title="item-code">520008</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(16)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+			</div>
+			<h3> Sleeves</h3>
+			<div class="list">
+				<div class="item" data-key="17">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-1.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Marrakech<br>Yellow Sleeve</div>
+						<div class="des">
+							50x35x12cm 50gsm
+						</div>
+						<div class="price" title="item-code">1150111</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(17)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="18">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-3.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Combino Green<br>Holynight Kraft</div>
+						<div class="des">
+							35x35cm 
+						</div>
+						<div class="price" title="item-code">1407174</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(18)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="19">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-5.jpg" class="card-img" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Kraft Sleeve</div>
+						<div class="des">
+							15cm 50gsm
+						</div>
+						<div class="price" title="item-code">1540203</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(19)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="20">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-6.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Black Back Sleeve</div>
+						<div class="des">
+							80x35x12cm
+						</div>
+						<div class="price" title="item-code">1580082</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(20)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="21">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-8.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Pink Kraft sleeve</div>
+						<div class="des">
+							...
+						</div>
+						<div class="price" title="item-code">3339004</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(21)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="22">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-10.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Obsession Green Sleeve</div>
+						<div class="des">
+							38x45x14cm
+						</div>
+						<div class="price" title="item-code">9800047</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(22)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="23">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-11.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Blue Tissue<br>look sleeve</div>
+						<div class="des">
+							50x35x12cm
+						</div>
+						<div class="price" title="item-code">9800203</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(23)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="24">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-12.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Natural Sleeve</div>
+						<div class="des">
+							50x40x17cm
+						</div>
+						<div class="price" title="item-code">F120001200</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(24)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="25">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-13.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Natural Kraft<br>Flower Sleeve</div>
+						<div class="des">
+							55x35x10cm
+						</div>
+						<div class="price" title="item-code">F120001203</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(25)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="26">
+					<div class="img">
+						<img src="../products/sleeve-images/sleeve-15.jpg" alt="Sleeve image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Kraft Cello Swirl<br>Design Sleeve</div>
+						<div class="des">
+							...
+						</div>
+						<div class="price" title="item-code">1540203</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(26)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<h3> BouquetHolders</h3>
+			<div class="list">
+				<div class="item" data-key="27">
+					<div class="img">
+						<img src="../products/boquet-images/bouquet-4.jpg" alt="kraft image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Bouquetholder<br>Sisal</div>
+						<div class="des">
+							25cm Red
+						</div>
+						<div class="price" title="item-code">7612012</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(27)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="28">
+					<div class="img">
+						<img src="../products/boquet-images/bouquet-5.jpg" alt="kraft image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Bouquetholder<br>Snow</div>
+						<div class="des">
+							...
+						</div>
+						<div class="price" title="item-code">7611350</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(28)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="29">
+					<div class="img">
+						<img src="../products/boquet-images/bouquet-6.jpg" class="card-img" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Bouquetholder</div>
+						<div class="des">
+							25cm Natural
+						</div>
+						<div class="price" title="item-code">7612127</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(29)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="30">
+					<div class="img">
+						<img src="../products/boquet-images/bouquet-1.jpg" class="card-img" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Bouquetholder<br>Salim</div>
+						<div class="des">
+							Snow 25cm
+						</div>
+						<div class="price" title="item-code">7612010</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(30)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="31">
+					<div class="img">
+						<img src="../products/boquet-images/bouquet-2.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Bouquetholder<br>Snow</div>
+						<div class="des">
+							...
+						</div>
+						<div class="price" title="item-code">7611350</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(31)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="32">
+					<div class="img">
+						<img src="../products/boquet-images/bouquet-3.jpg"alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Pot Cover<br>Natural</div>
+						<div class="des">
+							12cm
+						</div>
+						<div class="price" title="item-code">520060</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(32)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="33">
+					<div class="img">
+						<img src="../products/boquet-images/bouquet-7.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Potcover Lime<br>White dot Peaked</div>
+						<div class="des">
+							14cm 125gsm Baywhite
+						</div>
+						<div class="price" title="item-code">520062</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(33)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="34">
+					<div class="img">
+						<img src="../products/boquet-images/bouquet-8.jpg" alt="image" class="rac-img">
+					</div>
+				
+					<div class="content">
+						<div class="title">Gebera Large<br>Racquet</div>
+						<div class="des">
+							10 Holes also in small
+						</div>
+						<div class="price" title="item-code">520049</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(34)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+
+				<div class="item" data-key="35">
+					<div class="img">
+						<img src="../products/boquet-images/bouquet-9.jpg" alt="image">
+					</div>
+				
+					<div class="content">
+						<div class="title">Pot Plant Kraft<br>Single Sided</div>
+						<div class="des">
+							laminate Gloxinia
+						</div>
+						<div class="price" title="item-code">5200503</div>
+
+						<input type="number" class="count" min="1" value="1">
+
+						<button class="add">Add to cart</button>
+
+						<button class="remove" onclick="remove(35)">
+							<ion-icon name="trash-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+			</div>
+	</div>
+		<div class="copyright" id="footer">
+			&copy;2023 Dilpack All Rights Reserved
+
+			<a href="#top"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>
+		</div>
+
+	<script src="order.js"></script>
+	<script>
+		window.onbeforeunload = () => {
+  		for(const form of document.getElementsByTagName('form')) {
+    	form.reset();
+  		}
+	}
+	</script>
+</body>
+</html>
+<!-----------/////////////////////////////------------>
+<!------//////////////////////////////////////////---->
