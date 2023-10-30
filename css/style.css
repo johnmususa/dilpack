@@ -1952,6 +1952,21 @@ form .submit:active{
 		margin-bottom: 2.5rem;
 	}
 }
+@media screen and (max-width:914px){
+	.banner-button{
+		margin-top: 28rem;
+		margin-bottom: 2rem;
+		width: 18rem;
+		padding: 12px 23px;
+		outline: none;
+		border-radius: 10px;
+		border: none;
+		margin-right: 1.5rem;
+		cursor: pointer;
+		box-shadow: 4px 6px 8px 0 rgba(0,0,0,0.4);	
+		background-color:seagreen; 
+	}
+}
 @media screen and (max-width:900px){
 	form textarea{
 		margin:0 auto;
@@ -2155,6 +2170,21 @@ form .submit:active{
 		padding: 5px 5px;
 		font-size: 1.2rem;
 		letter-spacing:0px;
+	}
+}
+@media screen and (max-width:844px){
+	.banner-button{
+		margin-top: 20rem;
+		margin-bottom: 2rem;
+		width: 18rem;
+		padding: 12px 23px;
+		outline: none;
+		border-radius: 10px;
+		border: none;
+		margin-right: 1.5rem;
+		cursor: pointer;
+		box-shadow: 4px 6px 8px 0 rgba(0,0,0,0.4);	
+		background-color:seagreen; 
 	}
 }
 @media screen and (max-width:838px){
@@ -3092,7 +3122,7 @@ form .submit:active{
 	.banner-button{
 		margin-bottom: 1.5rem;
 		width: 14rem;
-		margin-top: 27rem;
+		margin-top: 30rem;
 		padding: 11px 25px;
 	}
 	.input-box{
@@ -3241,7 +3271,7 @@ form .submit:active{
 	.banner-button{
 		margin-bottom: 1.5rem;
 		width: 14rem;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 11px 25px;
 	}
 	.contact-form{
@@ -3275,7 +3305,7 @@ form .submit:active{
 	.banner-button{
 		margin-bottom: 1.5rem;
 		width: 14rem;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 11px 25px;
 	}
 	.about-content p{
@@ -3383,7 +3413,7 @@ form .submit:active{
 	.banner-button{
 		margin-bottom: 1.5rem;
 		width: 14rem;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 11px 25px;
 	}
 	#about-us h1{
@@ -3473,7 +3503,7 @@ form .submit:active{
 	.banner-button{
 		margin-bottom: 1.5rem;
 		width: 14rem;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	#about-us h1{
@@ -3579,7 +3609,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	#about-us{
@@ -3702,7 +3732,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	#products h2{
@@ -3747,7 +3777,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	.owner p,.owner h1 span{
@@ -3800,7 +3830,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	.about-content p{
@@ -3901,8 +3931,127 @@ form .submit:active{
 	.banner-button{
 		margin-bottom: 2rem;
 		width: 14rem;
-
-		margin-top: 23rem;
+		margin-top: 27rem;
+		padding: 9px 20px;
+	}
+	.about-content p{
+		font-size: 12px;;
+		font-weight: 400;
+		width: 80%;
+		margin: 0 auto;
+		line-height: 25px;
+		padding-top: 1.2rem;
+		margin-bottom: 3.5rem;
+	}
+	.product-text p{
+		font-size: 12px;;
+		font-weight: 400;
+		width: 80%;
+		margin: 0 auto;
+		line-height: 25px;
+		padding-top: 1.2rem;
+		margin-bottom: 4rem;
+	}
+	.row-col{
+		width: 50%;
+		padding: 10px 0;
+		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+		margin:0 auto;
+		margin-bottom: 5rem;
+	}
+	.contact-form{
+		display: block;
+		padding: 20px 0;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:542px){
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 27%;
+		padding: 3px 0;
+		margin-left: 130px;
+		overflow: hidden;
+	}
+	.menu-bar ul li:hover .sub-menu-1 ul li{
+		margin: 0 auto;
+		border-bottom: 1px solid white;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 30%;
+		overflow: hidden;
+		padding: 3px 0;
+		margin-left: 130px;
+	}
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 30rem;
+		padding: 9px 20px;
+	}
+	.about-content p{
+		font-size: 12px;;
+		font-weight: 400;
+		width: 80%;
+		margin: 0 auto;
+		line-height: 25px;
+		padding-top: 1.2rem;
+		margin-bottom: 3.5rem;
+	}
+	.product-text p{
+		font-size: 12px;;
+		font-weight: 400;
+		width: 80%;
+		margin: 0 auto;
+		line-height: 25px;
+		padding-top: 1.2rem;
+		margin-bottom: 4rem;
+	}
+	.row-col{
+		width: 50%;
+		padding: 10px 0;
+		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+		margin:0 auto;
+		margin-bottom: 5rem;
+	}
+	.contact-form{
+		display: block;
+		padding: 20px 0;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:541px){
+	#section-1{
+		height: -webkit-fill-avaliable;
+		height: 90dvh;
+	}
+	.menu-bar .nav-list .sub-menu-1{
+		position: relative;
+		width: 27%;
+		padding: 3px 0;
+		margin-left: 130px;
+		overflow: hidden;
+	}
+	.menu-bar ul li:hover .sub-menu-1 ul li{
+		margin: 0 auto;
+		border-bottom: 1px solid white;
+	}
+	.menu-bar .nav-list .sub-menu-2{
+		position: relative;
+		width: 30%;
+		overflow: hidden;
+		padding: 3px 0;
+		margin-left: 130px;
+	}
+	.banner-button{
+		margin-bottom: 1.5rem;
+		width: 14rem;
+		font-size: 6px;
+		margin-top: 27rem;
 		padding: 9px 20px;
 	}
 	.about-content p{
@@ -3960,7 +4109,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	.about-content p{
@@ -4068,7 +4217,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	.about-content p{
@@ -4226,7 +4375,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	.btn-1,.btn-2{
@@ -4281,7 +4430,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	.row-col{
@@ -4324,7 +4473,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 }
@@ -4353,7 +4502,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 30rem;
 		padding: 9px 20px;
 	}
 	.row-col{
@@ -4397,7 +4546,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 14rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 29rem;
 		padding: 9px 20px;
 	}
 	.row-col{
@@ -4519,7 +4668,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 13rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 29rem;
 		padding: 9px 20px;
 	}
 	.about-content p{
@@ -4733,7 +4882,7 @@ form .submit:active{
 		margin-bottom: 1.5rem;
 		width: 13rem;
 		font-size: 6px;
-		margin-top: 25rem;
+		margin-top: 28rem;
 		padding: 9px 20px;
 	}
 	#about-us{
@@ -4933,19 +5082,19 @@ form .submit:active{
 	}
 	.banner-button{
 		width: 14rem;
-		margin-top: 26rem;
+		margin-top: 34rem;
 		padding: 9px 23px;
 	}
 }
 @media screen and (max-width:412px){
 	#section-1{
-		height: 90vh;
+		height: 85svh;
 		height: -webkit-fil-avaliable;
 		background-image: url(../images/logo-png.png);
 	}
 	.banner-button{
 		width: 14rem;
-		margin-top: 26rem;
+		margin-top: 35rem;
 		padding: 9px 23px;
 	}
 }
@@ -4988,14 +5137,14 @@ form .submit:active{
 	}
 	.banner-button{
 		width: 14rem;
-		margin-top: 26rem;
+		margin-top: 28rem;
 		padding: 9px 23px;
 	}
 }
 @media screen and (max-width:390px){
 	#section-1{
 		height: -webkit-fill-avaliable;
-		height: 90vh;
+		height: 85svh;
 		background-image: url(../images/logo-png.png);
 	}
 	.menu-bar .nav-list .sub-menu-1{
@@ -5031,19 +5180,18 @@ form .submit:active{
 	}
 	.banner-button{
 		width: 14rem;
-		margin-top: 26rem;
+		margin-top: 37rem;
 		padding: 9px 23px;
 	}
 }
 @media screen and (max-width:375px){
 	#section-1{	
-		height: -webkit-fill-avaliable;
-		height: 89svh;
+		height: 85svh;
 		background-image: url(../images/logo-png.png);
 	}
 	.banner-button{
 		width: 14rem;
-		margin-top: 26rem;
+		margin-top: 30rem;
 		padding: 9px 23px;
 	}
 	.menu-bar .nav-list .sub-menu-1{
@@ -5209,7 +5357,7 @@ form .submit:active{
 		background-image: url(../images/logo-png.png);
 	}
 	.banner-button{
-		margin-top: 28rem;
+		margin-top: 34rem;
 		margin-bottom: 1.5rem;
 		width: 13rem;
 		padding: 9px 20px;
@@ -5463,7 +5611,7 @@ form .submit:active{
 	}
 	.banner-button{
 		width: 14rem;
-		margin-top: 29rem;
+		margin-top: 27rem;
 		padding: 9px 23px;
 	}
 	.about-content p{
@@ -5848,6 +5996,9 @@ form .submit:active{
 	}
 }
 @media screen and (max-width:260px){
+	.banner-button{
+		margin-top:25rem;
+	}
 	#footer h2{
 		font-weight: 320;
 		font-size: 21px;
