@@ -22,7 +22,7 @@ header{
 	scroll-behavior: smooth;
 	justify-content: space-around;
 	align-items: center;
-	background-color: red;
+	background-color: white;
 	position: sticky;
 	top: 0;
 	flex-grow: 1;
