@@ -57,7 +57,10 @@ html{
 }
 /*//////End off Section/////////*/
 /*.sidebar{
-	width: 70%;
+	width: 10%;
+	height: 100%;
+	position: fixed;
+	background-color: seagreen;
 	margin: 0 auto;
 	padding: 10px 0;
 	text-align: center;
