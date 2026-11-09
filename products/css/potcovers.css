@@ -5,7 +5,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	transition: all .3s ease-in-out;
 }
 html{
 	font-size: 62.5%;
@@ -13,45 +12,53 @@ html{
 	scroll-behavior: smooth;
 	transition: all .3s ease-in-out;
 }
+:root{
+	--main-color: #598f6a;
+	--second-main-color: seagreen;
+	--text-color: #ffffff;
+	--secondary-text-color: #000000;
+}
 /*////////////start off point////////*/
-/*//////////////////////////////////*/
 .header{
 	width: 100%;
-	padding: 30px 0;
-	background-color:#69b280;
+	padding: 25px;
+	background-color: var(--second-main-color);
 	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 .header h1{
-	font-size: 60px;
-	letter-spacing: 10px;
-	color: white;
+	font-size: 4.2rem;
+	letter-spacing: 7px;
 	text-transform: uppercase;
-	font-weight: 500;
-	padding-left: 13rem;
+	color: var(--text-color);
+	font-weight: 520px;
 	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
 	text-decoration: none;
-	text-shadow: 0px 0.5px 8px rgb(1, 66, 1);
+	padding-left: 11rem;
+	text-shadow: 0px 0.5px 8px rgb(42, 56, 42);
 }
 .header button{
 	width: 15rem;
-	padding: 5px 20px;
+	padding: 10px 20px;
 	outline: none;
 	background-color: transparent;
 	border:1px solid white;
 	cursor: pointer;
 	margin-top: 2rem;
-	margin-left: 8rem;
+	margin-bottom: 1rem;
 	border-radius: 5px;
+	margin-left: 10rem;
 }
 .header button a{
 	font-size: 14px;
 	letter-spacing: 1px;
 	font-weight: 400;
-	color: white;
+	color: var(--text-color);
 	text-decoration: none;
 }
 .header button:hover{
-	background-color: seagreen;
+	background-color: var(--main-color);
 	cursor: pointer;
 	transition: .3s ease-in-out;
 }
@@ -60,23 +67,30 @@ html{
 	cursor: pointer;
 	transform: translateY(1.2rem);
 }
+
+.main-container{
+	display: grid;
+	grid-template-columns: 1fr, 100%;
+}
 .sidebar{
-	width: 12%;
+	width: 11%;
 	height: 100%;
 	top: 0;
 	position: fixed;
-	padding-top: 20rem;
-	text-align: center;
-	background-color: #69b280;
-	border-right:2px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--second-main-color);
+	border-right: .2px solid white;
 }
 .sidebar a{
 	display: block;
 	font-size: 17px;
 	letter-spacing: 1px;
-	font-weight: 400;
-	color: white;
-	padding-bottom: 35px;
+	font-weight: 420;
+	color: var(--text-color);
+	padding-bottom: 50px;
 	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
 }
 .sidebar a:hover{
@@ -84,1750 +98,737 @@ html{
 	cursor: pointer;
 }
 main{
-	width: 100%;
-	padding: 20px 0;
+	padding: 25px 10px 30px 10px;
 }
 main p{
 	font-size: 15px;
 	font-weight: 400;
 	letter-spacing: 1px;
 	color: black;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
+	width: 85%;
+	max-width: 800px;
 	padding-left: 10rem;
-	margin:0 auto;
+	margin: 0 auto;
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
-	line-height: 25px;
-	margin-bottom: 6rem;
+	line-height: 20px;
+	margin-bottom: 5rem;
 }
 .content{
-	width: 90%;
-	padding: 20px 0;
 	background-color: white;
+	margin-left: 15rem;
+	padding: 10px;
 }
 .rows{
 	display: grid;
-	grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-	grid-gap:4rem ;
-	padding-left: 25rem;
-	margin-bottom: 7rem;
-}
-.card{
-	width: 88%;
-	height: 100%;
-	box-shadow: 0 0 3rem 0 rgba(210,210,200,0.820);
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 13px;
+	align-items: center;
 	text-align: center;
-	border-radius: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
+}
+.rows .card{
+	width: 100%;
+	margin-block: 1rem;
+	border: .1px solid whitesmoke;
+	padding: 10px;
+	box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
 }
 .card img{
-	padding-top: 10px;
-	margin-bottom: 2rem;
 	width: 70%;
-	height: 200px;
+	margin: auto;
+	max-height: 200px;
+	margin-bottom: 1.2rem;
 	backface-visibility: hidden;
 	border-radius: 10px;
+	padding-top: 12px;
 }
 .text{
 	width: 100%;
-	padding-top: 2rem;
-	padding: 3px 0;
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
 }
 .text h1{
-	font-size: 20px;
-	color: black;
-	font-weight: 300;
-	padding-bottom: 3px;
-	padding-top: 10px;
+	font-size: 1.7rem;
+	padding-block: 10px;
+	color: var(--secondary-text-color);
+	font-weight: 420px;
 	text-align: center;
-	border-bottom: 1px solid black;
+	border-bottom: .1px solid lightgrey;
 	margin-bottom: 1rem;
 	font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
 }
 .text ul li{
 	font-size: 15px;
-	color: black;
+	color: var(--secondary-text-color);
 	list-style: none;
 	letter-spacing: 2px;
-	font-weight: 400;
-	margin-bottom: 1rem;
+	line-height: 27px;
+	font-weight: 400px;
 }
 .text .buttons{
-	display: flex;
-	text-align: center;
-	text-align: center;
-	margin-top: 2rem;
-	margin-bottom: 1.5rem;
-	justify-content: center;
+	margin-top: 2.5rem;
+	margin-bottom: 2rem;
 }
 .text .buttons a{
-	width: 12rem;
-	padding: 3px 20px;
-	font-size: 13px;
-	font-weight: 400;
+	width: 17rem;
+	padding: 10px 35px;
+	font-size: 14px;
+	font-weight: 400px;
 	text-decoration: none;
-	border: 1px solid black;
+	background-color: transparent;
 	outline: none;
-	border-radius: 10px;
+	border-radius: 5px;
+	border: .1px solid black;
 	cursor: pointer;
-	color: black;
+	color: var(--secondary-text-color);
+}
+.text .buttons .btn-1{
+	margin-right: 1.5rem;
 }
 .buttons a:hover{
-	background-color:#69b280;
-	cursor: pointer;
+	background-color:seagreen;
 	color: white;
 	transition: .3s ease-in-out;
 }
 .top-btn{
-	margin-bottom: 6rem;
+	margin-top: 2rem;
+	position: absolute;
+	z-index: 50;
+	right: 0;
+	border: 1px solid black;
+	padding: 10px 10px;
+	margin-right: 10px;
 }
 .top-btn ion-icon{
 	width: 50px;
 	height: 50px;
-	font-size: 50px;
 	color: black;
 	float: right;
-	padding-right: 3rem;
 }
 .top-btn ion-icon:hover{
-	transform: scale(1.2);
+	transform: scale(1.1);
 	cursor: pointer;
 	color: green;
 }
 /*/////////////////////////////*/
 /*////Complete off Section////*/
-@media(max-width:1085px){
+@media screen and (max-width: 1220px){
 	.sidebar{
-		width: 15%;
-		padding-top: 15rem;	
+		width: 11%;
+		height: 100%;
+		top: 0;
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: var(--second-main-color);
+		border-right: .2px solid white;
 	}
-	.header h1{
-		font-size: 65px;
-		letter-spacing: 10px;
-		font-weight: 500;
-		padding-left: 17rem;
+	.content{
+		background-color: white;
+		margin-left: 12rem;
+		padding: 10px;
 	}
-	.header button{
-		width: 15rem;
-		padding: 5px 20px;
-		margin-top: 2rem;
-		margin-left: 10rem;
+}
+
+@media screen and (max-width: 1024px){
+	.sidebar{
+		width: 11%;
+		height: 100%;
+		top: 0;
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: var(--second-main-color);
+		border-right: .2px solid white;
+	}
+	.sidebar a{
+		display: block;
+		font-size: 15px;
+		letter-spacing: 1px;
+		font-weight: 420;
+		color: var(--text-color);
+		padding-bottom: 50px;
+		font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
 	}
 	main p{
 		font-size: 15px;
 		font-weight: 400;
 		letter-spacing: 1px;
-		width: 70%;
-		padding-left: 16rem;
-		line-height: 18px;
-		margin-bottom: 6rem;
+		color: black;
+		width: 80%;
+		max-width: 700px;
+		margin: auto;
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
+		line-height: 20px;
+		margin-bottom: 5rem;
 	}
 	.content{
-		width: 90%;
-		padding: 20px 0;
+		background-color: white;
+		margin-left: 10rem;
+		padding: 10px;
 	}
 	.rows{
 		display: grid;
-		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 23rem;
-		margin-bottom: 6rem;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 11px;
+		align-items: center;
+		text-align: center;
 	}
-	.card{
-		width: 90%;
-		height: 100%;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.card img{
-		padding-top: 13px;
-		margin-bottom: 2rem;
-		width: 85%;
-		height: 200px;
-	}
-	.text h1{
-		font-size: 23px;
-		padding-bottom: 3px;
-		padding-top: 10px;
-		font-weight: 300;
-		margin-bottom: 1rem;
-	}
-	.text ul{
-		padding-top: 10px;
-	}
-	.text ul li{
-		font-size: 15px;
-		letter-spacing: 2px;
-		font-weight: 400;
-		margin-bottom: 1rem;
-	}
-}
-@media(max-width:1060px){
-	.text .buttons a{
-		width: 10rem;
-		font-size: 13px;
-		font-weight: 400;
-		padding: 3px 8px;
-	}
-	.rows{
-		margin-bottom: 7rem;
-	}
-}
-@media(max-width:1024px){
-	.header h1{
-		font-size: 60px;
-		letter-spacing: 12px;
-		font-weight: 500;
-		padding-left: 15rem;
-	}
-	.header button{
-		width: 15rem;
-		padding: 5px 20px;
-		margin-top: 2rem;
-		margin-left: 7rem;
-	}
-	main p{
-		font-size: 15px;
-		font-weight: 400;
-		width: 70%;
-		padding-left: 13rem;
-		line-height: 19px;
-		margin-bottom: 6rem;
-	}
-	.rows{
-		display: grid;
-		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 22rem;
-		margin-bottom: 6rem;
-	}
-	.card{
-		width: 95%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
+	.rows .card{
+		width: 100%;
+		margin-block: 1rem;
+		border: .1px solid whitesmoke;
+		padding: 10px;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
 	}
 	.card img{
-		padding-top: 15px;
-		margin-bottom: 2rem;
 		width: 80%;
-		height: 180px;
+		margin: auto;
+		max-height: 200px;
+		margin-bottom: 1.2rem;
 		backface-visibility: hidden;
 		border-radius: 10px;
 	}
 	.text h1{
-		font-size: 20px;
-	}
-	.text .size{
-		font-size: 16px;
+		font-size: 2rem;
+		padding-block: 10px;
+		color: var(--secondary-text-color);
+		font-weight: 420px;
+		text-align: center;
+		border-bottom: .1px solid lightgrey;
+		margin-bottom: 1rem;
+		font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
 	}
 	.text ul li{
-		font-size: 14px;
-	}
-	.text .buttons a{
-		width: 10rem;
-		padding: 3px 10px;
-		font-size: 12px;
-		font-weight: 400;
-		background-color: transparent;
-		border-radius: 10px;
-		border: 1px solid black;
-		cursor: pointer;
-		color: black;
-	}
-	.top-btn ion-icon{
-		float: right;
-		padding-right: 2rem;
+		font-size: 15px;
+		color: var(--secondary-text-color);
+		list-style: none;
+		letter-spacing: 2px;
+		line-height: 25px;
+		font-weight: 400px;
 	}
 }
-@media(max-width:950px){
+
+@media screen and (max-width:916px) {
+	.sidebar{
+		width: 17%;
+		height: 100%;
+		top: 0;
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		border-right: .2px solid white;
+	}
+	.sidebar a{
+		display: block;
+		font-size: 15px;
+		letter-spacing: 1px;
+		font-weight: 420;
+		color: var(--text-color);
+		padding-bottom: 50px;
+		font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
+	}
+	main{
+		padding: 25px 10px 30px 10px;
+	}
 	main p{
-		font-size: 13px;
+		font-size: 15px;
 		font-weight: 400;
+		letter-spacing: 1px;
 		color: black;
-		width: 70%;
+		width: 90%;
+		max-width: 700px;
 		padding-left: 13rem;
-		margin:0 auto;
+		margin: auto;
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
 		line-height: 20px;
 		margin-bottom: 5rem;
 	}
-	.sidebar{
-		width: 15%;
-		padding-top: 15rem;	
-	}
 	.content{
-		width: 90%;
-		padding: 20px 0;
 		background-color: white;
+		margin-left: 13rem;
+		padding: 10px;
 	}
 	.rows{
 		display: grid;
-		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 20rem;
-		margin-bottom: 5rem;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 25px;
+		align-items: center;
+		text-align: center;
+		grid-column: column;
 	}
-	.card{
-		width: 95%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1.5rem;
+	.rows .card{
 		width: 80%;
-		height: 180px;
-	}
-	.text h1{
-		font-size: 20px;
-	}
-	.text .size{
-		font-size: 16px;
-	}
-	.text ul{
-		padding-top: 10px;
-	}
-	.text ul li{
-		font-size: 14px;
-		margin-bottom: 10px;
-	}
-	.top-btn ion-icon{
-		width: 50px;
-		height: 50px;
-		font-size: 50px;
-		color: black;
-		float: right;
-		padding-right: 3rem;
-	}
-}
-@media(max-width:866px){
-	.header h1{
-		font-size: 60px;
-		letter-spacing: 12px;
-		font-weight: 500;
-		padding-left: 15rem;
-	}
-	.content{
-		width: 90%;
-		padding: 20px 0;
-		background-color: white;
-	}
-	.rows{
-		display: grid;
-		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 18rem;
-		margin-bottom: 5rem;
-	}
-	.card{
-		width: 94%;
-		height: 100%;
-		padding-left: 7px;
-		padding-right: 7px;
+		margin: auto;
+		margin-block: 1rem;
+		border: .1px solid whitesmoke;
+		padding: 10px;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
 	}
 	.card img{
-		padding-top: 15px;
-		margin-bottom: 1.3rem;
-		width: 84%;
-		height: 200px;
-	}
-	.text h1{
-		font-size: 20px;
-		letter-spacing: none;
+		width: 60%;
+		margin: auto;
+		max-height: 270px;
+		margin-bottom: 1.4rem;
+		backface-visibility: hidden;
+		border-radius: 10px;
 	}
 }
-@media(max-width:862px){
+@media screen and (max-width: 768px) {
 	.header h1{
-		font-size: 55px;
-		letter-spacing: 10px;
-		font-weight: 500;
-		padding-left: 15rem;
-	}
-	.header button{
-		width: 14rem;
-		padding: 5px 15px;
-		border:1px solid white;
-		cursor: pointer;
-		margin-top: 2rem;
-	}
-	main p{
-		font-size: 13px;
-		font-weight: 400;
-		width: 70%;
-		padding-left: 13rem;
-		margin:0 auto;
-		line-height: 19px;
-		margin-bottom: 3rem;
-	}
-	.content{
-		width: 90%;
-		padding: 20px 0;
-		background-color: white;
-	}
-	.rows{
-		display: grid;
-		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 18rem;
-		margin-bottom: 6rem;
-	}
-	.card{
-		width: 94%;
-		height: 100%;
-		padding-left: 7px;
-		padding-right: 7px;
-	}
-	.card img{
-		padding-top: 14px;
-		margin-bottom: 1.3rem;
-		width: 83%;
-		height: 170px;
-	}
-	.text h1{
-		font-size: 18px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 15px;
-	}
-	.text ul{
-		padding-top: 10px;
-	}
-	.text ul li{
-		font-size: 14px;
-		margin-bottom: 10px;
-	}
-}
-@media(max-width:834px){
-	.header h1{
-		font-size: 55px;
-		letter-spacing: 10px;
-		font-weight: 500;
-		padding-left: 13rem;
+		font-size: 4rem;
+		letter-spacing: 6px;
+		text-transform: uppercase;
+		color: var(--text-color);
+		font-weight: 520px;
+		font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
+		text-decoration: none;
+		text-shadow: 0px 0.5px 8px rgb(42, 56, 42);
+		padding-left: 12rem;
 	}
 	.sidebar{
 		width: 16%;
-		padding-top: 15rem;	
-	}
-}
-@media(max-width:790px){
-	.header h1{
-		font-size: 50px;
-		letter-spacing: 9px;
-		font-weight: 500;
-		padding-left: 13rem;
-	}
-	.header button{
-		width: 14rem;
-		padding: 5px 15px;
-		border:1px solid white;
-		cursor: pointer;
-		margin-top: 2rem;
-		margin-left: 8rem;
-	}
-	.sidebar{
-		width: 16%;
-		padding-top: 15rem;	
+		height: 100%;
+		top: 0;
+		position: fixed;
+		border-right: .2px solid white;
 	}
 	.sidebar a{
 		display: block;
-		font-size: 15px;
-		font-weight: 400;
-		color: white;
-		padding-bottom: 34px;
+		font-size: 14px;
+		letter-spacing: .1px;
+		font-weight: 420;
+		padding-bottom: 50px;
+		font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
 	}
 	main p{
-		font-size: 13px;
+		font-size: 14px;
 		font-weight: 400;
+		letter-spacing: 1px;
 		color: black;
-		width: 74%;
-		padding-left: 13rem;
-		margin:0 auto;
-		line-height: 19px;
-		margin-bottom: 3rem;
+		width: 100%;
+		max-width: 650px;
+		padding-left: 11rem;
+		margin: auto;
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
+		line-height: 18px;
+		margin-bottom: 5rem;
 	}
 	.content{
-		width: 90%;
-		padding: 20px 0;
 		background-color: white;
+		margin-left: 10rem;
+		padding: 10px;
 	}
 	.rows{
 		display: grid;
-		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-		grid-gap:2rem ;
-		padding-left: 16rem;
-		margin-bottom: 5rem;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 25px;
+		align-items: center;
+		text-align: center;
+		grid-column: column;
 	}
-	.text .size, .text ul li{
-		font-size: 13px;
-		letter-spacing: none;
-	}
-	.text .buttons a{
-		width: 10rem;
-		padding: 3px 10px;
-		font-size: 12px;
-		font-weight: 400;
-	}	
-	.top-btn ion-icon{
-		width: 40px;
-		height: 40px;
-		font-size: 45px;
-		color: black;
-		float: right;
-		padding-right: 3rem;
-	}
-}
-@media(max-width:742px){
-	.rows{
-		display: grid;
-		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 15rem;
-		margin-bottom: 5rem;
-	}
-	.card{
-		width: 98%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1.3rem;
-		width: 83%;
-		height: 160px;
-	}
-}
-@media(max-width:732px){
-	.header h1{
-		font-size: 55px;
-		letter-spacing: 9px;
-		font-weight: 500;
-		padding-left: 13rem;
-	}
-	.rows{
-		display: grid;
-		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 14rem;
-		margin-bottom: 5rem;
-	}
-	.card{
-		width: 100%;
-		height: 100%;
-		padding-left: 7px;
-		padding-right: 7px;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1.3rem;
-		width: 83%;
-		height: 160px;
-	}
-}
-@media(max-width:712px){
-	.header h1{
-		font-size: 50px;
-		letter-spacing: 9px;
-		font-weight: 500;
-		padding-left: 15rem;
-	}
-	main p{
-		font-size: 12px;
-		font-weight: 400;
-		color: black;
+	.rows .card{
 		width: 80%;
-		padding-left: 15rem;
-		text-align: left;
-		margin:0 auto;
-		line-height: 19px;
-		margin-bottom: 5rem;
+		margin: auto;
+		margin-block: 1rem;
+		border: .1px solid whitesmoke;
+		padding: 10px;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
+	}
+	.card img{
+		width: 80%;
+		margin: auto;
+		max-height: 270px;
+		margin-bottom: 1.2rem;
+		backface-visibility: hidden;
+		border-radius: 10px;
+		padding-top: 12px;
+	}
+}
+
+@media screen and (max-width: 616px) {
+	.header h1{
+		font-size: 3.2rem;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		color: var(--text-color);
+		font-weight: 520px;
+		font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
+		text-decoration: none;
+		text-shadow: 0px 0.5px 8px rgb(42, 56, 42);
+		padding-left: 10rem;
+	}
+	.header button{
+		width: 14rem;
+		padding: 10px 17px;
+		outline: none;
+		background-color: transparent;
+		border:1px solid white;
+		cursor: pointer;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		border-radius: 5px;
+		margin-left: 8rem;
+	}
+	.header button a{
+		font-size: 14px;
+		letter-spacing: 1px;
+		font-weight: 400;
+		color: var(--text-color);
+		text-decoration: none;
 	}
 	.sidebar{
-		width: 20%;
-		padding-top: 15rem;	
+		width: 17%;
+		height: 100%;
+		top: 0;
+		position: fixed;
+		border-right: .2px solid white;
+	}
+	.sidebar a{
+		display: block;
+		font-size: 14px;
+		letter-spacing: 0px;
+		font-weight: 420;
+		padding-bottom: 50px;
+		font-family: 'eurostileextended-roman-dtc-regular', sans-serif;
+	}
+	main p{
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: .1px;
+		color: black;
+		width: 100%;
+		max-width: 600px;
+		padding-left: 11rem;
+		margin: auto;
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
+		line-height: 18px;
+		margin-bottom: 5rem;
+	}
+	.content{
+		background-color: white;
+		margin-left: 10rem;
+		padding: 10px;
 	}
 	.rows{
-		display: block;
-		grid-template-columns: 33% 33% 33% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 28rem;
-		margin-bottom: 5rem;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 25px;
+		align-items: center;
+		text-align: center;
+		grid-column: column;
 	}
-	.card{
-		width: 75%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 5rem;
+	.rows .card{
+		width: 90%;
+		margin: auto;
+		margin-block: 1rem;
+		border: .1px solid whitesmoke;
+		padding: 10px;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
 	}
 	.card img{
-		padding-top: 15px;
-		margin-bottom: 1.3rem;
-		width: 75%;
-		height: 180px;
-	}
-	.text h1{
-		font-size: 24px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 16px;
-	}
-	.text ul{
-		padding-top: 10px;
-	}
-	.text ul li{
-		font-size: 16px;
-		margin-bottom: 10px;
+		width: 80%;
+		margin: auto;
+		max-height: 270px;
+		margin-bottom: 1.2rem;
+		backface-visibility: hidden;
+		border-radius: 10px;
+		padding-top: 12px;
 	}
 }
-@media(max-width:704px){
+
+@media screen and (max-width: 510px) {
 	.header h1{
-		font-size: 50px;
-		letter-spacing: 10px;
-		font-weight: 500;
-		padding-left: 15rem;
+		font-size: 2.7rem;
+		letter-spacing: 6px;
+		font-weight: 520px;
+		text-shadow: 0px 0.5px 8px rgb(42, 56, 42);
+		padding-left: 9rem;
+	}
+	.header button{
+		width: 14rem;
+		padding: 10px 17px;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		border-radius: 5px;
+		margin-left: 9rem;
+	}
+	.header button a{
+		font-size: 14px;
+		letter-spacing: 1px;
+		font-weight: 400;
+	}
+	.sidebar{
+		width: 18%;
+		height: 100%;
+		top: 0;
+		position: fixed;
+		border-right: .2px solid white;
+	}
+	.sidebar a{
+		display: block;
+		font-size: 13px;
+		letter-spacing: 0px;
+		font-weight: 420;
+		padding-bottom: 50px;
+	}
+	main p{
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 0px;
+		width: 100%;
+		max-width: 600px;
+		padding-left: 9rem;
+		margin: auto;
+		line-height: 18px;
+		margin-bottom: 5rem;
+	}
+	.content{
+		background-color: white;
+		margin-left: 9rem;
+		padding: 8px;
+	}
+	.rows{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 25px;
+		align-items: center;
+		text-align: center;
+		grid-column: column;
+	}
+	.rows .card{
+		width: 100%;
+		margin: auto;
+		margin-block: 1rem;
+		border: .1px solid whitesmoke;
+		padding: 10px;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
+	}
+	.card img{
+		width: 80%;
+		margin: auto;
+		max-height: 250px;
+		margin-bottom: 1.2rem;
+		backface-visibility: hidden;
+		border-radius: 10px;
+		padding-top: 12px;
+	}
+	.top-btn{
+		margin-top: 2rem;
+		position: absolute;
+		z-index: 50;
+		right: 0;
+		padding: 10px 10px;
+		margin-right: 8px;
+	}
+	.top-btn ion-icon{
+		width: 45px;
+		height: 45px;
+		color: black;
+		float: right;
+	}
+}
+
+@media screen and (max-width: 432px) {
+	.header h1{
+		font-size: 2.5rem;
+		letter-spacing: 4px;
+		font-weight: 520px;
+		text-shadow: 0px 0.5px 8px rgb(42, 56, 42);
+		padding-left: 9rem;
 	}
 	.header button{
 		width: 13rem;
-		padding: 5px 12px;
-		margin-top: 2.2rem;
-		margin-left: 10rem;
-	}
-	.sidebar{
-		width: 19%;
-		padding-top: 15rem;	
-	}
-	main p{
-		font-size: 12px;
-		font-weight: 400;
-		color: black;
-		width: 83%;
-		padding-left: 15rem;
-		text-align: left;
-		margin:0 auto;
-		line-height: 19px;
-		margin-bottom: 4rem;
-	}
-	.content{
-		width: 85%;
-		padding: 20px 0;
-		background-color: white;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 30rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 85%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 6rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1.5rem;
-		width: 77%;
-		height: 190px;
-	}
-	.text h1{
-		font-size: 25px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 17px;
-	}
-	.text ul{
-		padding-top: 10px;
-	}
-	.text ul li{
-		font-size: 15px;
-		margin-bottom: 10px;
-	}
-}
-@media(max-width:656px){
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 26rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 85%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 6rem;
-	}
-	.card img{
-		padding-top: 17px;
-		margin-bottom: 1.5rem;
-		width: 80%;
-		height: 190px;
-	}
-	.text h1{
-		font-size: 23px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 16px;
-	}
-	.text ul{
-		padding-top: 10px;
-	}
-	.text ul li{
-		font-size: 15px;
-		margin-bottom: 10px;
-	}
-}
-@media(max-width:628px){
-	.header h1{
-		font-size: 40px;
-		letter-spacing: 8px;
-		font-weight: 500;
-		padding-left: 13rem;
+		padding: 10px 15px;
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+		border-radius: 5px;
+		margin-left: 9rem;
 	}
 	.header button a{
-		font-size: 12px;
-		font-weight: 400;
-		color: white;
-	}
-	.sidebar{
-		width: 20%;
-		padding-top: 15rem;	
-	}
-	.sidebar a{
 		font-size: 14px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	main p{
-		font-size: 12px;
+		letter-spacing: 1px;
 		font-weight: 400;
-		width: 80%;
-		padding-left: 12rem;
-		line-height: 18px;
-		margin-bottom: 4rem;
-	}
-	.content{
-		width: 90%;
-		padding: 20px 0;
-		background-color: white;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 25rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 81%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 6rem;
-	}
-	.card img{
-		padding-top: 10px;
-		margin-bottom: 1.5rem;
-		width: 73%;
-		height: 180px;
-	}
-	.text h1{
-		font-size: 23px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 16px;
-	}
-	.text ul{
-		padding-top: 10px;
-	}
-	.text ul li{
-		font-size: 15px;
-		margin-bottom: 10px;
-	}
-}
-@media(max-width:576px){
-	main p{
-		font-size: 12px;
-		font-weight: 400;
-		width: 85%;
-		padding-left: 13rem;
-		line-height: 17px;
-		margin-bottom: 4rem;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 23rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 87%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 5rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1.5rem;
-		width: 77%;
-		height: 180px;
-	}
-}
-@media(max-width:548px){
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 23rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 87%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 5rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1.5rem;
-		width: 77%;
-		height: 180px;
-	}
-}
-@media(max-width:528px){
-	.header h1{
-		font-size: 40px;
-		letter-spacing: 7px;
-		font-weight: 500;
-		padding-left: 13rem;
-	}
-	.header button{
-		width: 12rem;
-		padding: 5px 12px;
-		margin-top: 2rem;
-		margin-left: 10rem;
 	}
 	.sidebar{
 		width: 21%;
-		padding-top: 15rem;	
+		height: 100%;
+		top: 0;
+		position: fixed;
+		border-right: .2px solid white;
 	}
 	.sidebar a{
-		font-size: 13px;
-		font-weight: 400;;
-		padding-bottom: 34px;
+		display: block;
+		font-size: 12px;
+		letter-spacing: 0px;
+		font-weight: 420;
+		padding-bottom: 50px;
 	}
 	main p{
-		font-size: 11px;
+		font-size: 14px;
 		font-weight: 400;
-		width: 85%;
-		padding-left: 12rem;
-		line-height: 17px;
-		margin-bottom: 3rem;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 21rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 87%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 4rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 75%;
-		height: 170px;
-	}
-	.text h1{
-		font-size: 22px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 16px;
-	}
-	.text ul{
-		padding-top: 10px;
-	}
-	.text ul li{
-		font-size: 15px;
-		margin-bottom: 10px;
-	}
-}
-@media(max-width:486px){
-	.header h1{
-		font-size: 30px;
-		letter-spacing: 7px;
-		font-weight: 500;
-		padding-left: 12rem;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 19rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 88%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
+		letter-spacing: 0px;
+		width: 97%;
+		max-width: 500px;
+		padding-left: 8rem;
+		margin: auto;
+		line-height: 18px;
 		margin-bottom: 5rem;
 	}
+	.content{
+		background-color: white;
+		margin-left: 9rem;
+		padding: 8px;
+	}
+	.rows{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 25px;
+		align-items: center;
+		text-align: center;
+		grid-column: column;
+	}
+	.rows .card{
+		width: 100%;
+		margin: auto;
+		margin-block: 1rem;
+		border: .1px solid whitesmoke;
+		padding: 5px;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
+	}
 	.card img{
-		padding-top: 15px;
+		width: 70%;
+		margin: auto;
+		max-height: 250px;
 		margin-bottom: 1.2rem;
-		width: 77%;
-		height: 160px;
+		backface-visibility: hidden;
+		border-radius: 10px;
+		padding-top: 12px;
 	}
 	.text h1{
-		font-size: 20px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 14px;
-	}
-	.text ul{
-		padding-top: 10px;
+		font-size: 1.6rem;
+		padding-block: 10px;
+		font-weight: 420px;
+		text-align: center;
+		border-bottom: .1px solid lightgrey;
+		margin-bottom: 1rem;
 	}
 	.text ul li{
-		font-size: 14px;
-		margin-bottom: 10px;
+		font-size: 13px;
+		letter-spacing: 1px;
+		line-height: 25px;
+		font-weight: 400px;
+	}
+	.top-btn{
+		margin-top: 2rem;
+		position: absolute;
+		z-index: 50;
+		right: 0;
+		padding: 10px 10px;
+		margin-right: 7px;
+	}
+	.top-btn ion-icon{
+		width: 45px;
+		height: 45px;
+		color: black;
+		float: right;
 	}
 }
-@media(max-width:472px){
+
+@media screen and (max-width: 375px) {
 	.header h1{
-		font-size: 30px;
-		letter-spacing: 7px;
-		font-weight: 500;
-		padding-left: 12rem;
+		font-size: 2.2rem;
+		letter-spacing: 2px;
+		font-weight: 520px;
+		text-shadow: 0px 0.5px 8px rgb(42, 56, 42);
+		padding-left: 8rem;
 	}
 	.header button{
-		width: 11rem;
-		padding: 5px 10px;
-		margin-top: 2.5rem;
-		margin-left: 10rem;
+		width: 13rem;
+		padding: 10px 10px;
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+		border-radius: 5px;
+		margin-left: 8rem;
 	}
 	.header button a{
-		font-size: 12px;
+		font-size: 13px;
+		letter-spacing: 1px;
 		font-weight: 400;
 	}
 	.sidebar{
 		width: 22%;
-		padding-top: 15rem;	
+		height: 100%;
+		top: 0;
+		position: fixed;
+		border-right: .2px solid white;
 	}
 	.sidebar a{
+		display: block;
 		font-size: 12px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 18rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 90%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 4rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 77%;
-		height: 170px;
-	}
-	.text h1{
-		font-size: 23px;
-		letter-spacing: none;
-	}
-}
-@media(max-width:442px){
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 17rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 95%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 4rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 77%;
-		height: 165px;
-	}
-	.text h1{
-		font-size: 20px;
-		letter-spacing: none;
-	}
-}
-@media(max-width:433px){
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 15rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 93%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 4rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 75%;
-		height: 160px;
-	}
-}
-@media(max-width:425px){
-	.sidebar{
-		width: 23%;
-		padding-top: 15rem;	
+		font-weight: 400;
+		padding-bottom: 50px;
 	}
 	main p{
-		font-size: 11px;
+		font-size: 13px;
 		font-weight: 400;
-		width: 84%;
-		padding-left: 11rem;
+		width: 100%;
+		max-width: 500px;
+		padding-left: 8rem;
+		margin: auto;
 		line-height: 17px;
 		margin-bottom: 3rem;
 	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 16rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 94%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 4rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 75%;
-		height: 155px;
-	}
-	.text h1{
-		font-size: 20px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 15px;
-	}
-	.text ul{
-		padding-top: 10px;
-	}
-	.text ul li{
-		font-size: 14px;
-		margin-bottom: 10px;
-	}
-}
-@media(max-width:414px){
-	.header h1{
-		font-size: 27px;
-		letter-spacing: 6px;
-		font-weight: 500;
-		padding-left: 10rem;
-	}
-}
-@media(max-width:412px){
-	.header h1{
-		font-size: 26px;
-		letter-spacing: 6px;
-		font-weight: 500;
-		padding-left: 10rem;
-	}
-	.sidebar{
-		width: 26%;
-		padding-top: 15rem;	
-	}
-}
-@media(max-width:399px){
-	.header h1{
-		font-size: 25px;
-		letter-spacing: 5px;
-		font-weight: 500;
-		padding-left: 10rem;
-	}
-	main p{
-		font-size: 10px;
-		font-weight: 400;
-		width: 86%;
-		padding-left: 10rem;
-		line-height: 15px;
-		margin-bottom: 3rem;
-	}
-	.sidebar{
-		width: 26%;
-		padding-top: 15rem;	
+	.content{
+		background-color: white;
+		margin-left: 8rem;
+		padding: 8px;
 	}
 	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 16rem;
-		margin-bottom: 4rem;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 25px;
+		align-items: center;
+		text-align: center;
+		grid-column: column;
 	}
-	.card{
-		width: 94%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 6rem;
+	.rows .card{
+		width: 100%;
+		margin: auto;
+		margin-block: 1rem;
+		border: .1px solid whitesmoke;
+		padding: 8px;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
 	}
 	.card img{
-		padding-top: 10px;
+		width: 65%;
+		margin: auto;
+		max-height: 230px;
 		margin-bottom: 1.2rem;
-		width: 74%;
-		height: 170px;
-	}
-	.text h1{
-		font-size: 18px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 12px;
-	}
-	.text ul li{
-		font-size: 12px;
-		margin-bottom: 10px;
+		backface-visibility: hidden;
+		border-radius: 10px;
+		padding-top: 12px;
 	}
 }
-@media(max-width:377px){
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 15rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 95%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 6rem;
-	}
-	.card img{
-		padding-top: 10px;
-		margin-bottom: 1.2rem;
-		width: 74%;
-		height: 170px;
-	}
-}
-@media(max-width:375px){
-	.header h1{
-		font-size: 30px;
-		letter-spacing: 6px;
-		font-weight: 500;
-		padding-left: 10rem;
-	}
-	.header button{
-		width: 10rem;
-		padding: 4px 8px;
-		margin-top: 2rem;
-		margin-left: 10rem;
-	}
-	.header button a{
-		font-size: 12px;
-		font-weight: 400;
-	}
-	.sidebar{
-		width: 24%;
-		padding-top: 15rem;	
-	}
-	.sidebar a{
-		font-size: 11px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	main p{
-		font-size: 10px;
-		font-weight: 400;
-		width: 85%;
-		padding-left: 10rem;
-		line-height: 16px;
-		margin-bottom: 3rem;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:4rem ;
-		padding-left: 14rem;
-		margin-bottom: 4rem;
-	}
-	.card{
-		width: 95%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 4rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 78%;
-		height: 160px;
-	}
-	.text h1{
-		font-size: 20px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 13px;
-	}
-	.text ul li{
-		font-size: 13px;
-		margin-bottom: 10px;
-	}
-}
-@media(max-width:360px){
-	.header h1{
-		font-size: 26px;
-		letter-spacing: 5px;
-		font-weight: 500;
-		padding-left: 10rem;
-	}
-	.header button{
-		width: 10rem;
-		padding: 4px 8px;
-		margin-top: 2.3rem;
-		margin-left: 8rem;
-	}
-	.header button a{
-		font-size: 11px;
-		font-weight: 400;
-	}
-	.sidebar{
-		width: 25%;
-		padding-top: 15rem;	
-	}
-	.sidebar a{
-		font-size: 10px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 14rem;
-		margin-bottom: 3rem;
-	}
-	.card{
-		width: 97%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 4rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 75%;
-		height: 130px;
-	}
-}
-@media(max-width:349px){
-	.header h1{
-		font-size: 25px;
-		letter-spacing: 4px;
-		font-weight: 500;
-		padding-left: 9rem;
-	}
-	.header button{
-		width: 10rem;
-		padding: 4px 8px;
-		margin-top: 1.5rem;
-		margin-left: 8rem;
-	}
-	.header button a{
-		font-size: 11px;
-		font-weight: 400;
-	}
-	main p{
-		font-size: 9px;
-		font-weight: 400;
-		width: 85%;
-		padding-left: 9rem;
-		line-height: 15px;
-		margin-bottom: 2rem;
-	}
-	.sidebar{
-		width: 25%;
-		padding-top: 15rem;	
-	}
-	.sidebar a{
-		font-size: 10px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 12rem;
-		margin-bottom: 3rem;
-	}
-	.card{
-		width: 97%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 4rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 75%;
-		height: 140px;
-	}
-	.text h1{
-		font-size: 18px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 12px;
-	}
-	.text ul li{
-		font-size: 12px;
-		margin-bottom: 10px;
-	}
-	.text .buttons a{
-		width: 9rem;
-		padding: 3px 5px;
-		font-size: 10px;
-		font-weight: 400;
-	}
-}
-@media(max-width:333px){
-	.header h1{
-		font-size: 23px;
-		letter-spacing: 4px;
-		font-weight: 500;
-		padding-left: 9rem;
-	}
-	.header button{
-		width: 10rem;
-		padding: 4px 8px;
-		margin-top: 2.3rem;
-		margin-left: 8rem;
-	}
-	.header button a{
-		font-size: 11px;
-		font-weight: 400;
-	}
-	main p{
-		font-size: 9px;
-		font-weight: 400;
-		width: 85%;
-		padding-left: 9rem;
-		line-height: 15px;
-		margin-bottom: 3rem;
-	}
-	.sidebar{
-		width: 25%;
-		padding-top: 15rem;	
-	}
-	.sidebar a{
-		font-size: 10px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 12rem;
-		margin-bottom: 3rem;
-	}
-	.card{
-		width: 97%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 5rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 75%;
-		height: 140px;
-	}
-	.text h1{
-		font-size: 17px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 11px;
-	}
-	.text ul li{
-		font-size: 11px;
-		margin-bottom: 10px;
-	}
-	.text .buttons a{
-		width: 9rem;
-		padding: 3px 5px;
-		font-size: 10px;
-		font-weight: 400;
-	}
-}
-@media(max-width:320px){
-	.header h1{
-		font-size: 23px;
-		letter-spacing: 4px;
-		font-weight: 500;
-		padding-left: 9rem;
-	}
-	.header button{
-		width: 10rem;
-		padding: 4px 8px;
-		margin-top: 2.3rem;
-		margin-left: 8rem;
-	}
-	.header button a{
-		font-size: 11px;
-		font-weight: 400;
-	}
-	main p{
-		font-size: 9px;
-		font-weight: 400;
-		width: 85%;
-		padding-left: 8rem;
-		line-height: 15px;
-		margin-bottom: 3rem;
-	}
-	.sidebar{
-		width: 25%;
-		padding-top: 15rem;	
-	}
-	.sidebar a{
-		font-size: 10px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 12rem;
-		margin-bottom: 3rem;
-	}
-	.card{
-		width: 98%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 4rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 77%;
-		height: 140px;
-	}
-	.text h1{
-		font-size: 18px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 12px;
-	}
-	.text ul li{
-		font-size: 12px;
-		margin-bottom: 10px;
-	}
-	.text .buttons a{
-		width: 9rem;
-		padding: 3px 5px;
-		font-size: 10px;
-		font-weight: 400;
-	}
-}
-@media(max-width:289px){
-	.header h1{
-		font-size: 20px;
-		letter-spacing: 3px;
-		font-weight: 500;
-		padding-left: 8rem;
-	}
-	.header button{
-		width: 9rem;
-		padding: 4px 6px;
-		margin-top: 1.5rem;
+@media screen and (max-width: 320px){
+	.content{
+		background-color: white;
 		margin-left: 7rem;
-	}
-	.header button a{
-		font-size: 10px;
-		font-weight: 400;
-	}
-	main p{
-		font-size: 9px;
-		font-weight: 400;
-		width: 85%;
-		padding-left: 7rem;
-		line-height: 15px;
-		margin-bottom: 1.5rem;
-	}
-	.sidebar{
-		width: 26%;
-		padding-top: 15rem;	
-	}
-	.sidebar a{
-		font-size: 9px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 11rem;
-		margin-bottom: 3rem;
-	}
-	.card{
-		width: 97%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 3rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 75%;
-		height: 130px;
-	}
-	.text h1{
-		font-size: 16px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 10px;
-	}
-	.text ul li{
-		font-size: 10px;
-		margin-bottom: 10px;
-	}
-	.text .buttons a{
-		width: 8rem;
-		padding: 3px 5px;
-		font-size: 9px;
-		font-weight: 400;
-	}
-	.top-btn ion-icon{
-		width: 35px;
-		height: 35px;
-		font-size: 40px;
-		color: black;
-		float: right;
-		padding-right: 3rem;
+		padding: 5px;
 	}
 }
-@media(max-width:272px){
-	.header h1{
-		font-size: 20px;
-		letter-spacing: 3px;
-		font-weight: 500;
-		padding-left: 8rem;
-	}
-	.header button{
-		width: 9rem;
-		padding: 4px 6px;
-		margin-top: 1.5rem;
-		margin-left: 7rem;
-	}
-	.header button a{
-		font-size: 10px;
-		font-weight: 400;
-	}
-	main p{
-		font-size: 9px;
-		font-weight: 400;
-		width: 85%;
-		padding-left: 7rem;
-		line-height: 15px;
-		margin-bottom: 1.5rem;
-	}
-	.sidebar{
-		width: 26%;
-		padding-top: 15rem;	
-	}
-	.sidebar a{
-		font-size: 9px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 10rem;
-		margin-bottom: 3rem;
-	}
-	.card{
-		width: 97%;
-		height: 100%;
-		padding-left: 5px;
-		padding-right: 5px;
-		margin-bottom: 3rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 75%;
-		height: 125px;
-	}
-	.text h1{
-		font-size: 16px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 10px;
-	}
-	.text ul li{
-		font-size: 10px;
-		margin-bottom: 10px;
-	}
-	.text .buttons a{
-		width: 8rem;
-		padding: 3px 5px;
-		font-size: 9px;
-		font-weight: 400;
-	}
-	.top-btn ion-icon{
-		width: 35px;
-		height: 35px;
-		font-size: 40px;
-		color: black;
-		float: right;
-		padding-right: 3rem;
-	}
-}
-@media(max-width:250px){
-	.header h1{
-		font-size: 18px;
-		letter-spacing: 2px;
-		font-weight: 500;
-		padding-left: 7rem;
-	}
-	.header button{
-		width: 9rem;
-		padding: 2px 6px;
-		margin-top: 1.2rem;
-		margin-left: 7rem;
-	}
-	.header button a{
-		font-size: 10px;
-		font-weight: 400;
-	}
-	main p{
-		font-size: 8px;
-		font-weight: 400;
-		width: 87%;
-		padding-left: 7rem;
-		line-height: 13px;
-		margin-bottom: 1.5rem;
-	}
-	.sidebar{
-		width: 27%;
-		padding-top: 15rem;	
-	}
-	.sidebar a{
-		font-size: 8px;
-		font-weight: 400;;
-		padding-bottom: 34px;
-	}
-	.rows{
-		display: block;
-		grid-template-columns: 30% 30% 30% 1fr 1fr 1fr;
-		grid-gap:3rem ;
-		padding-left: 9rem;
-		margin-bottom: 3rem;
-	}
-	.card{
-		width: 99%;
-		height: 100%;
-		padding-left: 3px;
-		padding-right: 3px;
-		margin-bottom: 3rem;
-	}
-	.card img{
-		padding-top: 15px;
-		margin-bottom: 1rem;
-		width: 70%;
-		height: 118px;
-	}
-	.text h1{
-		font-size: 17px;
-		letter-spacing: none;
-	}
-	.text .size{
-		font-size: 10px;
-	}
-	.text ul li{
-		font-size: 10px;
-		margin-bottom: 10px;
-	}
-	.text .buttons a{
-		width: 8rem;
-		padding: 3px 5px;
-		font-size: 8px;
-		font-weight: 400;
-	}
-	.top-btn ion-icon{
-		width: 35px;
-		height: 35px;
-		font-size: 40px;
-		color: black;
-		float: right;
-		padding-right: 3rem;
-	}
-}
-/*////lowest responsive view at 214px/////*/
+/*//// Complete responsive view port /////*/
 /*///////////////////////////////////////*/
