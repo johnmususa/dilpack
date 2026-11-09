@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 html{
 	font-size: 62.5%;
@@ -11,70 +12,480 @@ html{
 	scroll-behavior: smooth;
 	transition: all .3s ease-in-out;
 }
+:root{
+	--main-color: #598f6a;
+	--second-main-color: seagreen;
+	--text-color: #ffffff;
+	--secondary-text-color: #000000;
+}
+main{
+	padding: 25px 10px 20px 10px;
+}
 /*////////////start off point////////*/
-/*//////////////////////////////////*/
 .header{
 	width: 100%;
-	padding: 25px 0;
+	padding: 30px;
 	text-align: center;
 	box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
-	background-color:#69b280;
+	background-color: var(--second-main-color);
+	flex-grow: 1;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 .header h1{
-	font-size: 65px;
-	font-weight: 600;
+	font-size: 5rem;
+	text-transform: uppercase;
+	font-weight: 550px;
 	line-height: 1.2;
-	margin-top: 1rem;
 	margin-bottom: 2rem;
-	color: #fff;
+	color: var(--text-color);
 	letter-spacing: 10px;
+	text-shadow: 0px 0.5px 8px rgb(42, 56, 42);
+}
+.header p{
+	color: white;
+	letter-spacing: 2px;
+	font-weight: 420px;
+	margin-bottom: 2.7rem;
+	font-size: 2.3rem;
 }
 .hero-btn{
-	width: 15rem;
-	padding: 8px 23px;
+	width: 16rem;
+	padding: 11px 20px;
 	outline: none;
 	border: 1px solid white;
-	font-size: 15px;
-	font-weight: 350;
-	color: white;
-	background-color: #69b280;
-	text-decoration: none;
-	border-radius: 10px;
+	font-size: 14px;
+	font-weight: 400px;
 	letter-spacing: 1px;
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+	margin-bottom: 2.5rem;
+	border-radius: 5px;
 }
 .hero-btn:hover{
 	background-color:seagreen;
 	transition: .3s ease-in;
 }
-
-
-
-
-
-
-
-
-
-
-/*//////Start of responsive view/////*/
-/*//////////////////////////////////*/
-@media(max-width:952){
-	.header{
-		width: 100%;
-		padding: 20px 0;
-	}
+main{
+	width: 100%;
+}
+.content h2{
+	text-align: center;
+	width: 85%;
+	margin: auto;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: black;
+	line-height: 22px;
+	max-width: 700px;
+	margin-bottom: 3rem;
+}
+.content h3{
+	text-align: center;
+	font-size: 24px;
+	color: black;
+	letter-spacing: 1px;
+	font-weight: 420px;
+	margin-bottom: 2.5rem;
+	padding-bottom: 5px;
+	border-bottom: .1px solid lightgrey;
+}
+.solid{
+	width: 27%;
+	margin: auto;
+}
+.container{
+	width: 100%;
+	display: flex;
+	gap: 25px;
+	justify-content: space-evenly;
+	align-content: center;
+	padding: 10px;
+	flex-grow: 1;
+	overflow: hidden;
+	background-color: #fff;
+}
+.card{
+	width: 35%;
+	height: 70%;
+	padding: 12px 0px 10px 0px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	border: .1px solid whitesmoke;
+	box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
+}
+.card img{
+	width: 60%;
+	height: 180px;
+	margin-bottom: 2.7rem;
+}
+.text{
+	text-align: center;
+	padding: 10px;
+	background-color:#fff;
+}
+.text h1{
+	color: black;
+	font-size: 20px;
+	font-weight: 400px;
+	border-bottom: 1px solid grey;
+	letter-spacing: 1.5px;
+	margin-bottom: 1.3rem;
+}
+.text ul li{
+	list-style: none;
+	font-size: 13px;
+	padding-bottom: 10px;
+	letter-spacing: 1px;
+	font-weight: 400px;
+	color: black;
+}
+.card:hover{
+	box-shadow: 0 1rem 4rem 0 rgba(230,212,212,0.822);
+	transition: .3s ease-out;
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.link{
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	margin-top: 3rem;
+}
+.link h4{
+	font-size: 15px;
+	font-weight: 400px;
+	color: black;
+	letter-spacing: 1px;
+	margin-bottom: 2.3rem;
+}
+button{
+	width: 16rem;
+	outline: none;
+	border: 1px solid black;
+	padding: 11px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 2.5rem;
+	background-color: transparent;
+}
+button a{
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: black;
+	font-weight: 420px;
+	text-decoration: none;
+}
+button:hover,button a:hover{
+	background-color: var(--second-main-color);
+	color: white;
+	transition: .3s ease-in-out;
+	cursor: pointer;
+}
+button:active{
+	transform: translateY(1.1rem);
+}
+footer{
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	background-color: var(--second-main-color);
+}
+footer p{
+	font-size: 15px;
+	font-weight: 400px;
+	letter-spacing: 1px;
+	color: white;
+}
+/*///////////start of responsive view/////*/
+@media screen and (max-width: 1024px) {
 	.header h1{
-		font-size: 70px;
-		font-weight: 600;
+		font-size: 4.3rem;
+		text-transform: uppercase;
+		font-weight: 530px;
 		line-height: 1.2;
-		margin-top: 1rem;
-		letter-spacing: 10px;
+		margin-bottom: 1.5rem;
+		color: var(--text-color);
+		letter-spacing: 8px;
+		text-shadow: 0px 0.5px 8px rgb(42, 56, 42);
 	}
 	.header p{
-		letter-spacing: 3px;
-		font-weight: 400;
-		margin-bottom: 1.5rem;
-		font-size: 25px;
+		color: white;
+		letter-spacing: 2px;
+		font-weight: 420px;
+		margin-bottom: 2.7rem;
+		font-size: 2.1rem;
 	}
-/*//////End off Section////////////*/
-/*////////////////////////////////*/
+	.hero-btn{
+		width: 15rem;
+		padding: 11px 18px;
+		outline: none;
+		border: 1px solid white;
+		font-size: 14px;
+		font-weight: 400px;
+		letter-spacing: 1px;
+		color: white;
+		background-color: transparent;
+		text-decoration: none;
+		margin-bottom: 2.5rem;
+		border-radius: 5px;
+	}
+	.content h3{
+		text-align: center;
+		font-size: 22px;
+		color: black;
+		letter-spacing: 1px;
+		font-weight: 420px;
+		margin-bottom: 2.5rem;
+		padding-bottom: 5px;
+		border-bottom: .1px solid lightgrey;
+	}
+	.container{
+		width: 100%;
+		display: flex;
+		gap: 10px;
+		justify-content: space-evenly;
+		align-content: center;
+		padding: 8px;
+		flex-grow: 1;
+		overflow: hidden;
+		background-color: #fff;
+	}
+}
+
+@media screen and (max-width: 875px) {
+	.container{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+		justify-content: center;
+		align-content: center;
+		padding: 10px;
+		flex-grow: 1;
+		overflow: hidden;
+		background-color: #fff;
+	}
+	.card{
+		width: 80%;
+		height: 90%;
+		margin: auto;
+		padding: 14px 0px 10px 0px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		border: .1px solid whitesmoke;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
+	}
+	.card img{
+		width: 50%;
+		height: 230px;
+		margin-bottom: 2.7rem;
+	}
+}
+
+@media screen and (max-width: 545px) {
+	.header{
+		width: 100%;
+		padding: 25px 0px 35px 0px;
+		text-align: center;
+		box-shadow: 0 0 2rem 0 rgba(230,212,212,0.822);
+		background-color: var(--second-main-color);
+		flex-grow: 1;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.header h1{
+		font-size: 3.5rem;
+		text-transform: uppercase;
+		font-weight: 520px;
+		line-height: 1.2;
+		margin-bottom: 1.3rem;
+		color: var(--text-color);
+		letter-spacing: 5px;
+		text-shadow: 0px 0.5px 8px rgb(42, 56, 42);
+	}
+	.header p{
+		color: white;
+		letter-spacing: 1.5px;
+		font-weight: 420px;
+		margin-bottom: 2.5rem;
+		font-size: 1.7rem;
+	}
+	.hero-btn{
+		width: 15rem;
+		padding: 10px 15px;
+		outline: none;
+		border: 1px solid white;
+		font-size: 13px;
+		font-weight: 400px;
+		letter-spacing: 1px;
+		color: white;
+		background-color: transparent;
+		text-decoration: none;
+		margin-bottom: 2.3rem;
+		border-radius: 5px;
+	}
+	.content h2{
+		text-align: center;
+		width: 95%;
+		margin: auto;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		color: black;
+		line-height: 20px;
+		max-width: 600px;
+		margin-bottom: 2rem;
+	}
+	.content h3{
+		text-align: center;
+		font-size: 17px;
+		color: black;
+		letter-spacing: 1px;
+		font-weight: 420px;
+		margin-bottom: 2.5rem;
+		padding-bottom: 5px;
+		border-bottom: .1px solid lightgrey;
+	}
+	.container{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		justify-content: center;
+		align-content: center;
+		padding: 10px;
+		flex-grow: 1;
+		overflow: hidden;
+		background-color: #fff;
+	}
+	.card{
+		width: 100%;
+		height: 95%;
+		margin: auto;
+		padding: 16px 0px 10px 0px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		border: .1px solid whitesmoke;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
+	}
+	.card img{
+		width: 60%;
+		height: 230px;
+		margin-bottom: 1rem;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.header{
+		width: 100%;
+		padding: 25px 0px 35px 0px;
+	}
+	.header h1{
+		font-size: 2.7rem;
+		font-weight: 520px;
+		line-height: 1.2;
+		margin-bottom: 1.2rem;
+		letter-spacing: 5px;
+	}
+	.header p{
+		color: white;
+		letter-spacing: 1.5px;
+		font-weight: 420px;
+		margin-bottom: 2.3rem;
+		font-size: 1.4rem;
+	}
+	.hero-btn{
+		width: 16rem;
+		padding: 10px 13px;
+		font-size: 13px;
+		font-weight: 400px;
+		letter-spacing: .1px;
+		margin-bottom: 2.3rem;
+		border-radius: 5px;
+	}
+	.content h2{
+		text-align: center;
+		width: 97%;
+		margin: auto;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: .1px;
+		color: black;
+		line-height: 19px;
+		max-width: 600px;
+		margin-bottom: 2.2rem;
+	}
+	.content h3{
+		text-align: center;
+		font-size: 17px;
+		color: black;
+		letter-spacing: 1px;
+		font-weight: 420px;
+		margin-bottom: 2.5rem;
+		padding-bottom: 5px;
+		border-bottom: .1px solid lightgrey;
+	}
+	.container{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		justify-content: center;
+		align-content: center;
+		padding: 10px;
+		flex-grow: 1;
+		overflow: hidden;
+		background-color: #fff;
+	}
+	.card{
+		width: 100%;
+		height: 95%;
+		margin: auto;
+		padding: 16px 0px 10px 0px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		border: .1px solid whitesmoke;
+		box-shadow: 0 0 3rem 0 rgba(185, 185, 181, 0.82);
+	}
+	.card img{
+		width: 70%;
+		height: 250px;
+		margin-bottom: 1rem;
+	}
+	.link h4{
+		font-size: 12px;
+		letter-spacing: 1px;
+		margin-bottom: 2rem;
+	}
+	button{
+		width: 15rem;
+		outline: none;
+		border: 1px solid black;
+		padding: 10px 18px;
+		cursor: pointer;
+		margin-bottom: 2.5rem;
+	}
+	button a{
+		font-size: 14px;
+		letter-spacing: 1px;
+		font-weight: 420px;
+	}
+	footer p{
+		font-size: 13px;
+		font-weight: 400px;
+		letter-spacing: 1px;
+	}
+}
+/*/////////Complete Responsive View/////////*/
+/*/////////////////////////////////////////*/
